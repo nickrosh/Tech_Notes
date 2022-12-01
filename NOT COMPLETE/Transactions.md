@@ -1,6 +1,6 @@
 
 
-A *Transaction* is a single indivisible unit of work in a Database. ACID ensures reliability that is key with important transactions like Bank transfers, imagine if a fault network caused your bank withdrawal to happen twice. An ACID transaction obeys the following:
+A *Transaction* is a single indivisible unit of work in a Database. ACID describes the attributes of a reliable database and ensures reliability that is key with important transactions like Bank transfers, imagine if a fault network caused your bank withdrawal to happen twice. An ACID transaction obeys the following:
 
 
 ### Atomic
