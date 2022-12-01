@@ -1,0 +1,111 @@
+{
+  "main": {
+    "id": "bee1f37187161991",
+    "type": "split",
+    "children": [
+      {
+        "id": "6815a04171af34b8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd382a7fb6ad80f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Distributed/DB Partitions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e289933308ebc485",
+    "type": "split",
+    "children": [
+      {
+        "id": "16e67687e30f18ec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ac71b6f6efdd722",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "58c23f6c7836599f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a518600a64dcbe27",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9241b2d4ef9ff86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfe1d719bbc3b285",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Distributed/DB Partitions.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "cd382a7fb6ad80f1",
+  "lastOpenFiles": [
+    "Distributed/DB Replication.md",
+    "Software Engineering/Asynchronous Execution.md",
+    "NOT COMPLETE/Transformers.md",
+    "NOT COMPLETE/Transactions.md",
+    "NOT COMPLETE/Recurrent Neural Net.md",
+    "NOT COMPLETE/Neural Net.md",
+    "NOT COMPLETE/Embeddings.md",
+    "NOT COMPLETE/Convolutional Neural Net.md",
+    "NOT COMPLETE/Attention.md",
+    "NOT COMPLETE/Arrays & Hashing.md"
+  ]
+}

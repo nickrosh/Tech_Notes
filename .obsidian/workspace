@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "bee1f37187161991",
+    "type": "split",
+    "children": [
+      {
+        "id": "cd382a7fb6ad80f1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Distributed/DB Replication.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e289933308ebc485",
+    "type": "split",
+    "children": [
+      {
+        "id": "16e67687e30f18ec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ac71b6f6efdd722",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "58c23f6c7836599f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a518600a64dcbe27",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9241b2d4ef9ff86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfe1d719bbc3b285",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Distributed/DB Replication.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "cd382a7fb6ad80f1",
+  "lastOpenFiles": [
+    "DS&A/Patterns/Arrays & Hashing.md",
+    "DS&A/Patterns/Sliding Window.md",
+    "NOT COMPLETE/ACID Transactions.md",
+    "NOT COMPLETE/Convolutional Neural Net.md",
+    "NOT COMPLETE/DB Partitions.md",
+    "NOT COMPLETE/Neural Net.md",
+    "NOT COMPLETE/Recurrent Neural Net.md",
+    "NOT COMPLETE/Transformers.md",
+    "DS&A/Data Structures/Tries.md",
+    "DS&A/Data Structures/Trees.md"
+  ]
+}
