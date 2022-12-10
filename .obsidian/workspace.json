@@ -8,18 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cd382a7fb6ad80f1",
+            "id": "855d32d26b202e42",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NOT COMPLETE/Transactions.md",
+                "file": "NOT COMPLETE/Neural Net.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2d05eba0629516f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DS&A/Patterns/Stack Patterns.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NOT COMPLETE/Transactions.md",
+                "file": "DS&A/Patterns/Stack Patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,16 +108,16 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cd382a7fb6ad80f1",
+  "active": "2d05eba0629516f2",
   "lastOpenFiles": [
+    "DS&A/Patterns/Two Pointers.md",
+    "DS&A/Patterns/Stack Patterns.md",
+    "NOT COMPLETE/Neural Net.md",
+    "DS&A/Patterns/Sliding Window.md",
+    "DS&A/Patterns/Arrays & Hashing.md",
     "NOT COMPLETE/Recurrent Neural Net.md",
-    "NOT COMPLETE/Arrays & Hashing.md",
-    "Distributed/DB Partitions.md",
-    "Distributed/DB Replication.md",
-    "Software Engineering/Asynchronous Execution.md",
     "NOT COMPLETE/Transformers.md",
     "NOT COMPLETE/Transactions.md",
-    "NOT COMPLETE/Neural Net.md",
     "NOT COMPLETE/Embeddings.md",
     "NOT COMPLETE/Convolutional Neural Net.md"
   ]
