@@ -8,31 +8,30 @@
         "type": "tabs",
         "children": [
           {
-            "id": "855d32d26b202e42",
+            "id": "dc9ee229d84a20c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NOT COMPLETE/Neural Net.md",
+                "file": "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "2d05eba0629516f2",
+            "id": "1b74054e8e8180d9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DS&A/Patterns/Stack Patterns.md",
+                "file": "Data Structures & Algorithms/Patterns/2-D Dynamic Programming.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DS&A/Patterns/Stack Patterns.md",
+                "file": "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,17 +107,25 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2d05eba0629516f2",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "dc9ee229d84a20c1",
   "lastOpenFiles": [
-    "DS&A/Patterns/Two Pointers.md",
-    "DS&A/Patterns/Stack Patterns.md",
-    "NOT COMPLETE/Neural Net.md",
-    "DS&A/Patterns/Sliding Window.md",
-    "DS&A/Patterns/Arrays & Hashing.md",
-    "NOT COMPLETE/Recurrent Neural Net.md",
-    "NOT COMPLETE/Transformers.md",
-    "NOT COMPLETE/Transactions.md",
-    "NOT COMPLETE/Embeddings.md",
-    "NOT COMPLETE/Convolutional Neural Net.md"
+    "Data Structures & Algorithms/Patterns/Stack Patterns.md",
+    "Data Structures & Algorithms/Patterns/Sliding Window.md",
+    "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
+    "NOT COMPLETE/Attention.md",
+    "Machine Learning/Bias vs. Variance.md",
+    "Machine Learning/Classification.md",
+    "Machine Learning/Clustering.md",
+    "Machine Learning/Feature Engineering.md",
+    "Machine Learning/ML Metrics.md",
+    "Machine Learning/Regression.md"
   ]
 }

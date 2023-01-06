@@ -1,10 +1,10 @@
 
 
-There has been many new paradigms of database technology, these new ideas outside of the classic [Relational DB](Relational%20DB.md) are collectively called Not Only SQL, better known as NoSQL. The paradigms are as follows:
+There has been many new paradigms of database technology, these new ideas outside of the classic [Relational Databases](Relational%20Databases.md) are collectively called Not Only SQL, better known as NoSQL. The paradigms are as follows:
 
 
-### [Document DB](Document%20DB.md)
-JSON-like document style storage, similar to [Serialized](Serialization.md) data sent via [HTTP](HTTP.md).
+### [Document Databases](Document%20Databases.md)
+JSON-like document style storage, actually saved as [BSON](Serialization.md) encoding that allows binary types.
 Example: **MongoDB**
 
 ### Column-Oriented DB
@@ -17,3 +17,4 @@ Example: **Neo4J**
 
 ### Key-Value DB
 Storing data in key-value pairs, like a non-volatile [Hash Map](Hash%20Maps.md).
+Example: **Redis**

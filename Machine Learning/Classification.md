@@ -3,6 +3,8 @@
 **Classification** is predicting discrete values or **classes** for each input
 
 
+## Comparison of Algorithms
+
 ### Logistic Regression
 
 | Pros | Cons |

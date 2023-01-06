@@ -1,6 +1,6 @@
 
 
-In the interest of optimizing the space requirements, as well as logically and optimally arranging our data, we model data in a [Relational DB](Relational%20DB.md).
+In the interest of optimizing the space requirements, as well as logically and optimally arranging our data, we model data in a [Relational Databases](Relational%20Databases.md).
 
 
 ### Database Normalization

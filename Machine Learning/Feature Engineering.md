@@ -71,7 +71,7 @@ Finds maximum separability of the classes
 | | like PCA, must normalize data first |
 
 #### Autoencoders
-Type of [Neural Net](Neural%20Net.md) for feature extraction.
+Type of [Neural Networks](Neural%20Networks.md) for feature extraction.
 
 | Pros | Cons |
 | --- | --- |

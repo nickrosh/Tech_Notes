@@ -3,6 +3,8 @@
 **Clustering** is unsupervised learning technique that clusters data into a number of groups
 
 
+## Comparison of Algorithms
+
 
 ### K-Means
 

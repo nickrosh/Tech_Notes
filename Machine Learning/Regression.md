@@ -2,6 +2,7 @@
 
 **Regression** is predicting continuous/numeric variables. Mostly used for forecasting and optimizer systems
 
+## Comparison of Algorithms
 
 ### Linear Regression
 
