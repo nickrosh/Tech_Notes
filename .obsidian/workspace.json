@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6815a04171af34b8",
+        "id": "57c4108d724be16d",
         "type": "tabs",
         "children": [
           {
-            "id": "dc9ee229d84a20c1",
+            "id": "95dae41d2f5c4dc9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1b74054e8e8180d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Structures & Algorithms/Patterns/2-D Dynamic Programming.md",
+                "file": "Software Engineering/C++/Templates.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
+                "file": "Software Engineering/C++/Templates.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,17 +103,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dc9ee229d84a20c1",
+  "active": "95dae41d2f5c4dc9",
   "lastOpenFiles": [
-    "Data Structures & Algorithms/Patterns/Stack Patterns.md",
-    "Data Structures & Algorithms/Patterns/Sliding Window.md",
-    "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
-    "NOT COMPLETE/Attention.md",
-    "Machine Learning/Bias vs. Variance.md",
-    "Machine Learning/Classification.md",
-    "Machine Learning/Clustering.md",
-    "Machine Learning/Feature Engineering.md",
-    "Machine Learning/ML Metrics.md",
-    "Machine Learning/Regression.md"
+    "Software Engineering/C++/STL.md",
+    "Software Engineering/C++/Smart Pointers.md",
+    "Software Engineering/C++/Scope, Duration, & Linkage.md",
+    "Software Engineering/C++/References.md",
+    "Software Engineering/C++/RAII.md",
+    "Software Engineering/C++/Overloading.md",
+    "Software Engineering/C++/Lambdas.md",
+    "Software Engineering/C++/Exceptions.md",
+    "Software Engineering/C++/C++ OOP.md",
+    "Software Engineering/C/Dynamic Memory Allocation.md"
   ]
 }

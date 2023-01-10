@@ -1,6 +1,6 @@
 
 
-These principles help you write better, more modular code that can be extended and used by a large team.
+These principles help you write better, more modular object oriented code that can be extended and used by a large team.
 
 
 

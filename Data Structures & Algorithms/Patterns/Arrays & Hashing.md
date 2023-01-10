@@ -11,7 +11,7 @@ One method is a frequency [Hash Map](Hash%20Maps.md), another is an array with 2
 
 You can get the top k frequent elements in an array in linear time by doing something similar to bucket sort
 
-![](Pasted%20image%2020221207171047.png)
+![](../../Attachments/Pasted%20image%2020221207171047.png)
 
 Normally, you would make a [Hash Map](Hash%20Maps.md) and put the element-value as the key and the frequency as the value. But this would mean the key space would be unbounded, and you would also be unable to know which keys correspond to the highest frequency values. 
 Instead, flip the reasoning, so frequency will be the key, and value will be a list of elements that correspond to the frequency. The length of the array will be N + 1, the number of elements in the input + 1 (for zero frequency).

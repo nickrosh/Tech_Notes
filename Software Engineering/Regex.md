@@ -1,6 +1,6 @@
 
 
-**Regex** is used to find specific text within large text documents.
+**Regular Expressions** are used to find specific text within large text documents. This is either in a program or with a [Command Line Tool](Common%20Linux%20Commands.md) like grep.
 
 | Regex | Description |
 | --- | --- |
