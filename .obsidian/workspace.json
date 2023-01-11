@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Software Engineering/C++/C++ STL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "165cc20f24e2a14f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Software Engineering/C++/Templates.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,9 +116,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "95dae41d2f5c4dc9",
+  "active": "165cc20f24e2a14f",
   "lastOpenFiles": [
-    "Software Engineering/C++/STL.md",
+    "Software Engineering/C++/C++ OOP.md",
+    "Software Engineering/C++/Templates.md",
     "Software Engineering/C++/Smart Pointers.md",
     "Software Engineering/C++/Scope, Duration, & Linkage.md",
     "Software Engineering/C++/References.md",
@@ -113,7 +127,6 @@
     "Software Engineering/C++/Overloading.md",
     "Software Engineering/C++/Lambdas.md",
     "Software Engineering/C++/Exceptions.md",
-    "Software Engineering/C++/C++ OOP.md",
-    "Software Engineering/C/Dynamic Memory Allocation.md"
+    "Software Engineering/C++/C++ STL.md"
   ]
 }
