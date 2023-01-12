@@ -1,13 +1,13 @@
 
 
-Linear Data Structure similar to [[Queues]] that follows a FILO (First In, Last Out) scheme. The primary functions are as follows:
+Linear Data Structure similar to [Queues](Queues.md) that follows a FILO (First In, Last Out) scheme. The primary functions are as follows:
 
 - Push: add an item to the top of the stack
 - Pop: remove the item from the top of the stack
 - Is_Empty: checks to see if the stack is empty
 - Peek: gets the value of the top element without removing it from the stack
 
-![[Pasted image 20220404003056.png]]
+![](../../Attachments/Pasted%20image%2020220404003056.png)
 
 
 ### Time Complexity

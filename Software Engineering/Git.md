@@ -4,7 +4,7 @@ Git is the version control system invented by Linus Torvalds.
 
 ### Fundamentals
 
-![](Pasted%20image%2020220830231635.png)
+![](../Attachments/Pasted%20image%2020220830231635.png)
 
 When you add files or change existing files in a repo they must be added to the current snapshot with `git add`. You can see what is current in the snapshot with `git status`. Then once you wish to commit the snapshot, use `git commit`. To then view the history of snapshots you may use `git log`. These three actions form the core of Git's functionality. You can also tag a commit e.g. labelling a specific snapshot as a stable release with something like `git tag -a v1.0 -m "Stable version 1"`.
 
@@ -12,14 +12,14 @@ To view a different snapshot in time you use `git checkout [commit checksum]` an
 
 To revert to a previous commit, use `git revert`. This creates a new commit that is a copy of the commit before the revert. Git never erases history.
 
-![](Pasted%20image%2020220831000055.png)
+![](../Attachments/Pasted%20image%2020220831000055.png)
 `git reset --hard` will resets all tracked files to the last commit
 `git clean -f` will remove all untracked files. 
 Be careful with these as they delete things without keeping a record like `revert`.
 
 ### Branches
 
-![](Pasted%20image%2020220831002436.png)
+![](../Attachments/Pasted%20image%2020220831002436.png)
 You create branches to work on different features without having to edit the main branch.
 
 `git branch` to view all branches
@@ -35,11 +35,11 @@ At their core, branches are just a way to maintain different file repositories. 
 
 Merging two branches is simple if one is linearly ahead of the other, this is called a fast-forward merge.
 
-![](Pasted%20image%2020220831002933.png)
+![](../Attachments/Pasted%20image%2020220831002933.png)
 When there is a conflict, like the image above, a 3-way merge is performed and you must resolve any conflicts that arise by selecting which changes to keep from each branch. This could be a messy problem if there are a lot of conflicts
 
 An alternative is rebasing.
-![](Pasted%20image%2020220831003241.png)
+![](../Attachments/Pasted%20image%2020220831003241.png)
 With `git rebase [target]` you can stick your current branch in front of the target branch. This makes the merge a simple fast-forward merge and makes it much simpler to accomplish. No merge conflicts will exist
 
 
@@ -47,7 +47,7 @@ With `git rebase [target]` you can stick your current branch in front of the tar
 
 You can add a remote repo like **GitHub** with `git remote add [remote] [link]`. This will add the remote repo, which you can interact with
 
-![](Pasted%20image%2020220831004612.png)
+![](../Attachments/Pasted%20image%2020220831004612.png)
 
 `git push [remote] [branch]` pushes your branch to the remote repo. 
 `git fetch [remote]` pulls in changes from the remote repo, you can then merge in those changes. 

@@ -1,6 +1,6 @@
 
 
-**XPath/JSONPath**: How to traverse [XML/JSON](Serialization.md) respectively
+**XPath/JSONPath**: How to traverse [XML/JSON](../Internet%20&%20Networking/Serialization.md) respectively
 
 
 |XPath | JSONPath | Description |

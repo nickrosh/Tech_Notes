@@ -23,4 +23,4 @@ int main() {
 }
 ```
 
-remember not to do `fcnPtr = goo();` this tries to assign the return value from a call to the function (of type int) to the pointer which is expecting type `int(*)()` . We want the pointer set to the address of the function. Th power of function pointers is that you can make flexible functions and libraries that allow the programmer to choose behavior by passing function pointers as arguments, like selecting what function to use to compare two numbers. This is accomplished by [virtual functions](C++%20OOP.md) in C++.
+remember not to do `fcnPtr = goo();` this tries to assign the return value from a call to the function (of type int) to the pointer which is expecting type `int(*)()` . We want the pointer set to the address of the function. Th power of function pointers is that you can make flexible functions and libraries that allow the programmer to choose behavior by passing function pointers as arguments, like selecting what function to use to compare two numbers. This is accomplished by [virtual functions](../C++/C++%20OOP.md) in C++.

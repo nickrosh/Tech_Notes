@@ -9,7 +9,7 @@ Breadth first search is a graph and tree search algorithm that searches level-by
 
 
 
-![](Pasted%20image%2020220413232230.png)
+![](../../Attachments/Pasted%20image%2020220413232230.png)
 
 
 ### Time Complexity

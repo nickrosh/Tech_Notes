@@ -12,7 +12,7 @@ The original data format to be sent over the web. It is old and bad. The format 
 
 
 ### JSON
-The most popular and important format for sending data, usually over [REST APIs](REST%20API.md). it is a simple format, that looks like [Hash Maps](Hash%20Maps.md). JSON accepts the following data types:
+The most popular and important format for sending data, usually over [REST APIs](REST%20API.md). it is a simple format, that looks like [Hash Maps](../Data%20Structures%20&%20Algorithms/Data%20Structures/Hash%20Maps.md). JSON accepts the following data types:
 
 - String
 - Number

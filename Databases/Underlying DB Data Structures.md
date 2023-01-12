@@ -1,11 +1,11 @@
 
 ## Hash Indexes
 
-The simplest way to store data is with [Hash Maps](Hash%20Maps.md). These [Key-Value Stores](NoSQL.md) simply map values to hashable indexes. Let's say our data storage consists only of appending to a file, let's call this the log. Whenever you need to find an object, simply look for its index. A simplistic system like this is well suited for in-memory storage that is updated frequently with not too many distinct keys
+The simplest way to store data is with [Hash Maps](../Data%20Structures%20&%20Algorithms/Data%20Structures/Hash%20Maps.md). These [Key-Value Stores](NoSQL.md) simply map values to hashable indexes. Let's say our data storage consists only of appending to a file, let's call this the log. Whenever you need to find an object, simply look for its index. A simplistic system like this is well suited for in-memory storage that is updated frequently with not too many distinct keys
 
 If we keep just appending to the log, how do we avoid eventually running out of disk space? A good solution is to break the log into segments of a certain size by closing a segment file when it reaches a certain size, and making subsequent writes to a new segment file. We can then perform *compaction* on these segments, where we throw away duplicate keys in the log, and keep only the most recent update for each key (Last Write Wins). As we compact the segments and they become smaller, we can also *merge* the files together. Segments are never modified after they have been written, so the merged segment is written to a new file.
 
-![](Pasted%20image%2020221227170759.png)
+![](../Attachments/Pasted%20image%2020221227170759.png)
 
 An append-only log seems wasteful but it has its benefits:
 - Appending and segment merging are sequential writes, which are much faster than random writes, especially on Hard Drives, and SSDs to a lesser extent
@@ -21,11 +21,11 @@ However there are also limitations:
 
 We make a small change to the format of our segment files: we require that the sequence of key-value pairs is *sorted by key*. This format is called *Stored String Tables* or *SSTables* for short. SSTables have several key advantages over log segments with hash indexes
 
-1. Merging segments is simple and efficient, even if the files are bigger than the available memory. The approach is like the one used in the [Merge Sort](Merge%20Sort.md) algorithm. You start looking at the input files, look at the first key in each file, copy the lowest key (according to the sort order) to the output file, and repeat. This produces a new merged segment file, also sorted by key. As each segment contains all the values written to the DB during some period of time , this means that all the values in one segment must be more recent than all the values in another segment. Thus, we don't have to worry about keys showing up in multiple segments.
+1. Merging segments is simple and efficient, even if the files are bigger than the available memory. The approach is like the one used in the [Merge Sort](../Data%20Structures%20&%20Algorithms/Algorithms/Merge%20Sort.md) algorithm. You start looking at the input files, look at the first key in each file, copy the lowest key (according to the sort order) to the output file, and repeat. This produces a new merged segment file, also sorted by key. As each segment contains all the values written to the DB during some period of time , this means that all the values in one segment must be more recent than all the values in another segment. Thus, we don't have to worry about keys showing up in multiple segments.
 2. In order to find a particular key in the file, you no longer need to keep an index of all the keys in memory. As everything is sorted, you only need a few sparse keys to point you in the right direction, and then you just need to scan a few kilobytes.
 3. Since read requests need to scan over several key-value pairs in the requested range anyway, it is possible to group those records into a block and compress it before writing it to disk. This saves disk space and I/O bandwidth use.
 
-How to actually get the data sorted by key in the first place? We maintain a balanced [Tree](Trees.md) (like Red-Black) in memory that allow us to sort our data. Now our storage engine works like the following:
+How to actually get the data sorted by key in the first place? We maintain a balanced [Tree](../Data%20Structures%20&%20Algorithms/Data%20Structures/Trees.md) (like Red-Black) in memory that allow us to sort our data. Now our storage engine works like the following:
 - When a write comes in, add it to an in-memory balanced tree data structure. This is sometimes called a *memtable*.
 - When the memtable gets bigger than some threshold- typically a few megabytes- write it our to disk as an SSTable file. This can be done efficiently because the tree already maintains the key-value pairs sorted by key. The new SSTable is being written out to disk, writes can continue to a new memtable instance.
 - In order to serve a read request, first try to find it in the memtable, then in the most recent segment on-disk, then look through older segments.
@@ -40,7 +40,7 @@ The most widely used structure however, is the *B-Tree*. It is used in almost ev
 
 Like SSTables, B-Trees keep key-value pairs sorted by key, which allows efficient key value lookups and range queries. The log-structured systems we looked at earlier break down into megabyte sized segments, and write sequentially. B-Trees break the database down into fixed-size *blocks* or *pages*, traditionally 4KB in size (sometimes bigger), and read or write one page at a time. This design aligns more closely to the actual hardware as disk are also arranged in fixed-size blocks. 
 
-![](Pasted%20image%2020221227174600.png)
+![](../Attachments/Pasted%20image%2020221227174600.png)
 
 One page is designated the *root* of the tree and contains several keys and references to child pages. Each child is responsible for a continuous range of keys, and the keys between references indicate where the boundaries between those ranges lie. Eventually we get down to a page containing individual keys (a *leaf* page) which either contains the values for each key inline or contains references to the pages where the values can be found.
 

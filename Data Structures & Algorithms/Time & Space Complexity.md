@@ -1,4 +1,4 @@
-**Time Complexity** quantifies the amount of time taken by an algorithm to run as a function of the length of the input 'N'. It is assumed that constant time 'c' is taken to execute one operation. Thus if you had an [Array](Arrays.md) of size N and you iterated through the whole thing, the algorithm would be $O(n)$ time complexity. Note that we generally prefer better time complexity, even at the expense of space.
+**Time Complexity** quantifies the amount of time taken by an algorithm to run as a function of the length of the input 'N'. It is assumed that constant time 'c' is taken to execute one operation. Thus if you had an [Array](Data%20Structures/Arrays.md) of size N and you iterated through the whole thing, the algorithm would be $O(n)$ time complexity. Note that we generally prefer better time complexity, even at the expense of space.
 
 **Space Complexity** quantifies the space that the algorithm takes up to run as a function of the length of the input. For example, if you needed to save an array the same size as the input, then your space complexity would be $O(n)$.
 
@@ -12,17 +12,17 @@ $$
 The best complexity is constant time $O(1)$, then comes log time $O(logn)$ and then linear time $O(n)$. After this is $O(nlogn)$ which is the best complexity for sorting, so it is commonly seen.
 
 
-![](Pasted%20image%2020221220004601.png)
+![](../Attachments/Pasted%20image%2020221220004601.png)
 
 ### Common Data Structures Operations
 
-![](Pasted%20image%2020221220004814.png)
+![](../Attachments/Pasted%20image%2020221220004814.png)
 
 
 
 ### Common Algorithm Complexities
 
-![](Pasted%20image%2020221220005008.png)
+![](../Attachments/Pasted%20image%2020221220005008.png)
 
 Additionally for advanced algorithms, we commonly see the following complexities. But note that **these are not hard rules like the above are**, these are only common complexities
 

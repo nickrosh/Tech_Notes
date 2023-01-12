@@ -20,7 +20,7 @@ Besides simple key-value modeling, the situation becomes more complicated when s
 
 #### Partitioning Secondary Indexes by Document
 
-![](Pasted%20image%2020221130224756.png)
+![](../Attachments/Pasted%20image%2020221130224756.png)
 
 In this approach, each partition is completely separate: each partition maintains its own secondary indexes, covering only the documents in that partition. It doesn't care what data is stored in other partitions. Whenever you need to write to the database- to add, remove, or update a document- you only need to deal with the partition that contains the document ID that you are writing. For that reason, a document partitioned index is also known as a *local index*. This method is popular with [Document DBs](Document%20Databases.md).
 
@@ -28,7 +28,7 @@ This method makes no guarantee everything you are searching for will be in the s
 
 #### Partitioning Secondary Indexes by Term
 
-![](Pasted%20image%2020221130225553.png)
+![](../Attachments/Pasted%20image%2020221130225553.png)
 
 Rather than every partition having its own secondary index, we can construct a global index that covers data in all partitions. However, we can't just store that index on one node, since it would likely become a bottleneck and defeat the purpose of partitioning. A global index must also be partitioned, but it can be partitioned differently from the primary key index.
 
@@ -42,11 +42,11 @@ Over time, things change in a database, from increased load, to larger datasets,
 2. While rebalancing is happening, the DB should continue accepting reads and writes
 3. No more data than necessary should be moved between nodes
 
-*Note*: There is a debate between Manual and Automatic rebalancing. While [Consistent Delivery](CI%20&%20CD.md) is all the rage, it's still always good to have a human in the loop.
+*Note*: There is a debate between Manual and Automatic rebalancing. While [Consistent Delivery](../Software%20Engineering/CI%20&%20CD.md) is all the rage, it's still always good to have a human in the loop.
 
 #### Rebalancing a Fixed Number of Partitions
 
-![](Pasted%20image%2020221130231959.png)
+![](../Attachments/Pasted%20image%2020221130231959.png)
 
 There is a simple solution: create many more partitions than there are nodes, and assign several partitions to each node. This way, entire partitions are moved between nodes, and we can ensure only partition assignment to nodes is what is changing. This goes back to the original point however, that the number of partitions must be carefully considered. Large partitions make rebalancing expensive, and small partitions have overhead.
 
@@ -60,22 +60,22 @@ For both fixed and Dynamic partitioning, the partition scheme is done according 
 
 #### Manual or Automatic?
 
-The one important question in regards to rebalancing partitions is: does the rebalancing happen automatically or manually? In the quest for ever more automation and [CI & CD](CI%20&%20CD.md) many push for fully automated rebalancing. However, it can be unpredictable. Rebalancing is an expensive operation, because it requires rerouting requests and moving a large amount of data from one node to another. If it is not done carefully, this can overload the network or the nodes and harm the performance of other requests while rebalancing is in progress. For these reasons, it is usually a good idea to have a human in the loop.
+The one important question in regards to rebalancing partitions is: does the rebalancing happen automatically or manually? In the quest for ever more automation and [CI & CD](../Software%20Engineering/CI%20&%20CD.md) many push for fully automated rebalancing. However, it can be unpredictable. Rebalancing is an expensive operation, because it requires rerouting requests and moving a large amount of data from one node to another. If it is not done carefully, this can overload the network or the nodes and harm the performance of other requests while rebalancing is in progress. For these reasons, it is usually a good idea to have a human in the loop.
 
 
 ## Request Routing
 
 We have now partitioned our dataset across multiple nodes running on multiple machines, but there remains an open question: when a client wants to make a request, how does it know which node to connect to? This is an instance of a more general problem called *service discovery*
 
-![](Pasted%20image%2020221228210448.png)
+![](../Attachments/Pasted%20image%2020221228210448.png)
 
 There are a few different approaches we can do:
-1. Allow clients to contact any node (e.g. via a round-robin [Load Balancer](Load%20Balancer.md)) If that node coincidentally own the partition to which the request applies, it can handle the request. Otherwise, it is routed to the correct node.
-2. Send all requests from the clients to a routing tier first, which determines the node that should handle each request and forwards it accordingly. This routing tier acts only as a partition-aware [Load Balancer](Load%20Balancer.md).
+1. Allow clients to contact any node (e.g. via a round-robin [Load Balancer](../Distributed%20Systems/Load%20Balancer.md)) If that node coincidentally own the partition to which the request applies, it can handle the request. Otherwise, it is routed to the correct node.
+2. Send all requests from the clients to a routing tier first, which determines the node that should handle each request and forwards it accordingly. This routing tier acts only as a partition-aware [Load Balancer](../Distributed%20Systems/Load%20Balancer.md).
 3. Require that clients be aware of the partitioning and the assignment of partitions to nodes. In this case, a client can connect directly to the appropriate node.
 
 This is a hard problem. Many systems rely on a separate coordination service such as Zookeeper to keep track of this cluster metadata.
 
-![](Pasted%20image%2020221228210856.png)
+![](../Attachments/Pasted%20image%2020221228210856.png)
 
 Whenever a partition changes ownership or a node is added or removed, Zookeeper notifies the routing tier so that it can keep its routing information up to data.

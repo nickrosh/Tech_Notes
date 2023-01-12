@@ -16,12 +16,12 @@ When a dynamically allocated variable is deleted, the memory is "returned" to th
 - Allocating memory on the heap is comparatively slow.
 - Allocated memory stays allocated until it is specifically deallocated (beware memory leaks) or the application ends (at which point the OS should clean it up).
 - Dynamically allocated memory must be accessed through a pointer. Dereferencing a pointer is slower than accessing a variable directly.
-- Because the heap is a big pool of memory, large arrays, structures, or [classes](C++%20OOP.md) can be allocated here.
+- Because the heap is a big pool of memory, large arrays, structures, or [classes](../C++/C++%20OOP.md) can be allocated here.
 
 
 ## Stack
 
-The call stack (usually referred to as "The Stack") has a much more interesting role to play. The call stack keeps track of all the active functions (those that have been called but haver not yet terminated) from the start of the program top the current point of execution, and handles allocation of all function parameters and local variables. The call stack is simply a [Stack](Stacks.md) data structure and thus executes functions FIFO.
+The call stack (usually referred to as "The Stack") has a much more interesting role to play. The call stack keeps track of all the active functions (those that have been called but haver not yet terminated) from the start of the program top the current point of execution, and handles allocation of all function parameters and local variables. The call stack is simply a [Stack](../../Data%20Structures%20&%20Algorithms/Data%20Structures/Stacks.md) data structure and thus executes functions FIFO.
 
 Here is a sequence of steps that takes place when a function is called:
 1. The program encounters a function call.

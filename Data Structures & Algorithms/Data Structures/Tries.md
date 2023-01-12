@@ -2,7 +2,7 @@
 
 Tries are data structures that derive from [Trees](Trees.md). They are designed for efficient search of strings. In a Trie, every Node is a letter and they connect to each other to form words. The final node in a _word_ has a special flag which denotes that from the root to that particular node creates a full word. Usually, string search in a Balanced Binary Tree would be $O(M log N)$, where M is maximum string length and N is number of keys in tree. With a Trie, Insert and search costs $O(M)$ where M is the key length, however the space requirements of a Trie is $O(26 M N)$, the 26 coming from the size of the alphabet.
 
-![](Pasted%20image%2020220413232023.png)
+![](../../Attachments/Pasted%20image%2020220413232023.png)
 
 
 ### Implementation

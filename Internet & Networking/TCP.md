@@ -4,7 +4,7 @@ The TCP protocol is the backbone of the modern internet and a key component of t
 
 ### 3-way handshake
 
-![](Pasted%20image%2020220416151554.png)
+![](../Attachments/Pasted%20image%2020220416151554.png)
 
 TCP performs a "3-way-handshake" when it establishes a connection to ensure the server is active and connected. 
 

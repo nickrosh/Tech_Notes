@@ -1,16 +1,16 @@
 
 
-Token Authentication is a stateless authentication method that does not require [Cookies](Cookies.md).
+Token Authentication is a stateless authentication method that does not require [Cookies](../Cookies.md).
 
-![](Pasted%20image%2020220831010621.png)
+![](../../Attachments/Pasted%20image%2020220831010621.png)
 
 The user sends a request. If they are validated, then the server sends back a token. The user can then use that token to access requested pages without needing to be validated against a session ID.
 
 ### JSON Web Token
 
-JWTs are a popular type of token authentication for [REST API](REST%20API.md)s.
+JWTs are a popular type of token authentication for [REST API](../REST%20API.md)s.
 
-![](Pasted%20image%2020220831010824.png)
+![](../../Attachments/Pasted%20image%2020220831010824.png)
 
 The JWT is a 3 part token. Note that the token is not encrypted so don't send secrets in the payload.
 

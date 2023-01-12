@@ -20,7 +20,7 @@ The more popular way to handle collisions is with open addressing, finding a new
 
 
 Example of a Hash Map using chaining to deal with collisions.
-![](Pasted%20image%2020220413231644.png)
+![](../../Attachments/Pasted%20image%2020220413231644.png)
 
 
 ## Time Complexity

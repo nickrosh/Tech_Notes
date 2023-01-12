@@ -1,16 +1,16 @@
 
-Once you start expanding a [Relational Databases](Relational%20Databases.md) and need to handle more read and write requests, your first action should be creating replicas of the data and [Load Balancing](Load%20Balancer.md) among the various nodes to keep the load manageable.
+Once you start expanding a [Relational Databases](Relational%20Databases.md) and need to handle more read and write requests, your first action should be creating replicas of the data and [Load Balancing](../Distributed%20Systems/Load%20Balancer.md) among the various nodes to keep the load manageable.
 
 
 ## Leader-Follower Replication
 
-![](Pasted%20image%2020220417171545.png)
+![](../Attachments/Pasted%20image%2020220417171545.png)
 
 The most common architecture for replication is the **Leader-Follower** (also known as Master-Slave) model where there is one _Leader_ node where all the writes are sent to, and many replica _Follower_ Nodes that handle all the read requests.
 
 #### Synchronous Versus Asynchronous Replication
 
-![](Pasted%20image%2020221227184840.png)
+![](../Attachments/Pasted%20image%2020221227184840.png)
 
 See the example above. The replication to Follower 1 is *synchronous*: the leader waits until follower 1 has confirmed that it received the write before reporting success to the user, and before making the write visible to other clients. The replication to Follower 2 is *asynchronous*: the leader send the message, but doesn't wait for a response from the follower.
 
@@ -49,7 +49,7 @@ As the number and distance of replicas grows, a lag occurs between when the lead
 
 #### Reading Your Own Writes
 
-![](Pasted%20image%2020221227192731.png)
+![](../Attachments/Pasted%20image%2020221227192731.png)
 Say you make a write, then immediately try to read it and you see the old data. Your write went to the leader but the read then went to an stale follower. To ensure that a user always sees the data that they just updated, they can't look at an old replica. Some possible solutions include:
 - When reading something that the user may have modified, read it from the leader; otherwise, read it from a follower. This requires that you have some way of knowing whether something might have been modified, without actually querying it.
 - If most things in the application are potentially editable by the user, that approach won't be effective, as most things would have to be read from the leader (negating the benefit of read scaling). In that case, other criteria ma be used to decide whether to read from the leader. For example, you could track the time of the last update and, for one minute after the last update, make all reads from the leader. You could also monitor the replication lag on followers and prevent queries on any follower that is more than one minute behind the leader.
@@ -58,18 +58,18 @@ Say you make a write, then immediately try to read it and you see the old data. 
 
 #### Monotonic Reads
 
-![](Pasted%20image%2020221227192810.png)
+![](../Attachments/Pasted%20image%2020221227192810.png)
 If you read from different followers at different stages of replication, you may be data this _back in time_ like comments out of order. Above the user first reads from a fresh replica Follower 1, then reads again from a stale replica Follower 2, and can't see the data they just saw. *Monotonic Reads* guarantees that this kind of anomaly does not happen. One solution is to make sure a user always reads from the same follower, that way they will only see data in a linear time.
 
 #### Consistent Prefix Reads
 
-![](Pasted%20image%2020221227193052.png)
+![](../Attachments/Pasted%20image%2020221227193052.png)
 A problem particularly with [DB Partitions](DB%20Partitions.md) is when you read the wrong order of writes coming from different partitions. Above you can see, an observer looking at partition 2 will see that Ms. Poon has time travelled and the conversation is reversed This anomaly requires another type of guarantee, *Consistent Prefix*. This guarantee says that if a a sequence of writers happens in a certain order, then anyone reading those writes will see them appear in the same order.. One solution to this is to make sure that any writes that are causally related to each other are written to the same partition.
 
 
 ## Multi-Leader Replication
 
-![](Pasted%20image%2020220417174437.png)
+![](../Attachments/Pasted%20image%2020220417174437.png)
 
 In some cases, we may want to have multiple leaders. Replication happens much the same way: each node that processes a write must forward that data change to all the other nodes. We call this a *multi-leader* configuration. There are many reasons to use this configuration
 - **Multi-datacenter operation**: Imagine you have a database with replicas in several different datacenters (possibly to tolerate a failure at one of the datacenters). With multi-leader, you can have a leader in every database, and route all changes between the leaders over the internet, like in the picture above.
@@ -80,7 +80,7 @@ In some cases, we may want to have multiple leaders. Replication happens much th
 
 #### Handling Write Conflicts
 
-![](Pasted%20image%2020220417174434.png)
+![](../Attachments/Pasted%20image%2020220417174434.png)
 
 In a single-leader database, the second writer will either block and wait for the first write to complete, or abort the second write transaction, forcing the user to retry the write. On the other hand, in a multi-leader database, both writes are successful and the conflict is only detected asynchronously at some later point in time. In principle, you could make the conflict detection  synchronous- i.e. wait for the write to be replicated to all replicas before telling the user that the write was successful. However by doing so, you lose the main advantage of Multi-leader: allowing each replica to accept writes independently. 
 
@@ -100,7 +100,7 @@ There is a third approach, abandoning the concept of a leader and allowing any r
 
 ### Writing to the Database When a Node is Down
 
-![](Pasted%20image%2020221227222612.png)
+![](../Attachments/Pasted%20image%2020221227222612.png)
 
 In a leader configuration, if a node goes down, you would have to go into failover. In leaderless, failover does not exist. The above image shows what happens: the client (user 1234) send the write to all three replicas is parallel, and the two available replicas accept the write but the unavailable replica misses it. Let's say that it's sufficient for two out of three replicas to acknowledge the write: after user 1234 has received two *ok* responses, we consider the write to be successful. The client simply ignores the fact that one of the replicas missed the write. Now the node comes back online except it has *stale* data. To solve this issue, when a client reads from the database, it sends read requests to *several nodes in parallel*.
 
@@ -113,7 +113,7 @@ In this scheme, eventually all data should be copied to every node to ensure eve
 
 #### Quorums for Reading and Writing
 
-![](Pasted%20image%2020220417181137.png)
+![](../Attachments/Pasted%20image%2020220417181137.png)
 
 Say you make a read or a write and only 2 out of 3 nodes respond that it was successful. Can that be considered a successful operation? In fact, we can determine whether an operation was successful if it reaches a quorum with all the nodes. If there are **N** replicas, every write must be confirmed by **W** nodes to be considered successful, and we must read **R** nodes for each read. As long as $W + R > N$, we expect to get an up-to-date value when reading.
 

@@ -10,7 +10,7 @@ def traverse(root):
 	# Post-order Traversal
 ```
 
-Almost every single algorithm about Trees, and really most data structures follow the above template. Every single [Depth First Search](Depth%20First%20Search.md) question is just this with one or two changes to make it unique. You can look at [Graphs](Graphs.md) as just a Tree with N-neighbors. Thus this gets even further reduced when talking about graphs with N connections
+Almost every single algorithm about Trees, and really most data structures follow the above template. Every single [Depth First Search](../Algorithms/Depth%20First%20Search.md) question is just this with one or two changes to make it unique. You can look at [Graphs](../Data%20Structures/Graphs.md) as just a Tree with N-neighbors. Thus this gets even further reduced when talking about graphs with N connections
 
 ```python
 def traverse(root):
@@ -49,7 +49,7 @@ def dfs(node):
 
 ## Order-Level Traversal
 
-The tree equivalent of [Breadth First Search](Breadth%20First%20Search.md) is to go through each level of the tree left to right iteratively. This is very useful in problems that require something special or a particular node from each level of the tree. 
+The tree equivalent of [Breadth First Search](../Algorithms/Breadth%20First%20Search.md) is to go through each level of the tree left to right iteratively. This is very useful in problems that require something special or a particular node from each level of the tree. 
 
 ```python
 def level_order(root):

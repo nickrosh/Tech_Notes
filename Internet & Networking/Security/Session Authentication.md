@@ -1,8 +1,8 @@
 
 
-With Session Authentication, the DB tracks when a user logs in and when they log off, also takes advantage of [Cookies](Cookies.md). 
+With Session Authentication, the DB tracks when a user logs in and when they log off, also takes advantage of [Cookies](../Cookies.md). 
 
-![](Pasted%20image%2020220831005557.png)
+![](../../Attachments/Pasted%20image%2020220831005557.png)
 
 The server compares the login info against the user information in the DB. If it is correct then the server returns a cookie containing the session ID to the user. The user can then use that cookie to authenticate with subsequent requests
 

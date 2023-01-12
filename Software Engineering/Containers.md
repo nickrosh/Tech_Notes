@@ -4,7 +4,7 @@ Containers are a lightweight method to package code and dependencies in a depend
 
 
 
-![](Pasted%20image%2020220830225314.png)
+![](../Attachments/Pasted%20image%2020220830225314.png)
 
 
 ## Docker

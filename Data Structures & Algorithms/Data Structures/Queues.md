@@ -1,6 +1,6 @@
 
 
-Linear Data Structure similar to [[Stacks]] that follows a FIFO (First In, First Out) scheme. The primary functions are as follows:
+Linear Data Structure similar to [Stacks](Stacks.md) that follows a FIFO (First In, First Out) scheme. The primary functions are as follows:
 
 - Enqueue: add an item to the rear of the queue
 - Dequeue: remove the item at the front of the queue
@@ -8,7 +8,7 @@ Linear Data Structure similar to [[Stacks]] that follows a FIFO (First In, First
 - Peek: gets the value of the front element without removing it from the queue
 
 
-![[Pasted image 20220404003359.png]]
+![](../../Attachments/Pasted%20image%2020220404003359.png)
 
 
 ### Time Complexity

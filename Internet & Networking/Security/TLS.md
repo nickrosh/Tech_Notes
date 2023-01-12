@@ -1,9 +1,9 @@
 
 
-Transport Layer Security is a security protocol in the [Application Layer](TCP-IP%20Model.md) that encrypts and decrypts data sent over the internet. It is responsible for encrypting [HTTP](HTTP.md) into the secure form HTTPS. TLS has the server send over its credentials from a **Certificate Authority (CA)** as a source of truth of a server's identity. Then, cryptographic session keys are created and exchanged which allow the client and server to have a secure encrypted channel.
+Transport Layer Security is a security protocol in the [Application Layer](../TCP-IP%20Model.md) that encrypts and decrypts data sent over the internet. It is responsible for encrypting [HTTP](../HTTP.md) into the secure form HTTPS. TLS has the server send over its credentials from a **Certificate Authority (CA)** as a source of truth of a server's identity. Then, cryptographic session keys are created and exchanged which allow the client and server to have a secure encrypted channel.
 
 
-![](Pasted%20image%2020220416160434.png)
+![](../../Attachments/Pasted%20image%2020220416160434.png)
 
 1. The handshake begins when a client connects to a TLS-enabled server requesting a secure connection and the client presents a list of supported [cipher suites](https://en.wikipedia.org/wiki/Cipher_suite "Cipher suite") ([ciphers](https://en.wikipedia.org/wiki/Encryption "Encryption") and [hash functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function "Cryptographic hash function")).
 2. From this list, the server picks a cipher and hash function that it also supports and notifies the client of the decision.

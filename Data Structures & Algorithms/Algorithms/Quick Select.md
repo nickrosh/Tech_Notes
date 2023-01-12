@@ -1,7 +1,7 @@
 >Given an integer array, find the Kth largest element
 
 If we [Sort](Quick%20Sort.md) the array, it will be in $O(nlogn)$ time.
-If we use a [Priority Queue](Heaps.md) it will be in $O(nlogk)$ time.
+If we use a [Priority Queue](../Data%20Structures/Heaps.md) it will be in $O(nlogk)$ time.
 
 We can actually do better. **Quick Select** is an algorithm that can select a value in $O(n)$ average time. 
 

@@ -12,7 +12,7 @@ Every table has a primary key which allows you to find each row. The *primary ke
 
 The most important component of RDBs is the relationship of data, and how you are able to create relationships among disparate data fields. The process of removing repeated data and putting into separate tables is called *Normalization*
 
-![](Pasted%20image%2020221228211559.png)
+![](../Attachments/Pasted%20image%2020221228211559.png)
 
 Instead of saving every single data field, simply use Foreign Keys, which are much more space efficient to point to the needed data in the other tables. When you are querying and actually need the data, you can then utilize *Joins* to recombine the data
 
@@ -21,7 +21,7 @@ Instead of saving every single data field, simply use Foreign Keys, which are mu
 #### Joins
 A key part the relational model is the joining of tables and data on certain conditions. Usually one would use `LEFT JOIN` from the central table and a secondary source of data. `INNER JOIN` only returns rows that have intersecting keys
 
-![](Pasted%20image%2020220415004100.png)
+![](../Attachments/Pasted%20image%2020220415004100.png)
 
 
 #### Indexes
@@ -54,7 +54,7 @@ Manipulating data within objects of the database are done with **DML** (Data Man
 `DELETE` => delete records from a table
 
 
-If we try to map the [CRUD](REST%20API.md) operations to SQL, it would be:
+If we try to map the [CRUD](../Internet%20&%20Networking/REST%20API.md) operations to SQL, it would be:
 
 Create = `INSERT`
 Read = `SELECT`

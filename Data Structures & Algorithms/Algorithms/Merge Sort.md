@@ -5,7 +5,7 @@ Merge sort is a sorting algorithm that **always** sorts in $O(n log n)$ time, bu
 Merge sort is also a stable sorting algorithm, meaning that duplicate values won't get their order changed. 
 
 
-![](Pasted%20image%2020220413231255.png)
+![](../../Attachments/Pasted%20image%2020220413231255.png)
 
 
 ### Time Complexity

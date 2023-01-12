@@ -13,7 +13,7 @@ The algorithm works as follows:
 
 You can see in the example, starting at Node _'S'_ the search goes until it reaches node _'B'_ which has no adjacent unsearched nodes, so it backtracks to _'G'_ and then goes down a new path until it finishes searching the entire graph.
 
-![](Pasted%20image%2020220413232525.png)
+![](../../Attachments/Pasted%20image%2020220413232525.png)
 
 ### Time Complexity
 

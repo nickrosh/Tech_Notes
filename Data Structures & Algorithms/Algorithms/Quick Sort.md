@@ -5,11 +5,11 @@ Quick sort is a sorting algorithm that takes advantage of the fact you can make 
 Quick sort is not stable however, meaning that duplicate values can switch in order
 
 Sorting the elements on the left of the pivot using recursion:
-![](Pasted%20image%2020220413231447.png)
+![](../../Attachments/Pasted%20image%2020220413231447.png)
 
 
 Sorting the elements on the right of  the pivot using recursion:
-![](Pasted%20image%2020220413231529.png)
+![](../../Attachments/Pasted%20image%2020220413231529.png)
 
 
 

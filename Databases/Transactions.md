@@ -26,7 +26,7 @@ To prevent dirty reads, Read Committed DBs simply save the old version of commit
 #### Snapshot Isolation
 
 
-![](Pasted%20image%2020221227002641.png)
+![](../Attachments/Pasted%20image%2020221227002641.png)
 
 While it might seem like *Read Committed* hits everything we need, look at the above picture for a bug called *Read Skew* where Alice observes the database in an inconsistent state. One of her reads is looking at the old version of the data, the second read is looking at the updated data. This bug is not a huge deal for many applications as you can just refresh the data you are looking at and get the right data, but for certain applications this is unacceptable.
 - Backups: Taking a backup requires making a copy of the entire database, which may take hours on a large database., During the time that the backup process is running, writes will continue to be made to the database.
@@ -56,7 +56,7 @@ The isolation levels described primarily protect against dirty reads in the case
 
 Another type of race condition is *Write Skew* when two transactions read the same objects and then update some of those objects (different transactions may update different objects). In the special case where different transactions update the same object, you get a dirty write or lost update anomaly (depending on the timing). 
 
-![](Pasted%20image%2020221227013633.png)
+![](../Attachments/Pasted%20image%2020221227013633.png)
 
 Here you can see an example where one doctor has to always be on-call. Both doctors concurrently read the DB and see there is another doctor on-call so they both leave, even though this shouldn't be allowed. Unlike Lost Updates, our previous solutions will not work. For something like two people trying to register the same Username at the same time, add a UNIQUE constraint to the database. This will not always work as like in the example above.
 
@@ -109,6 +109,6 @@ Queries based on a false premise are the root of many errors. To provide seriali
 
 **Detecting Writes That Affect Prior Reads**: The second case to consider is when another transaction modifies data after it has been read. In the context of 2PL, we discussed index-range locks, which allow the DB to lock access to all rows matching some search query. SSI does something similar except that SSI locks don't block other transactions. When a transaction writes to the DB, it must look in the indexers for any other transactions that have recently read the affected data. This process is similar to acquiring a write lock on the affected key range, but rather than blocking until the readers have committed, the lock acts as a tripwire: it simply notifies the transactions that the data they read may not longer be up to date. See below.
 
-![](Pasted%20image%2020221227161631.png)
+![](../Attachments/Pasted%20image%2020221227161631.png)
 
 SSI is the best method of Serializable Isolation Level, as it can be on multiple CPU cores, and it won't lock down objects whenever one transaction wants to access it.

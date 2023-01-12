@@ -1,8 +1,8 @@
 
 
-A load balancer is a **Reverse Proxy** that distributes incoming traffic among different nodes. This is done to lower the load on any individual machine, and is key to scaling a web service. Load balancers can operate on one of two layers of the  [OSI Model](OSI%20Model.md).
+A load balancer is a **Reverse Proxy** that distributes incoming traffic among different nodes. This is done to lower the load on any individual machine, and is key to scaling a web service. Load balancers can operate on one of two layers of the  [OSI Model](../Internet%20&%20Networking/OSI%20Model.md).
 
-![](Pasted%20image%2020220417165133.png)
+![](../Attachments/Pasted%20image%2020220417165133.png)
 
 
 ### Layer 4 Load Balancer
@@ -12,7 +12,7 @@ Pros
 - Simpler load balancing
 - Efficient (no data lookup)
 - More secure (does not look at packet data)
-- One [TCP](TCP.md) connection
+- One [TCP](../Internet%20&%20Networking/TCP.md) connection
 
 Cons
 - No smart load balancing
@@ -31,6 +31,6 @@ Pros
 
 Cons
 - Slightly more Expensive (looks at data)
-- Decrypts (terminates [TLS](TLS.md))
+- Decrypts (terminates [TLS](../Internet%20&%20Networking/Security/TLS.md))
 - Two TCP Connections
 - Must share TLS certificate

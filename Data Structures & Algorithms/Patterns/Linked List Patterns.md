@@ -1,7 +1,7 @@
 
 ## Reverse Linked List
 
-You can reverse a [Linked List](Linked%20Lists.md) with the following simple method
+You can reverse a [Linked List](../Data%20Structures/Linked%20Lists.md) with the following simple method
 
 ```python
 prev = None
@@ -20,7 +20,7 @@ This iterates through the LL and uses a temp variable to save the next pointer, 
 
 ## Circular Linked List
 
-You can determine a linked list is circular by simply saving the nodes in a [Hash Map](Hash%20Maps.md), and then when  a new node is found to exist in a hash map, you know you have a circular list. This is enabled because you can use class instances as Dictionary Keys in Python.
+You can determine a linked list is circular by simply saving the nodes in a [Hash Map](../Data%20Structures/Hash%20Maps.md), and then when  a new node is found to exist in a hash map, you know you have a circular list. This is enabled because you can use class instances as Dictionary Keys in Python.
 
 ## Fast and Slow Pointers
 

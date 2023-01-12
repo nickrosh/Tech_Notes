@@ -4,7 +4,7 @@
 
 ### HTTP Requests
 
-![](Pasted%20image%2020220414001657.png)
+![](../Attachments/Pasted%20image%2020220414001657.png)
 
 A request contains the following components:
 
@@ -17,7 +17,7 @@ A request contains the following components:
 
 ### HTTP Responses
 
-![](Pasted%20image%2020220414004124.png)
+![](../Attachments/Pasted%20image%2020220414004124.png)
 
 A response contains the following elements:
 
@@ -44,7 +44,7 @@ A response contains the following elements:
 ### Headers
 Here are the 5 most popular headers, but there are many many more.
 
-`Authorization` => This client-side header communicates the authorization status of the user. This is a token with the authorization status of the user. It is different from authentication, which is concerned with the actual validation of the user's identity. The authorization header is generally used to send a [Token](Token%20Authentication.md) that the server can process to determine if the user is allowed to access the given resource.
+`Authorization` => This client-side header communicates the authorization status of the user. This is a token with the authorization status of the user. It is different from authentication, which is concerned with the actual validation of the user's identity. The authorization header is generally used to send a [Token](Security/Token%20Authentication.md) that the server can process to determine if the user is allowed to access the given resource.
 
 `Content-Type` => this client and server-side header tells the recipient of the request what the body of the request contains. There are many options but some of the most common are:
 - `application/json` => for JSON API data
@@ -59,4 +59,4 @@ Here are the 5 most popular headers, but there are many many more.
 
 
 ### HTTPS
-HTTP is an unencrypted protocol, and thus the data can be seen by hackers. [TLS](TLS.md) provides encryption and security to HTTP in the form of a protocol called **HTTP-Secure** or **HTTPS**. This new protocol running on port 443 is now the de-facto standard. 
+HTTP is an unencrypted protocol, and thus the data can be seen by hackers. [TLS](Security/TLS.md) provides encryption and security to HTTP in the form of a protocol called **HTTP-Secure** or **HTTPS**. This new protocol running on port 443 is now the de-facto standard. 

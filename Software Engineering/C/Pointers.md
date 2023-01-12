@@ -31,8 +31,8 @@ The above function demonstrates how we use pass-by-reference to change variable 
 
 ## Pointers and Arrays
 
-In C, when you initialize an [Array](Arrays.md), you are really just creating a sequential span of memory. Moreover, when you call an array, what you are really doing is just calling a pointer to the first address of the array. Each element in the array is just moving the pointer to the offset by the byte size of each element.
+In C, when you initialize an [Array](../../Data%20Structures%20&%20Algorithms/Data%20Structures/Arrays.md), you are really just creating a sequential span of memory. Moreover, when you call an array, what you are really doing is just calling a pointer to the first address of the array. Each element in the array is just moving the pointer to the offset by the byte size of each element.
 
-![](Pasted%20image%2020230109020508.png)
+![](../../Attachments/Pasted%20image%2020230109020508.png)
 
 In the above image you can see, the array is nothing more than simply a pointer to the beginning of a sequence of memory, which can then be accessed as separate elements via offsets from the beginning memory location.

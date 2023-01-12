@@ -7,7 +7,7 @@ In a special case, the last node of the list, the **Tail** node, can point to th
 Traversal through a singly-linked linked list is done with two pointers, one pointing to the current node, and one pointing to the previous node. The two pointers inch through the list one at a time until the search condition is met. This is akin to an inchworm moving along a branch. You insert and delete nodes by simply changing the pointers to point to a new node, or skip over a node for insertion and deletion, respectively.
 
 
-![](Pasted%20image%2020220413230840.png)
+![](../../Attachments/Pasted%20image%2020220413230840.png)
 
 
 

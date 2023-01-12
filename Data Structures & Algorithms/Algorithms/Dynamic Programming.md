@@ -20,15 +20,15 @@ def fib(n):
 
 Suppose N=20, here's what the full recursive tree would look like
 
-![](Pasted%20image%2020221229165544.png)
+![](../../Attachments/Pasted%20image%2020221229165544.png)
 
-There is a huge amount of repeated work here. The [Time Complexity](Time%20&%20Space%20Complexity.md) for this is $O(2^n)$ (number of nodes in the tree is exponential). This brings up the first property in DP, *overlapping subproblems*. Now if we cached our calculations, we would eliminate all the repeated work
+There is a huge amount of repeated work here. The [Time Complexity](../Time%20&%20Space%20Complexity.md) for this is $O(2^n)$ (number of nodes in the tree is exponential). This brings up the first property in DP, *overlapping subproblems*. Now if we cached our calculations, we would eliminate all the repeated work
 
-![](Pasted%20image%2020221229165812.png)
+![](../../Attachments/Pasted%20image%2020221229165812.png)
 
-This technique is called *Memoization*. We generally use a [Hash Map](Hash%20Maps.md) to cache the calculated responses. Notice how we only calculate the left-most branch of the tree in this optimal method. The problem almost becomes like a [Linked List](Linked%20Lists.md) when we only look at what we're really calculating
+This technique is called *Memoization*. We generally use a [Hash Map](../Data%20Structures/Hash%20Maps.md) to cache the calculated responses. Notice how we only calculate the left-most branch of the tree in this optimal method. The problem almost becomes like a [Linked List](../Data%20Structures/Linked%20Lists.md) when we only look at what we're really calculating
 
-![](Pasted%20image%2020221229170030.png)
+![](../../Attachments/Pasted%20image%2020221229170030.png)
 
 Now you can see obviously we are only calculating for every value from zero to n, thus our time complexity becomes $O(n)$.
 
@@ -37,7 +37,7 @@ Now you can see obviously we are only calculating for every value from zero to n
 
 Instead of starting at the top, the final value that we want to reach, the "true" Dynamic Programming solution starts at the bottom and build up to the target value. Instead of using a tree, we can simply define the above calculations as an array, starting at the base cases of f(0) = 0 and f(1) = 1
 
-![](Pasted%20image%2020221229172216.png)
+![](../../Attachments/Pasted%20image%2020221229172216.png)
 
 We can then translate this to code
 

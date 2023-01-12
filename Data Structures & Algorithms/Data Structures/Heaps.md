@@ -6,11 +6,11 @@
 
 
 
-![](Pasted%20image%2020220413001316.png)
+![](../../Attachments/Pasted%20image%2020220413001316.png)
 
 In fact, we represent the heap as an array, as the tree will always be complete, with new nodes always adding to the first available open spot.
 
-![](Pasted%20image%2020220413001437.png)
+![](../../Attachments/Pasted%20image%2020220413001437.png)
 
 When you insert a new value, you append it to the end of the array and then _heapify_ it.
 

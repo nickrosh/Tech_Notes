@@ -1,7 +1,7 @@
 
 ## Deque Package
 
-`collections.deque` is excellent because it is a data structure that is both a [Stack](Stacks.md) and a [Queue](Queues.md). This means you can use it for either reason, or even both if a problem needs popping from either side (like palindrome). The most important methods are the following:
+`collections.deque` is excellent because it is a data structure that is both a [Stack](../Data%20Structures/Stacks.md) and a [Queue](../Data%20Structures/Queues.md). This means you can use it for either reason, or even both if a problem needs popping from either side (like palindrome). The most important methods are the following:
 
 - `deque.append(x)` : Add x to the right side of the deque
 - `deque.appendleft(x)` : Add x to the left side of the deque
