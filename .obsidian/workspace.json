@@ -109,14 +109,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Engineering/C++/Scope, Duration, & Linkage.md",
+                "file": "Software Engineering/C/Dynamic Memory Allocation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "404b84549b73d7cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -174,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering/C++/Scope, Duration, & Linkage.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -209,17 +221,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d735fc7bb80ba0d6",
+  "active": "404b84549b73d7cc",
   "lastOpenFiles": [
-    "Software Engineering/C++/Smart Pointers.md",
-    "Software Engineering/C++/C++ STL.md",
-    "Software Engineering/C++/Lambdas.md",
-    "Software Engineering/C++/Exceptions.md",
-    "Software Engineering/C++/Overloading.md",
-    "Software Engineering/C++/RAII.md",
-    "Software Engineering/C++/References.md",
-    "Software Engineering/C++/Scope, Duration, & Linkage.md",
+    "Software Engineering/C/Dynamic Memory Allocation.md",
+    "Software Engineering/C/Functions.md",
+    "Software Engineering/C/Pointers.md",
+    "Software Engineering/C/Structs.md",
+    "Software Engineering/C/The Stack & The Heap.md",
     "Software Engineering/C++/C++ OOP.md",
-    "Software Engineering/C++/Templates.md"
+    "Software Engineering/C++/C++ STL.md",
+    "Software Engineering/C++/Exceptions.md",
+    "Software Engineering/C++/Lambdas.md",
+    "Software Engineering/C++/Overloading.md"
   ]
 }
