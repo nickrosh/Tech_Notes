@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Engineering/Asynchronous Execution.md",
+                "file": "Software Engineering/C++/Scope, Duration, & Linkage.md",
                 "mode": "source",
                 "source": false
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering/Asynchronous Execution.md",
+                "file": "Software Engineering/C++/Scope, Duration, & Linkage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -211,15 +211,15 @@
   },
   "active": "d735fc7bb80ba0d6",
   "lastOpenFiles": [
-    "Software Engineering/JavaScript/Event Loop.md",
-    "Software Engineering/Asynchronous Execution.md",
-    "Internet & Networking/HTTP.md",
-    "Software Engineering/Design Patterns.md",
-    "Data Structures & Algorithms/Patterns/Backtracking Patterns.md",
-    "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
+    "Software Engineering/C++/Smart Pointers.md",
+    "Software Engineering/C++/C++ STL.md",
     "Software Engineering/C++/Lambdas.md",
+    "Software Engineering/C++/Exceptions.md",
+    "Software Engineering/C++/Overloading.md",
+    "Software Engineering/C++/RAII.md",
+    "Software Engineering/C++/References.md",
+    "Software Engineering/C++/Scope, Duration, & Linkage.md",
     "Software Engineering/C++/C++ OOP.md",
-    "Electrical & Computer Engineering/RLC Passive Components.md",
-    "Data Structures & Algorithms/Patterns/Stack Patterns.md"
+    "Software Engineering/C++/Templates.md"
   ]
 }

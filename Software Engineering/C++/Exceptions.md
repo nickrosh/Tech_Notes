@@ -9,19 +9,19 @@ Within the program, you can set a specific area to be on the lookout for excepti
 - Throw another exception. Because the catch block is outside of the try block, the newly thrown exception in this case is not handled by the preceding try block, it's handled by the next enclosing try block.
 
 ```cpp
-    try // Look for exceptions that occur within try block and route to attached catch block(s)
-    {
-        // If the user entered a negative number, this is an error condition
-        if (x < 0.0)
-            throw "Can not take sqrt of negative number"; // throw exception of type const char*
+try // Look for exceptions that occur within try block and route to attached catch block(s)
+{
+	// If the user entered a negative number, this is an error condition
+	if (x < 0.0)
+		throw "Can not take sqrt of negative number"; // throw exception of type const char*
 
-        // Otherwise, print the answer
-        std::cout << "The sqrt of " << x << " is " << std::sqrt(x) << '\n';
-    }
-    catch (const char* exception) // catch exceptions of type const char*
-    {
-        std::cerr << "Error: " << exception << '\n';
-    }
+	// Otherwise, print the answer
+	std::cout << "The sqrt of " << x << " is " << std::sqrt(x) << '\n';
+}
+catch (const char* exception) // catch exceptions of type const char*
+{
+	std::cerr << "Error: " << exception << '\n';
+}
 ```
 
 Occasionally you may run into a case where you want to catch an exception, but not want to fully handle it at the point where you catch it. To rethrow the exception further up the chain, simply add `throw;` on its own in the catch block. C++ will automatically throw the exception up.
@@ -33,18 +33,18 @@ Catch blocks operate on a type basis, meaning that a thrown exception can only g
 One solution is to use a catch-all catch block, which will accept any exception. Consider using a catch-all handler in main, to ensure orderly behavior when an unhandled exception occurs. Also consider disabling the catch-all handler for debug builds, to make it easier to identify how unhandled exceptions are occurring. If you have other catch block, put the catch-all at the end as it will capture everything.
 
 ```cpp
-	try
-	{
-		throw 5; // throw an int exception
-	}
-	catch (double x)
-	{
-		std::cout << "We caught an exception of type double: " << x << '\n';
-	}
-	catch (...) // catch-all handler
-	{
-		std::cout << "We caught an exception of an undetermined type\n";
-	}
+try
+{
+	throw 5; // throw an int exception
+}
+catch (double x)
+{
+	std::cout << "We caught an exception of type double: " << x << '\n';
+}
+catch (...) // catch-all handler
+{
+	std::cout << "We caught an exception of an undetermined type\n";
+}
 ```
 
 
@@ -53,35 +53,32 @@ One solution is to use a catch-all catch block, which will accept any exception.
 Many of the classes and operators in the standard library throw exception classes on failure. For example, [operator new](Smart%20Pointers.md) can throw `std::bad_alloc` if it is unable to [allocate enough memory](../C/Dynamic%20Memory%20Allocation.md). A failed `dynamic_cast` will throw `std::bad_cast` and so on. There are 28 different standard exceptions as of C++20. All standard exceptions derive from the base class `std::exception` (defined in the `<exception>` header). This base class is a small [interface class](C++%20OOP.md) designed to serve as a base class to any exception thrown by the [C++ standard library](C++%20STL.md). Simply catch a reference to the exception class and then get the actual error with `exception.what()`.
 
 ```cpp
-    try
-    {
-        // Your code using standard library goes here
-        // We'll trigger one of these exceptions intentionally for the sake of the example
-        std::string s;
-        s.resize(std::numeric_limits<std::size_t>::max()); // will trigger a std::length_error or allocation exception
-    }
-    // This handler will catch std::exception and all the derived exceptions too
-    catch (const std::exception& exception)
-    {
-        std::cerr << "Standard exception: " << exception.what() << '\n';
-    }
-
-    return 0;
+try
+{
+	// Your code using standard library goes here
+	// We'll trigger one of these exceptions intentionally for the sake of the example
+	std::string s;
+	s.resize(std::numeric_limits<std::size_t>::max()); // will trigger a std::length_error or allocation exception
+}
+// This handler will catch std::exception and all the derived exceptions too
+catch (const std::exception& exception)
+{
+	std::cerr << "Standard exception: " << exception.what() << '\n';
 }
 ```
 
 We can use standard exceptions directly as well. `std::runtime_error` part of the `<stdexcept` header is a popular choice as it has a generic name, and its constructor takes a customizable message:
 
 ```cpp
-	try
-	{
-		throw std::runtime_error("Bad things happened");
-	}
-	// This handler will catch std::exception and all the derived exceptions too
-	catch (const std::exception& exception)
-	{
-		std::cerr << "Standard exception: " << exception.what() << '\n';
-	}
+try
+{
+	throw std::runtime_error("Bad things happened");
+}
+// This handler will catch std::exception and all the derived exceptions too
+catch (const std::exception& exception)
+{
+	std::cerr << "Standard exception: " << exception.what() << '\n';
+}
 ```
 
 ## Custom Exception Classes
@@ -89,14 +86,14 @@ We can use standard exceptions directly as well. `std::runtime_error` part of th
 You can make your own custom class as an exception, as long as you are catching the class in the catch block. Let's say you make a `SpecialException` class that you want thrown as an exception. Simply use it in the throw command, and then catch a reference to the class in the catch block
 
 ```cpp
-    try
-    {
-        throw SpecialException();
-    }
-    catch (const SpecialException& special_exception)
-    {
-        std::cerr << "caught something special";
-    }
+try
+{
+	throw SpecialException();
+}
+catch (const SpecialException& special_exception)
+{
+	std::cerr << "caught something special";
+}
 ```
 
 Probably more usefully, we can derive from `std::exception` or `std::runtime_error` so that we can catch the custom exception as well as any standard exceptions coming from the standard library. You only need to override the virtual `what()` const member function in `std::exception` to derive from it.
