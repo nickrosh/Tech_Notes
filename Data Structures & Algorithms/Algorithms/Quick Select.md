@@ -10,34 +10,34 @@ It uses the same principle as [Quick Sort](Quick%20Sort.md) except instead of tr
 ### Implementation
 
 ```python
-        k = len(nums) - k
-        
-        def quick_select(left: int, right: int):
-			# like Quick Sort, we set the pointer to the left index
-            pointer = left
-			# We set the pivot value as the rightmost value in the partition
-            pivot = nums[right]
+k = len(nums) - k
 
-  
-			# Go through each value in the partition
-            for i in range(left, right):
-				# When a value is less than the pivot switch it
-				# with whatever pointer is currently pointing to
-                if nums[i] <= pivot:
+def quick_select(left: int, right: int):
+	# like Quick Sort, we set the pointer to the left index
+	pointer = left
+	# We set the pivot value as the rightmost value in the partition
+	pivot = nums[right]
 
-                    nums[i], nums[pointer] = nums[pointer], nums[i]
-					# Then advance the pointer by one
-                    pointer += 1
-			# At the end, swap the value at the pointer and the pivot value
-            nums[pointer], nums[right] = nums[right], nums[pointer]
-			# Here is where Quick Select comes in, we want to recurse to
-			# a smaller subset where we know K will be, and if we find K
-			# we can simply return the value at that location
-            if pointer > k:   return quick_select(left, pointer - 1)
 
-            elif pointer < k: return quick_select(pointer + 1, right)
+	# Go through each value in the partition
+	for i in range(left, right):
+		# When a value is less than the pivot switch it
+		# with whatever pointer is currently pointing to
+		if nums[i] <= pivot:
 
-            else:             return nums[pointer]
+			nums[i], nums[pointer] = nums[pointer], nums[i]
+			# Then advance the pointer by one
+			pointer += 1
+	# At the end, swap the value at the pointer and the pivot value
+	nums[pointer], nums[right] = nums[right], nums[pointer]
+	# Here is where Quick Select comes in, we want to recurse to
+	# a smaller subset where we know K will be, and if we find K
+	# we can simply return the value at that location
+	if pointer > k:   return quick_select(left, pointer - 1)
 
-        return quick_select(0, len(nums) - 1)
+	elif pointer < k: return quick_select(pointer + 1, right)
+
+	else:             return nums[pointer]
+
+return quick_select(0, len(nums) - 1)
 ```

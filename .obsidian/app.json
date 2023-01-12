@@ -4,5 +4,6 @@
   "spellcheck": true,
   "useMarkdownLinks": true,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "Attachments"
+  "attachmentFolderPath": "Attachments",
+  "newLinkFormat": "relative"
 }

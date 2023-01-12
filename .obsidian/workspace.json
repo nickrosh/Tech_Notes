@@ -25,14 +25,110 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Engineering/C++/Templates.md",
+                "file": "Software Engineering/C++/C++ OOP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c3b95d79c4557827",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/Analog/BJT.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8ce48b9f5770ebbd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/Analog/Amplifiers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f52823ef21bce6a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/Analog/Amplifiers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "77aef0e4c59d0e5d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/RLC Passive Components.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8102755cf67f2680",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/Direct Current.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dbdaa45b6459cc09",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/Kirchoff's Laws.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d735fc7bb80ba0d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/RLC Passive Components.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4a47bb65b12c6d2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software Engineering/C++/Lambdas.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -90,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering/C++/Templates.md",
+                "file": "Software Engineering/C++/Lambdas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,20 +209,21 @@
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "165cc20f24e2a14f",
+  "active": "4a47bb65b12c6d2d",
   "lastOpenFiles": [
+    "Data Structures & Algorithms/Data Structures/Graphs.md",
+    "Data Structures & Algorithms/Patterns/Linked List Patterns.md",
+    "Data Structures & Algorithms/Patterns/Binary Search Patterns.md",
+    "Data Structures & Algorithms/Patterns/2-D Dynamic Programming.md",
+    "Data Structures & Algorithms/Patterns/1-D Dynamic Programming.md",
     "Software Engineering/C++/C++ OOP.md",
+    "Software Engineering/Asynchronous Execution.md",
+    "Software Engineering/JavaScript/Event Loop.md",
     "Software Engineering/C++/Templates.md",
-    "Software Engineering/C++/Smart Pointers.md",
-    "Software Engineering/C++/Scope, Duration, & Linkage.md",
-    "Software Engineering/C++/References.md",
-    "Software Engineering/C++/RAII.md",
-    "Software Engineering/C++/Overloading.md",
-    "Software Engineering/C++/Lambdas.md",
-    "Software Engineering/C++/Exceptions.md",
-    "Software Engineering/C++/C++ STL.md"
+    "Software Engineering/C++/Smart Pointers.md"
   ]
 }

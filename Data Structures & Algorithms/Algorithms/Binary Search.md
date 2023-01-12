@@ -2,6 +2,7 @@
 
 Binary search allows you to search through a sorted array in $O(log n)$ time. This is much better than the time to search through an unsorted array $O(n)$. it involves searching midpoints, splitting the array in half until the element is found.
 
+
 ![](Pasted%20image%2020220413230533.png)
 
 You simply compare the search term versus the midpoint continuously until the item is found. If the left pointer is greater than the right pointer, then the stop condition is reached and 
