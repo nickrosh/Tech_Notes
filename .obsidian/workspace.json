@@ -13,122 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Engineering/C++/C++ STL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "165cc20f24e2a14f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software Engineering/C++/C++ OOP.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c3b95d79c4557827",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Electrical & Computer Engineering/Analog/BJT.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8ce48b9f5770ebbd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Electrical & Computer Engineering/Analog/Amplifiers.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f52823ef21bce6a0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Electrical & Computer Engineering/Analog/Amplifiers.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "77aef0e4c59d0e5d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Electrical & Computer Engineering/RLC Passive Components.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8102755cf67f2680",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Electrical & Computer Engineering/Direct Current.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dbdaa45b6459cc09",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Electrical & Computer Engineering/Kirchoff's Laws.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d735fc7bb80ba0d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software Engineering/C/Dynamic Memory Allocation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "404b84549b73d7cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 9
+        ]
       }
     ],
     "direction": "vertical"
@@ -221,17 +112,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "404b84549b73d7cc",
+  "active": "95dae41d2f5c4dc9",
   "lastOpenFiles": [
-    "Databases/ACID.md",
-    "Databases/Data Modeling.md",
-    "Databases/Document Databases.md",
-    "Databases/NoSQL.md",
-    "Databases/Relational Databases.md",
-    "Databases/Transactions.md",
-    "Databases/Underlying DB Data Structures.md",
-    "Databases/DB Replication.md",
-    "Databases/DB Partitions.md",
-    "Distributed Systems/Load Balancer.md"
+    "Software Engineering/Git.md",
+    "Software Engineering/Regex.md",
+    "Software Engineering/SOLID Principles.md",
+    "Software Engineering/Design Patterns.md",
+    "Software Engineering/Containers.md",
+    "Software Engineering/CI & CD.md",
+    "Software Engineering/Asynchronous Execution.md",
+    "Software Engineering/C++/Templates.md",
+    "Software Engineering/C++/Smart Pointers.md",
+    "Software Engineering/C++/Scope, Duration, & Linkage.md"
   ]
 }
