@@ -223,15 +223,15 @@
   },
   "active": "404b84549b73d7cc",
   "lastOpenFiles": [
-    "Software Engineering/C/Dynamic Memory Allocation.md",
-    "Software Engineering/C/Functions.md",
-    "Software Engineering/C/Pointers.md",
-    "Software Engineering/C/Structs.md",
-    "Software Engineering/C/The Stack & The Heap.md",
-    "Software Engineering/C++/C++ OOP.md",
-    "Software Engineering/C++/C++ STL.md",
-    "Software Engineering/C++/Exceptions.md",
-    "Software Engineering/C++/Lambdas.md",
-    "Software Engineering/C++/Overloading.md"
+    "Databases/ACID.md",
+    "Databases/Data Modeling.md",
+    "Databases/Document Databases.md",
+    "Databases/NoSQL.md",
+    "Databases/Relational Databases.md",
+    "Databases/Transactions.md",
+    "Databases/Underlying DB Data Structures.md",
+    "Databases/DB Replication.md",
+    "Databases/DB Partitions.md",
+    "Distributed Systems/Load Balancer.md"
   ]
 }
