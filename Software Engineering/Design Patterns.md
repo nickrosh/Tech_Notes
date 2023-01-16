@@ -1,6 +1,6 @@
 
 
-Some of the more common patterns from the GOF book
+Some of the more common [Object Oriented Programming](C++/C++%20OOP.md) design patterns from the *Gang Of Four* book:
 
 | Pattern | Description |
 |---|---|

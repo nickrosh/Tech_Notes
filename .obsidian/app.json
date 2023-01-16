@@ -3,7 +3,7 @@
   "livePreview": true,
   "spellcheck": true,
   "useMarkdownLinks": true,
-  "alwaysUpdateLinks": true,
+  "alwaysUpdateLinks": false,
   "attachmentFolderPath": "Attachments",
   "newLinkFormat": "relative"
 }

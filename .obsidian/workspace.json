@@ -4,11 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "57c4108d724be16d",
+        "id": "5608c427bf942483",
         "type": "tabs",
         "children": [
           {
-            "id": "95dae41d2f5c4dc9",
+            "id": "7c5830ebb34b7d8d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software Engineering/C/The Stack & The Heap.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "30f5dd9262189413",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -112,17 +125,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "95dae41d2f5c4dc9",
+  "active": "30f5dd9262189413",
   "lastOpenFiles": [
-    "Software Engineering/Git.md",
-    "Software Engineering/Regex.md",
-    "Software Engineering/SOLID Principles.md",
+    "Software Engineering/C/The Stack & The Heap.md",
+    "Electrical & Computer Engineering/Systems/Virtual Memory.md",
     "Software Engineering/Design Patterns.md",
-    "Software Engineering/Containers.md",
-    "Software Engineering/CI & CD.md",
-    "Software Engineering/Asynchronous Execution.md",
-    "Software Engineering/C++/Templates.md",
-    "Software Engineering/C++/Smart Pointers.md",
-    "Software Engineering/C++/Scope, Duration, & Linkage.md"
+    "Software Engineering/SOLID Principles.md",
+    "Software Engineering/Test Driven Development.md",
+    "Software Engineering/XPath & JSONPath.md",
+    "Software Engineering/Regex.md",
+    "Software Engineering/Common Linux Commands.md",
+    "Databases/DB Replication.md",
+    "Databases/DB Partitions.md"
   ]
 }

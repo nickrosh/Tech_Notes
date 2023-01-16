@@ -6,7 +6,57 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:\"Data Structures & Algorithms\"",
+      "color": {
+        "a": 1,
+        "rgb": 5402336
+      }
+    },
+    {
+      "query": "path:Databases",
+      "color": {
+        "a": 1,
+        "rgb": 15884141
+      }
+    },
+    {
+      "query": "path:\"Distributed Systems\"",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:\"Electrical & Computer Engineering\"",
+      "color": {
+        "a": 1,
+        "rgb": 16117565
+      }
+    },
+    {
+      "query": "path:\"Internet & Networking\"",
+      "color": {
+        "a": 1,
+        "rgb": 13919013
+      }
+    },
+    {
+      "query": "path:\"Machine Learning\"",
+      "color": {
+        "a": 1,
+        "rgb": 12669664
+      }
+    },
+    {
+      "query": "path:\"Software Engineering\"",
+      "color": {
+        "a": 1,
+        "rgb": 5424352
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -17,6 +67,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7132754626224423,
+  "scale": 0.5087618855792598,
   "close": false
 }

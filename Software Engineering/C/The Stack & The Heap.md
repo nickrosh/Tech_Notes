@@ -1,11 +1,15 @@
 
-The memory that a program uses is typically divided into a few different areas, called segments:
+The [memory](../../Electrical%20&%20Computer%20Engineering/Systems/Virtual%20Memory.md) that a program uses is typically divided into a few different areas, called segments:
 
 - The code segment (also called text segment), where the compiled program sits in memory. The code segment is typically read-only.
 - The bss segment (also called the uninitialized data segment), where zero-initialized global and static variables are stored.
 - The data segment (also called the initialized data segment), where initialized global and static variables are stored.
 - The heap, where dynamically allocated variables are allocated from.
 - The call stack, where function parameters, local variables, and other function-related information are stored.
+
+The stack and heap will "grow" into the free memory of the call stack. If they collide, or one goes over its bound, you will receive a *Stack Overflow* error.
+
+![](../../Attachments/Pasted%20image%2020230116021147.png)
 
 ## Heap
 
@@ -26,15 +30,15 @@ The call stack (usually referred to as "The Stack") has a much more interesting 
 Here is a sequence of steps that takes place when a function is called:
 1. The program encounters a function call.
 2. A stack frame is constructed and pushed on the stack. The stack frame consists of:
-- The address of the instruction beyond the function call (called the **return address**). This is how the CPU remembers whereto return to after the called function exits.
-- All function arguments
-- Memory for any local variables
-- Saved copies of any registers modified by the function that need to be restored when the function returns
-3. The CPU jumps to the function's start point
-4. The instructions inside the function begin executing
+	- The address of the instruction beyond the function call (called the **return address**). This is how the [CPU](../../Electrical%20&%20Computer%20Engineering/Digital/CPU.md) remembers whereto return to after the called function exits.
+	- All function arguments
+	- Memory for any local variables
+	- Saved copies of any registers modified by the function that need to be restored when the function returns
+3. The [CPU](../../Electrical%20&%20Computer%20Engineering/Digital/CPU.md) jumps to the function's start point
+4. The [instructions](../../Electrical%20&%20Computer%20Engineering/Digital/ISA.md) inside the function begin executing
 
 When the function terminates, the following steps happen:
-1. Registers are restored from the call stack
+1. [Registers](../../Electrical%20&%20Computer%20Engineering/Digital/Registers.md) are restored from the call stack
 2. The stack frame is popped off the stack. This frees the memory for all local variables and arguments.
 3. The return value is handled
 4. The CPU resumes execution at the return address.

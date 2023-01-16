@@ -18,3 +18,38 @@ Instead, flip the reasoning, so frequency will be the key, and value will be a l
 
 ## Kadane's Algorithm
 
+To find a non-empty subarray with the largest sum, the optimal solution is with *Kadane's Algorithm*. That is, we keep going through the array and compute a rolling sum. As soon as we reach a negative sum for a section, we know that that section can **never** contribute to the max subarray. Thus we can ignore that section and reset the rolling sum to zero. This can also be done as a [Sliding Window](Sliding%20Window.md) where we have a variable sliding window. As soon as the window sum is less than zero, move the left pointer up to the right pointer.
+
+![](../../Attachments/Pasted%20image%2020230114150322.png)
+
+
+## Prefix Sum
+
+When you take the rolling sum of an array, you are calculating the *prefix sum*:
+
+![](../../Attachments/Pasted%20image%2020230114175802.png)
+
+This prefix calculation is actually very helpful in many types of problems that ask for subarrays that sum to a specific number, or questions about finding the sum of a specific subarray. The reason being, let's say you want to find the sum of elements of index n to n+5, if you calculated that sum by iterating the subarray, and then needed to do that n times, you would have a quadratic [Time Complexity](../Time%20&%20Space%20Complexity.md). If you just take the Prefix sum at index n+10 and subtract the prefix sum at index n, you would have the sum in one operation. This is going off a similar idea as Kadane's, we can take the total running sum, and chop off the parts we don't want
+
+There is also postfix sum, which is the same idea in the opposite direction. Starting at the end of the array, get the rolling sum back backwards to the start of the array. Combined with prefix sum, this lets us answer questions that ask about getting subarrays from either side of the array.
+
+
+## Counting Letters
+
+A nice compact trick for detecting anagram and permutations of words is the fact that there are a limited number of letters. This coupled with the fact that we can take the *ordinal* value of a letter (e.g. 'a' = 0, 'b' = 1, etc.) we can actually store the count of each letter in an array of size 26. We can then convert this array to a tuple so that it can be hashed, and that can be the key for a python dictionary!
+
+This is very handy and efficient when we are trying to group things like permutations where the relative location of letters don't matter, just the letter frequency. Here is an example of grouping anagrams by using the count array, converted to a tuple (only immutable types can be hashable), as the key of a dictionary to group equal frequency lists:
+```python
+def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+	anagrams = {}
+	for word in strs:
+		count = [0] * 26
+		for letter in word:
+			position = ord(letter) - ord('a') # This gets the index a=0, b=1, etc.
+			count[position] += 1
+		count = tuple(count)
+		if count not in anagrams:
+			anagrams[count] = []
+		anagrams[count].append(word)
+	return list(anagrams.values())
+```
