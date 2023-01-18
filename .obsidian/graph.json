@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:\"Data Structures & Algorithms\"",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "query": "path:\"Electrical & Computer Engineering\"",
+      "query": "path:\"Electrical Engineering\"",
       "color": {
         "a": 1,
         "rgb": 16117565
@@ -55,6 +55,13 @@
         "a": 1,
         "rgb": 5424352
       }
+    },
+    {
+      "query": "path:\"Systems Software\"",
+      "color": {
+        "a": 1,
+        "rgb": 16754920
+      }
     }
   ],
   "collapse-display": true,
@@ -67,6 +74,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.713275462622445,
+  "scale": 0.7132754626224496,
   "close": false
 }

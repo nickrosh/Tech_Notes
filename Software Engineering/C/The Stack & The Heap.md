@@ -1,5 +1,5 @@
 
-The [memory](../../Electrical%20&%20Computer%20Engineering/Systems/Virtual%20Memory.md) that a program uses is typically divided into a few different areas, called segments:
+The [memory](../../Systems%20Software/Virtual%20Memory.md) that a program uses is typically divided into a few different areas, called segments:
 
 - The code segment (also called text segment), where the compiled program sits in memory. The code segment is typically read-only.
 - The bss segment (also called the uninitialized data segment), where zero-initialized global and static variables are stored.
@@ -30,15 +30,15 @@ The call stack (usually referred to as "The Stack") has a much more interesting 
 Here is a sequence of steps that takes place when a function is called:
 1. The program encounters a function call.
 2. A stack frame is constructed and pushed on the stack. The stack frame consists of:
-	- The address of the instruction beyond the function call (called the **return address**). This is how the [CPU](../../Electrical%20&%20Computer%20Engineering/Digital/CPU.md) remembers whereto return to after the called function exits.
+	- The address of the instruction beyond the function call (called the **return address**). This is how the [CPU](../../Electrical%20Engineering/Digital/CPU.md) remembers whereto return to after the called function exits.
 	- All function arguments
 	- Memory for any local variables
 	- Saved copies of any registers modified by the function that need to be restored when the function returns
-3. The [CPU](../../Electrical%20&%20Computer%20Engineering/Digital/CPU.md) jumps to the function's start point
-4. The [instructions](../../Electrical%20&%20Computer%20Engineering/Digital/ISA.md) inside the function begin executing
+3. The [CPU](../../Electrical%20Engineering/Digital/CPU.md) jumps to the function's start point
+4. The [instructions](../../Electrical%20Engineering/Digital/ISA.md) inside the function begin executing
 
 When the function terminates, the following steps happen:
-1. [Registers](../../Electrical%20&%20Computer%20Engineering/Digital/Registers.md) are restored from the call stack
+1. [Registers](../../Electrical%20Engineering/Digital/Registers.md) are restored from the call stack
 2. The stack frame is popped off the stack. This frees the memory for all local variables and arguments.
 3. The return value is handled
 4. The CPU resumes execution at the return address.

@@ -38,7 +38,7 @@ Use Calloc (or contiguous allocation) when you want to initialize all the elemen
 
 ![](../../Attachments/Pasted%20image%2020230110010417.png)
 
-All dynamically allocated memory must be freed, or it will become a memory leak. Simply call `free` on the pointer and the [Operating System](../../Electrical%20&%20Computer%20Engineering/Systems/Operating%20System.md) will take back control of the memory.
+All dynamically allocated memory must be freed, or it will become a memory leak. Simply call `free` on the pointer and the [Operating System](../../Systems%20Software/Operating%20System.md) will take back control of the memory.
 
 
 ## Realloc

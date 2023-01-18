@@ -1,5 +1,5 @@
 
-We can take advantage of fast, simple higher-level arithmetic operations directly on [bits](../Electrical%20&%20Computer%20Engineering/Digital/Binary.md). Using special tricks like shifting bits to the left, we can take advantage of binary arithmetic to calculate operations faster than traditional addition, multiply, divide, etc. Using operators like [AND](../Electrical%20&%20Computer%20Engineering/Digital/Logic%20Gates.md) and others, we can check for 0 and other unexpected calculations.
+We can take advantage of fast, simple higher-level arithmetic operations directly on [bits](../Electrical%20Engineering/Digital/Binary.md). Using special tricks like shifting bits to the left, we can take advantage of binary arithmetic to calculate operations faster than traditional addition, multiply, divide, etc. Using operators like [AND](../Electrical%20Engineering/Digital/Logic%20Gates.md) and others, we can check for 0 and other unexpected calculations.
 
 In C, C++, and Python the following are the bitwise operators:
 

@@ -37,7 +37,7 @@ Historically 8, 16, and 32 bit word sizes were used. Today all modern processors
 
 ## RISC vs CISC
 
-There are two different philosophies to instruction set architectures. The traditional view is that there should be many specialized instructions for every situation (Complex Instruction Set Architecture), which is the philosophy of x86. What researchers realized is that only a handful of instructions are actually used by the [compiler](../Systems/Compiler.md) anyway so it would just be more efficient to use a smaller set of instructions at a faster rate. This is called *Reduced Instruction Set Architecture*.
+There are two different philosophies to instruction set architectures. The traditional view is that there should be many specialized instructions for every situation (Complex Instruction Set Architecture), which is the philosophy of x86. What researchers realized is that only a handful of instructions are actually used by the [compiler](../../Systems%20Software/Compiler.md) anyway so it would just be more efficient to use a smaller set of instructions at a faster rate. This is called *Reduced Instruction Set Architecture*.
 
 In reality, it's not really an ongoing debate. There hasn't been a new CISC architecture in 35 years, x86 just has so much legacy development and software that it would not make sense to abandon it. The most popular RISC architectures today are ARM and the first open source ISA, RISC-V. So it should really be called RISC vs x86.
 

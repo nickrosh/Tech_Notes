@@ -7,7 +7,7 @@ For example, for the x86 [ISA](ISA.md), there are many registers, 16 of which ha
 
 For the most part, registers are implemented as banked Flip Flops but can also be made from [SRAM](Memory%20&%20Cache.md). The most common architecture is banked D Flip-Flops.
 
-As the registers are embedded in the [CPU](CPU.md) cores itself, it usually takes a single cycle to access them. The size of the registers grow to the virtual memory size of the [Operating System](../Systems/Operating%20System.md). Thus we can see an evolution of register sizes from 8 bits (one byte) to 16 bits (one word) to 32 bits (double word or DWORD) to the modern day 64 bits (quad word or QWORD). We can see this evolution in the picture below looking at the changing x86 registers:
+As the registers are embedded in the [CPU](CPU.md) cores itself, it usually takes a single cycle to access them. The size of the registers grow to the virtual memory size of the [Operating System](../../Systems%20Software/Operating%20System.md). Thus we can see an evolution of register sizes from 8 bits (one byte) to 16 bits (one word) to 32 bits (double word or DWORD) to the modern day 64 bits (quad word or QWORD). We can see this evolution in the picture below looking at the changing x86 registers:
 
 ![](../../Attachments/Pasted%20image%2020230115180456.png)
 

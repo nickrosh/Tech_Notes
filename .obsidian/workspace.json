@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Electrical & Computer Engineering/Resistance.md",
+                "file": "Electrical Engineering/Resistance.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Electrical & Computer Engineering/Electricity.md",
+                "file": "Electrical Engineering/Electricity.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Electrical & Computer Engineering/Capacitance.md",
+                "file": "Electrical Engineering/Capacitance.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Electrical & Computer Engineering/Inductance.md",
+                "file": "Electrical Engineering/Inductance.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,14 +61,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Electrical & Computer Engineering/Capacitance.md",
+                "file": "Electrical Engineering/Capacitance.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "6a7bdd33a260fd91",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -126,7 +134,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Electrical & Computer Engineering/Capacitance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,17 +168,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "416f9384bff2fe0a",
+  "active": "9ac71b6f6efdd722",
   "lastOpenFiles": [
-    "Electrical & Computer Engineering/Resistance.md",
-    "Electrical & Computer Engineering/Printed Circuit Board.md",
-    "Electrical & Computer Engineering/Power Electronics.md",
-    "Electrical & Computer Engineering/Inductance.md",
-    "Electrical & Computer Engineering/Electricity.md",
-    "Electrical & Computer Engineering/Diode.md",
-    "Electrical & Computer Engineering/Capacitance.md",
-    "Electrical & Computer Engineering/Analog/Radio Frequency.md",
-    "Electrical & Computer Engineering/Analog/Op-Amps.md",
-    "Electrical & Computer Engineering/Analog/Kirchoff's Laws.md"
+    "Software Engineering/C/The Stack & The Heap.md",
+    "Electrical Engineering/Digital/ISA.md",
+    "Electrical Engineering/Digital/CPU.md",
+    "Systems Software/Virtual Memory.md",
+    "Electrical Engineering/Circuit.md",
+    "Electrical Engineering/Capacitance.md",
+    "Electrical Engineering/Resistance.md",
+    "Electrical Engineering/Printed Circuit Board.md",
+    "Electrical Engineering/Power Electronics.md",
+    "Electrical Engineering/Inductance.md"
   ]
 }

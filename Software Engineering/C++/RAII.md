@@ -3,4 +3,4 @@
 
 #### Memory Leaks
 
-When a pointer to some memory is lost for whatever reason, that memory is pretty much lost to the developer. There is no way to recover it and furthermore, that memory is locked and can't be used until the program is terminated. This problem is so pervasive, we accept the significant performance hit of [garbage collectors](../../Electrical%20&%20Computer%20Engineering/Systems/Garbage%20Collection.md) to clean up unused memory.
+When a pointer to some memory is lost for whatever reason, that memory is pretty much lost to the developer. There is no way to recover it and furthermore, that memory is locked and can't be used until the program is terminated. This problem is so pervasive, we accept the significant performance hit of [garbage collectors](../../Systems%20Software/Garbage%20Collection.md) to clean up unused memory.
