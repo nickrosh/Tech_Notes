@@ -18,7 +18,7 @@ More complex operations are built up by combining these simple instructions, whi
 	- Read and write data from hardware devices
 2. **Arithmetic and logic operations**
 	- Add, subtract, multiply, or divide the values of the two registers, placing the result in a register, possibly setting one or more condition codes n a status register.
-	- Perform [Bitwise Operations](Bitwise%20Operations.md)
+	- Perform [Bitwise Operations](../../Software%20Engineering/Bitwise%20Operations.md)
 	- Compare two values in registers
 	- Floating-point instructions for arithmetic on [Floating Point Numbers](Floating%20Point%20Numbers.md)
 3. **Control Flow Operations**
@@ -29,10 +29,23 @@ More complex operations are built up by combining these simple instructions, whi
 
 There are also more complex instructions that are more commonly found in CISC architectures, like moving large blocks of memory or [SIMD](SIMD.md) instructions.
 
+## Word
+
+A word is a fixed-size piece of data handled as a unit by the instruction set or hardware of the processor. The number of bits or digits in a word (the *word size*) is an important characteristic of any specific [processor](CPU.md) design or computer architecture. The size of a word is reflected in many aspects of a computer's structure and operation. The majority of [Registers](Registers.md) in a processor are usually word-sized and the largest amount of data that can be moved to and from the [working memory](Memory%20&%20Cache.md) in a single operation in every architecture.
+
+Historically 8, 16, and 32 bit word sizes were used. Today all modern processors use 64-bit word sizes. Although microcontrollers and other embedded use cases still use smaller word sizes like 32 due to the decreased energy usage and complexity.
+
 ## RISC vs CISC
 
 There are two different philosophies to instruction set architectures. The traditional view is that there should be many specialized instructions for every situation (Complex Instruction Set Architecture), which is the philosophy of x86. What researchers realized is that only a handful of instructions are actually used by the [compiler](../Systems/Compiler.md) anyway so it would just be more efficient to use a smaller set of instructions at a faster rate. This is called *Reduced Instruction Set Architecture*.
 
 In reality, it's not really an ongoing debate. There hasn't been a new CISC architecture in 35 years, x86 just has so much legacy development and software that it would not make sense to abandon it. The most popular RISC architectures today are ARM and the first open source ISA, RISC-V. So it should really be called RISC vs x86.
 
-One of the main differences we can see between RISC and x86 is that x86 allows you to directly use a location in memory as an operand to a arithmetic or logic operation. In RISC, you would have to first load the memory into a register, make the calculation, and then store the value back to memory.
+One of the main differences we can see between RISC and x86 is that x86 allows you to directly use a location in memory as an operand to a arithmetic or logic operation. In RISC, you would have to first load the memory into a register, make the calculation, and then store the value back to memory. Additionally, RISC uses less [Registers](Registers.md) and is usually *load-store* architecture. Additionally, due to the microcode nature of CISC instructions, they are of variable length. RISC architectures always have fixed length instructions.
+
+
+#### Microcode
+
+In x86 and other CISC architectures, some of the more complex instructions are not hard wired as a [binary encoder](Encoders%20&%20Multiplexers.md), instead *microcode* is used to translate instructions into sets of CPU configuration signals called micro-operations that are applied sequentially over multiple clock pulses. The microcode is stored in memory and directly loaded into the [CPU](CPU.md). In some cases, the memory that stores the microprogram is rewritable (usually from an update to BIOS), making it possible to change the way in which the CPU decodes instructions. This also allows the ISA to have many many more instructions, as they no longer have to be hard wired. x86 has over 1,000 separate instructions.
+
+For x86, a hardwired instruction decode unit directly emits micro-ops for common x86 instructions, but falls back to a more traditional microcode ROM containing micro-ops for more complex or rarely used instructions.

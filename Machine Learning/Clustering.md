@@ -6,7 +6,7 @@
 ## Comparison of Algorithms
 
 
-### K-Means
+### [K Means](K%20Means.md)
 
 | Pros | Cons |
 | --- | --- |

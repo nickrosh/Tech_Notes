@@ -1,3 +1,4 @@
+
 [CMOS](CMOS.md) transistors can be used to build *logic gates* which perform fundamental Boolean operations. Entire [computers](CPU.md) can be build with just logic gates. Today, hardware is written at the RTL level, and the logic synthesizer creates a combination of switches and gates and other structures to satisfy the RTL requirement.
 
 ## NOT

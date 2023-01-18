@@ -1,5 +1,5 @@
 
-The *Complementary Metal Oxide Semiconductor Field Effect Transistor* is the foundational transistor technology of all modern digital computing. MOSFETs are Voltage controlled gate transistors, via the Field effect. A [voltage](../Direct%20Current.md) is applied to the gate, which creates a diffusion layer that allows current to flow from source to drain.
+The *Complementary Metal Oxide Semiconductor Field Effect Transistor* is the foundational transistor technology of all modern digital computing. MOSFETs are Voltage controlled gate transistors, via the Field effect. A [voltage](../Electricity.md) is applied to the gate, which creates a diffusion layer that allows current to flow from source to drain.
 
 ## Digital Switch
 

@@ -5,7 +5,7 @@ The standard library provides many powerful objects and algorithms that are full
 
 - `std::vector<type>` : Auto-sized dynamically allocated [array](../../Data%20Structures%20&%20Algorithms/Data%20Structures/Arrays.md). Probably the most used standard container in C++. From `<vector>`.
 - `std::array<type, size>`: Fixed statically allocated array. From `<array>`.
-- `std::unordered_map<key_type, value_type>` :  [Hash Map](../../Data%20Structures%20&%20Algorithms/Data%20Structures/Hash%20Maps.md) with fixed type for key and value. From `<unordered_map>`.
+- `std::unordered_map<key_type, value_type>` :  [Hash Map](../../Data%20Structures%20&%20Algorithms/Data%20Structures/Hash%20Maps.md) with fixed type for key and value. From `<unordered_map>`. Note that when you use the operator square bracket on a key that doesn't exist, you won't get an index error, C++ will actually insert that key to the map initialized to zero. Instead use `map.at(key)`, the dot at method is a const version of operator square bracket that throws an [Exception](Exceptions.md) when the key is not in the map. You can also use a structured binding to name the key and value when iterating over a map. This is similar to enumerate in Python.
 - `std::unordered_set<key_type>` : Hash set with fixed type for keys. From `<unordered_set>`
 
 And many many more...

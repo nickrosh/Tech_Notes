@@ -5,7 +5,7 @@ The [memory](../../Electrical%20&%20Computer%20Engineering/Systems/Virtual%20Mem
 - The bss segment (also called the uninitialized data segment), where zero-initialized global and static variables are stored.
 - The data segment (also called the initialized data segment), where initialized global and static variables are stored.
 - The heap, where dynamically allocated variables are allocated from.
-- The call stack, where function parameters, local variables, and other function-related information are stored.
+- The stack, where function parameters, local variables, and other function-related information are stored.
 
 The stack and heap will "grow" into the free memory of the call stack. If they collide, or one goes over its bound, you will receive a *Stack Overflow* error.
 

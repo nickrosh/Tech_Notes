@@ -6,7 +6,7 @@ Trees are a non-linear data structure that consists of a cascading number of nod
 
 ### Binary Search Trees
 
-When we talk about trees, we are almost always talking about binary search trees, where every node can have one or two children. The left child value will be lower and the right child value will be higher. Insertion then just becomes continually comparing node values and traversing down until you find the right location.
+When we talk about trees, we are almost always talking about binary search trees, where every node can have one or two children. The left child value will be lower and the right child value will be higher. Insertion then just becomes continually comparing node values and traversing down until you find the right location. You will notice this is actually a tree representation of the [Binary Search](../Algorithms/Binary%20Search.md) algorithm. Both algorithms take $O(\log n)$ to search for a value.
 
 
 ### Balanced Trees

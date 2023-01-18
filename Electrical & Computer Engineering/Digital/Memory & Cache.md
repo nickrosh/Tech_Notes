@@ -22,10 +22,14 @@ In order to get the best granularity and ensure optimal usage of the memory pipe
 
 ## Memory
 
-Computer memory is the primary data store for programs. Memory is implemented as large banks of DRAM situated close to the [[CPU](CPU.md)]. When there is a cache miss, the CPU will fetch the data from primary memory to be brought in. When the memory being fetched cannot be found in primary memory either, it is referred to as a *page miss*.
+Computer memory is the primary data store for programs. Memory is implemented as large banks of DRAM situated close to the [CPU](CPU.md). When there is a cache miss, the CPU will fetch the data from primary memory to be brought in. When the memory being fetched cannot be found in primary memory either, it is referred to as a *page miss*.
 
 #### DRAM
 
-*Dynamic Random Access Memory* is a volatile one transistor one capacitor technology that allows for greater amounts of storage. With DRAM, the bit is not stored as a metastable logic state, like a flip flop or SRAM, instead it is the voltage level of the capacitor. If the capacitor is holding charge, then that is a '1', conversely if the capacitor has no charge that means a '0'. This requires significant additional circuitry to keep every charged capacitor from losing its charge and corrupting the data. Additionally, in an Integrated circuit, the capacitor is manufactured as a trench capacitor, which makes it unsuitable to be placed in a [CPU](CPU.md) unlike SRAM.
+*Dynamic Random Access Memory* is a volatile one transistor one capacitor technology that allows for greater amounts of storage. With DRAM, the bit is not stored as a metastable sequential logic state, like [Flip Flops](Flip%20Flops.md) or SRAM, instead it is the voltage level of the capacitor. If the capacitor is holding charge, then that is a '1', conversely if the capacitor has no charge that means a '0'. This requires significant additional circuitry to keep every charged capacitor from losing its charge and corrupting the data. Additionally, in an Integrated circuit, the capacitor is manufactured as a trench capacitor, which makes it unsuitable to be placed in a [CPU](CPU.md) unlike SRAM.
 
 ![](../../Attachments/Pasted%20image%2020230115172520.png)
+
+DRAM must be refreshed continuously, as it will lost its capacitive charge in a fraction of a second. In fact, the reads and writes, and the subsequent charging are all explicit timings. There is a limit to trying to lower read and write time as signal integrity will be harder to maintain. A workaround to doubling memory throughput is to send data on both the rising and falling edge of the [Clock Signal](Clock%20Signal.md). This is called *Double Data Rate* or DDR.
+
+![](../../Attachments/Pasted%20image%2020230117174127.png)

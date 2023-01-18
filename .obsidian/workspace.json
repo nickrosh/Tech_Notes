@@ -8,31 +8,67 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7c5830ebb34b7d8d",
+            "id": "a85096c21ee3f09a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Engineering/C/The Stack & The Heap.md",
+                "file": "Electrical & Computer Engineering/Resistance.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "30f5dd9262189413",
+            "id": "3d0a72126ee1f519",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Electrical & Computer Engineering/Electricity.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7071da4709dc5739",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/Capacitance.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7bc67f0a4d01f712",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/Inductance.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "416f9384bff2fe0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electrical & Computer Engineering/Capacitance.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -90,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Electrical & Computer Engineering/Capacitance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,17 +161,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "30f5dd9262189413",
+  "active": "416f9384bff2fe0a",
   "lastOpenFiles": [
-    "Software Engineering/C/The Stack & The Heap.md",
-    "Electrical & Computer Engineering/Systems/Virtual Memory.md",
-    "Software Engineering/Design Patterns.md",
-    "Software Engineering/SOLID Principles.md",
-    "Software Engineering/Test Driven Development.md",
-    "Software Engineering/XPath & JSONPath.md",
-    "Software Engineering/Regex.md",
-    "Software Engineering/Common Linux Commands.md",
-    "Databases/DB Replication.md",
-    "Databases/DB Partitions.md"
+    "Electrical & Computer Engineering/Resistance.md",
+    "Electrical & Computer Engineering/Printed Circuit Board.md",
+    "Electrical & Computer Engineering/Power Electronics.md",
+    "Electrical & Computer Engineering/Inductance.md",
+    "Electrical & Computer Engineering/Electricity.md",
+    "Electrical & Computer Engineering/Diode.md",
+    "Electrical & Computer Engineering/Capacitance.md",
+    "Electrical & Computer Engineering/Analog/Radio Frequency.md",
+    "Electrical & Computer Engineering/Analog/Op-Amps.md",
+    "Electrical & Computer Engineering/Analog/Kirchoff's Laws.md"
   ]
 }

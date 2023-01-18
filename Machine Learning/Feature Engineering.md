@@ -51,7 +51,7 @@ Uses an algorithm to select features.
 ## Feature Extraction
 **Creating new smaller datasets that captures most of the info**
 
-#### Principal Component Analysis (PCA)
+#### [Principal Component Analysis](PCA.md) (PCA)
 Algorithm to create new features out of the dataset
 
 | Pros | Cons |

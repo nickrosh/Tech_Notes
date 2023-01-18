@@ -2,7 +2,7 @@
 
 **Hyper Text Transfer Protocol** is an application protocol of the internet running on port 80. It defines a simple client-server protocol of sending messages as requests and receiving responses based on the request parameters. 
 
-### HTTP Requests
+## HTTP Requests
 
 ![](../Attachments/Pasted%20image%2020220414001657.png)
 
@@ -15,7 +15,7 @@ A request contains the following components:
 - A Body, for some methods like `POST`, similar to those in responses, which contain the resource sent.
 
 
-### HTTP Responses
+## HTTP Responses
 
 ![](../Attachments/Pasted%20image%2020220414004124.png)
 
@@ -28,7 +28,7 @@ A response contains the following elements:
 - Optionally, a body containing the fetched resource.
 
 
-### Methods
+## Methods
 
 `GET` => requesting a resource
 `HEAD` => asks for a response identical to `GET` expect without the body
@@ -41,7 +41,7 @@ A response contains the following elements:
 `PATCH` => applies partial modifications to the resource
 
 
-### Headers
+## Headers
 Here are the 5 most popular headers, but there are many many more.
 
 `Authorization` => This client-side header communicates the authorization status of the user. This is a token with the authorization status of the user. It is different from authentication, which is concerned with the actual validation of the user's identity. The authorization header is generally used to send a [Token](Security/Token%20Authentication.md) that the server can process to determine if the user is allowed to access the given resource.
@@ -55,8 +55,8 @@ Here are the 5 most popular headers, but there are many many more.
 
 `Cookie` => this header contains other metadata stored in [Cookies](Cookies.md) on the users browser. These are often, but not exclusively, originally set by the server with the `Set-Cookie` header, and can be used to communicate any type of metadata about the user, including browsing history or login status.
 
-`Access-Control-Allow-Origin` => This is a server-side header that provides information about the servers accepted web addresses, as per **Cross Origin Request Sharing (CORS)**. 
+`Access-Control-Allow-Origin` => This is a server-side header that provides information about the servers accepted web addresses, as per [Cross-Origin Resource Sharing](Security/CORS.md). 
 
 
-### HTTPS
-HTTP is an unencrypted protocol, and thus the data can be seen by hackers. [TLS](Security/TLS.md) provides encryption and security to HTTP in the form of a protocol called **HTTP-Secure** or **HTTPS**. This new protocol running on port 443 is now the de-facto standard. 
+## HTTPS
+HTTP is an unencrypted protocol, and thus the data can be seen by anyone in the network. [TLS](Security/TLS.md) provides encryption and security to HTTP in the form of a protocol called **HTTP-Secure** or **HTTPS**. This new protocol running on port 443 is now the de-facto standard. 

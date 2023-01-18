@@ -7,6 +7,7 @@ return x + y;
 }
 ```
 
+What is actually happening is that when a function is called, the [program counter](../../Electrical%20&%20Computer%20Engineering/Digital/Registers.md) jumps to a different block of [instructions](../../Electrical%20&%20Computer%20Engineering/Digital/ISA.md) in memory and begins executing the subroutine.
 
 #### Function Pointers
 

@@ -1,6 +1,5 @@
 
-
-Data must be serialized so it can be sent over the wire, such has in a [HTTP](HTTP.md) request.
+Data must be serialized so it can be sent over the wire, such has in [HTTP](HTTP.md) requests or RCP calls.
 
 
 ### HTML
@@ -25,7 +24,7 @@ JSON is a great and popular format, but it is a text-based format and thus has a
 
 
 ### BSON
-Binary JSON. This format looks almost identical to JSON, but it is a binary format and thus has a smaller footprint and faster encoding/decoding. BSON is used by **MongoDB** for its database storage, as it also adds support for various other types like Date and Binary, that aren't supported in JSON.
+Binary JSON. This format looks almost identical to JSON, but it is a binary format and thus has a smaller footprint and faster encoding/decoding. BSON is used by [MongoDB](../Databases/Document%20Databases.md) for its database storage, as it also adds support for various other types like Date and Binary, that aren't supported in JSON.
 
 
 ### Protocol Buffer
