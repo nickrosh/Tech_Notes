@@ -6,9 +6,8 @@
 
 Big O notation is the mathematical notation for the worst-case scenario of an algorithm. When the complexity for a calculation is a polynomial, it will reduce to the highest order term. Additionally, we do not include any coefficients.
 
-$$
-O(3n^2 + nlogn + 2n ) = O(n^2)
-$$
+$$O(3n^2 + nlogn + 2n ) = O(n^2)$$
+
 The best complexity is constant time $O(1)$, then comes log time $O(logn)$ and then linear time $O(n)$. After this is $O(nlogn)$ which is the best complexity for sorting, so it is commonly seen.
 
 

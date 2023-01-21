@@ -5,16 +5,16 @@
 #### 1. Accuracy, Precision, and Recall
 
 **Accuracy**
-$$Accuracy = \frac{True Positive + True Negative}{All} $$
+$$Accuracy = \frac{\text{True Positives} + \text{True Negatives}}{\text{All}} $$
 
 (Not very useful if the target class is sparse)
 
 **Precision**
-$$Precision = \frac{True Positives}{True Positives+FalsePositives} $$
+$$Precision = \frac{\text{True Positives}}{\text{True Positives}+\text{False Positives}} $$
 seeing how accurate the positive classification is
 
 **Recall**
-$$Recall = \frac{True Positives}{TruePositives+FalseNegatives} $$
+$$Recall = \frac{\text{True Positives}}{\text{True Positives}+\text{False Negatives}} $$
 What % of actual positives were correctly identified
 
 
@@ -26,7 +26,7 @@ You want to catch as many criminals as possible (Recall)
 #### 2. F1 Score
 This metric manages the tradeoff between Precision and Recall.
 
-$$F1 = 2\frac{Precision * Recall}{Precision + Recall} $$
+$$F1 = 2\frac{\text{Precision} * \text{Recall}}{\text{Precision} + \text{Recall}} $$
 F1 is the harmonic mean of Precision and Recall. Only issue is that it gives equal weight to both. You can make weighted F1 if you want.
 
 

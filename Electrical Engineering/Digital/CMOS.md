@@ -14,13 +14,13 @@ In digital electronics, a transistor acts as a switch. This is the fundamental u
 
 There are two variants, PMOS for positive channel, and NMOS for negative channel. A NMOS transistor can be roughly viewed as *normally open* meaning that voltage needs to be applied to the  gate to allow current to flow from source to drain. Conversely, PMOS is *normally closed* meaning that current can flow from drain to source until voltage is applied to the gate, which stops the current flow. 
 
-NMOS is much more common, but PMOS is also widely, used in analog circuits, and in combination with NMOS. In digital circuits, we want to see clean 0 and 1 values, corresponding to voltage and ground. In real life, MOSFETs have an initial non-linear response to a change in gate voltage.
+NMOS is much more common, but PMOS is also widely, used in analog circuits, and in combination with NMOS. In digital circuits, we want to see clean 0 and 1 values, corresponding to voltage and ground. In real life, MOSFETs, like all transistors, are non-linear components. The initial response to gate voltage is vastly different than when
 
 ![](../../Attachments/Pasted%20image%2020230115012303.png)
 
-This is called the *linear region*. This is undesirable for digital computing. We design our circuits and hardware in such a way that we minimize the impact of this non-linear behavior. 
+This is called the *linear region*. In digital electronics, we really only care about when the voltage gets to whatever level we consider HIGH, thus the *saturation region* is not really relevant.  MOSFETS can also be used in analog applications like [Amplifiers](../Analog/Amplifiers.md) where we would actually bias the transistor to maintain operation in the saturation region at all times.
 
-## Silicon Manufacturing
+## Integrated Circuit CMOS Manufacturing
 
 CMOS is manufactured by doping the silicon to the exact n-type and p-type chemical properties required. Usually this is arsenic and boron. Once the silicon has been doped, photolithography is used to etch the gates and metal interconnects to form the actual circuits. Below you can see the side-cut view of actual CMOS transistors. When the voltage is applied to the gate, the region of silicon underneath the gate is called the *depletion zone* and will slowly fill up with charge carriers starting at the drain. It will grow to the source and then a conducting path will be formed between drain and source. This time to create the depletion zone is actually what is causing the non-linear behavior in the triode region of the transistor gate response. 
 
