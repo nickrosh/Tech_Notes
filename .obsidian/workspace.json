@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3d0a72126ee1f519",
+            "id": "d1515cca6b259148",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures & Algorithms/Time & Space Complexity.md",
+                "file": "Electrical Engineering/Signals.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Structures & Algorithms/Time & Space Complexity.md",
+                "file": "Electrical Engineering/Signals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,17 +112,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3d0a72126ee1f519",
+  "active": "d1515cca6b259148",
   "lastOpenFiles": [
-    "Machine Learning/ML Metrics.md",
-    "Machine Learning/PCA.md",
-    "Machine Learning/K Means.md",
-    "Machine Learning/Feature Engineering.md",
-    "Machine Learning/Ensemble Learning.md",
-    "Machine Learning/Decision Trees.md",
-    "Machine Learning/Clustering.md",
-    "Machine Learning/Classification.md",
-    "Machine Learning/Bias vs. Variance.md",
-    "Electrical Engineering/Analog/Signals.md"
+    "Electrical Engineering/Printed Circuit Board.md",
+    "Electrical Engineering/Integrated Circuit.md",
+    "Electrical Engineering/Electricity.md",
+    "Electrical Engineering/Electric Circuit.md",
+    "Electrical Engineering/Digital/SIMD.md",
+    "Electrical Engineering/Digital/Registers.md",
+    "Electrical Engineering/Digital/Memory & Cache.md",
+    "Electrical Engineering/Digital/Logic Gates.md",
+    "Electrical Engineering/Digital/ISA.md",
+    "Electrical Engineering/Digital/Instruction Pipelining.md"
   ]
 }

@@ -18,7 +18,7 @@ NMOS is much more common, but PMOS is also widely, used in analog circuits, and 
 
 ![](../../Attachments/Pasted%20image%2020230115012303.png)
 
-This is called the *linear region*. In digital electronics, we really only care about when the voltage gets to whatever level we consider HIGH, thus the *saturation region* is not really relevant.  MOSFETS can also be used in analog applications like [Amplifiers](../Analog/Amplifiers.md) where we would actually bias the transistor to maintain operation in the saturation region at all times.
+This is called the *linear region*. In digital electronics, we really only care about when the voltage gets to whatever level we consider HIGH, thus the *saturation region* is not really relevant.  MOSFETS can also be used in analog applications like [Amplifiers](../Analog/Analog%20FET.md) where we would actually bias the transistor to maintain operation in the saturation region at all times.
 
 ## Integrated Circuit CMOS Manufacturing
 
