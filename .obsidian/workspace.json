@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5608c427bf942483",
+        "id": "99a1a5d4676e2d65",
         "type": "tabs",
         "children": [
           {
-            "id": "d1515cca6b259148",
+            "id": "bb65ea48d5ddbb45",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Electrical Engineering/Signals.md",
+                "file": "Distributed Systems/Distribution Problems.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Electrical Engineering/Signals.md",
+                "file": "Distributed Systems/Distribution Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,17 +112,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d1515cca6b259148",
+  "active": "bb65ea48d5ddbb45",
   "lastOpenFiles": [
-    "Electrical Engineering/Printed Circuit Board.md",
-    "Electrical Engineering/Integrated Circuit.md",
-    "Electrical Engineering/Electricity.md",
-    "Electrical Engineering/Electric Circuit.md",
-    "Electrical Engineering/Digital/SIMD.md",
-    "Electrical Engineering/Digital/Registers.md",
-    "Electrical Engineering/Digital/Memory & Cache.md",
-    "Electrical Engineering/Digital/Logic Gates.md",
-    "Electrical Engineering/Digital/ISA.md",
-    "Electrical Engineering/Digital/Instruction Pipelining.md"
+    "Distributed Systems/Batch Processing.md",
+    "Distributed Systems/Caching.md",
+    "Distributed Systems/Distributed Consensus.md",
+    "Distributed Systems/Distribution Problems.md",
+    "Distributed Systems/Load Balancer.md",
+    "Distributed Systems/Message Queue.md",
+    "Distributed Systems/Microservices.md",
+    "Distributed Systems/Stream Processing.md",
+    "Distributed Systems/Pub-Sub Model.md",
+    "Databases/NoSQL.md"
   ]
 }

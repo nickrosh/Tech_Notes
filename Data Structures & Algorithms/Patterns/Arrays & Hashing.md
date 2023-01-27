@@ -53,3 +53,13 @@ def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 		anagrams[count].append(word)
 	return list(anagrams.values())
 ```
+
+
+## Any Hashable Key
+
+Remember in python, **ANY** hashable object (non-mutable) can be turned into a hash key. This includes Class instances, Tuples (not arrays!), strings, etc.
+
+
+## Key-Object HashMap
+
+One key doesn't have to map to one primitive, it can map to any object. This includes connecting the values to [Linked Lists](../Data%20Structures/Linked%20Lists.md) nodes (this is how LRU cache is implemented).

@@ -9,3 +9,8 @@ Sometimes we need to shrink a window on either side until we've reached a condit
 Then end condition of almost all of these are:  `while left < right:`
 
 In LC 42 *Trapping Rain Water*, we are tasked with calculating the amount of water that can be trapped by the array topology. This is a simple matter of 1. Understanding the algorithm of how to calculate water at each element and 2. construct a shrinking window to work through the array
+
+
+## Merge Lists
+
+The way to merge two sorted lists (this is also used in [Merge Sort](../Algorithms/Merge%20Sort.md)) is to put a pointer at the start of each list, and a pointer at the output. For every iteration, the lesser value among the two lists is chosen and the lesser pointer is incremented. Once one of the pointers goes to the end of its list, the rest of the other list is appended to the output.

@@ -12,7 +12,7 @@ JWTs are a popular type of token authentication for [REST API](../REST%20API.md)
 
 ![](../../Attachments/Pasted%20image%2020220831010824.png)
 
-The JWT is a 3 part token. Note that the token is not encrypted so don't send secrets in the payload.
+The JWT is a 3 part token. Note that the token is not [encrypted](Public-Key%20Cryptography.md) so don't send secrets in the payload.
 
 1. Header: the algorithm and token type
 2. Payload: the data

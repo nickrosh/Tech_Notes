@@ -15,11 +15,11 @@ Session layer provides inter-process communication between two systems, such as 
 
 
 ### Layer 4 - Transport
-Transport layer concerns itself with the Transport protocol, such as **TCP** and **UDP**. This is how we ensure we are sending all of the packets needed in the right order and correctness. These packets contain the source and destination port numbers. 
+Transport layer concerns itself with the Transport protocol, such as [TCP](TCP.md) and [UDP](UDP.md). This is how we ensure we are sending all of the packets needed in the right order and correctness. These packets contain the source and destination port numbers. 
 
 
 ### Layer 3 - Network
-This layer is the **Internet Protocol (IP)**, which sends data as packets containing the  source and destination IP addresses.
+This layer is the [Internet Protocol](IP.md), which sends data as packets containing the  source and destination IP addresses.
 
 
 ### Layer 2 - Data Link

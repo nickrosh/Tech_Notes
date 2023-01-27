@@ -4,7 +4,7 @@ Cookies allow you to send session data and metadata with each request. They can 
 ### Creating Cookies
 Two methods to create cookies:
 1. **Client JavaScript** - Document.cookie
-2. **Web Server **- Set-Cookie [header](HTTP.md)
+2. **Web Server**- Set-Cookie [header](HTTP.md)
 
 
 ### Cookie Properties

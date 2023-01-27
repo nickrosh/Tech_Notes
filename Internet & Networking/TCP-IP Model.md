@@ -5,15 +5,15 @@ The TCP/IP represents the network model of the modern internet. It is specifical
 ![](../Attachments/Pasted%20image%2020220416152501.png)
 
 ### Application
-This is the application such as SSH, FTP, or [HTTP](HTTP.md). Each application has its own designated Port, like SSH on 22 or HTTP on 80. This layer also contains the security protocols [TLS](Security/TLS.md) and **SSL** which concern the encryption and decryption of data, and the ability to use **HTTPS**.
+This is the application such as SSH, FTP, or [HTTP](HTTP.md). Each application has its own designated Port, like SSH on 22 or HTTP on 80. This layer also contains the security protocols [TLS](Security/TLS.md) and **SSL** which concern the [encryption](Security/Public-Key%20Cryptography.md) and decryption of data, and the ability to use **HTTPS**.
 
 
 ### Transport
-This is the transport protocol. This is usually either [TCP](TCP.md) to ensure data completeness or **UDP** for speed. 
+This is the transport protocol. This is usually either [TCP](TCP.md) to ensure data completeness or [UDP](UDP.md) for speed. 
 
 
 ### Internet
-This is the **Internet Protocol** (IP) layer which splits the data into IP Packets which contain the source and destination addresses
+This is the [Internet Protocol](IP.md) layer which splits the data into IP Packets which contain the source and destination addresses
 
 
 ### Link

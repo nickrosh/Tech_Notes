@@ -1,6 +1,5 @@
 
 
-
 REST (Representational State Transfer) defines a architectural style of API. It defines using [HTTP](HTTP.md) methods and well defined path names of API endpoints to define operations between a client and a server. These operations break down into the fundamental *Create, Read, Update, Delete*, also known as CRUD. These methods also line up with *INSERT, SELECT, UPDATE, DELETE* in [Relational Databases](../Databases/Relational%20Databases.md).
 
 ![](../Attachments/Pasted%20image%2020220413235626.png)

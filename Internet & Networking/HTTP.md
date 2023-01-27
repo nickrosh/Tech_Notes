@@ -60,3 +60,27 @@ Here are the 5 most popular headers, but there are many many more.
 
 ## HTTPS
 HTTP is an unencrypted protocol, and thus the data can be seen by anyone in the network. [TLS](Security/TLS.md) provides encryption and security to HTTP in the form of a protocol called **HTTP-Secure** or **HTTPS**. This new protocol running on port 443 is now the de-facto standard. 
+
+
+
+## HTTP/2
+
+
+HTTP/2 makes several key improvements over the traditional HTTP/1.1
+
+![](../Attachments/Pasted%20image%2020230125011400.png)
+
+1. **Multiplexing and Concurrency**: Several requests can be sent in rapid succession on the same [TCP](TCP.md) connection
+2. **Stream Dependencies**: The client can indicate to the server which of the resources are more important than the others
+3. **Header Compression**: HTTP Header size is drastically reduced with compression
+4. **Server Push**: The server can now send resources the client has not yet requested
+
+
+
+## HTTP/3
+
+HTTP/3 is the newest version of HTTP. Unlike previous versions which relied on the well established [TCP](TCP.md), HTTP/3 uses *QUIC*, a multiplexed transport protocol built on [UDP](UDP.md).
+
+![](../Attachments/Pasted%20image%2020230125011805.png)
+
+This switch fixes a major problem in previous versions called "head-of-line-blocking". Because the parallel nature of HTTP/2's multiplexing is not visible to TCP's loss recovery mechanism, a lost or reordered packet causes all active transactions to stall. Because QUIC provides native multiplexing, lost packets only impact the streams where data has been lost. QUIC will retransmit the lost data on its own stream, leaving the others unaffected. Additionally, QUIC builds in [TLS](Security/TLS.md) security as almost all websites use encryption. This removes the multiple back and forth of the combined TCP and TLS to certify a connection. 
