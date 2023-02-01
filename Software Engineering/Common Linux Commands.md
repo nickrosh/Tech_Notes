@@ -2,7 +2,7 @@
 
 | Command   | Description                                                                |
 | --------- | -------------------------------------------------------------------------- |
-| grep      | [Regex](Regex.md) through a file and return lines that march the pattern   |
+| grep      | [Regex](Regex.md) through a file and return lines that match the pattern   |
 | awk       | scripting program to edit/regex text files                                 |
 | sed       | short for stream editor, good for writing/replacing with regex             |
 | lsof      | list all current open files                                                |
@@ -13,3 +13,4 @@
 | find      | search for files in a directiory hierarchy                                 |
 | ssh       | let's you ssh into a server                                                |
 | kill      | terminate a process                                                        |
+| \|       | The Pipeline operator: a mechanism for inter-process communication, to pass the output from one command to the next                                                                           |

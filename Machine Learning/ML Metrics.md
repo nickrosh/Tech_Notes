@@ -1,6 +1,6 @@
 
 
-## Classification Metrics
+## [Classification](Classification.md) Metrics
 
 #### 1. Accuracy, Precision, and Recall
 
@@ -37,7 +37,7 @@ When the model output is prediction probabilities, log loss takes into account t
 
 #### 4. Categorical Cross Entropy
 
-Multiclass version of the above. Usually used for Neural Nets. Susceptible to imbalanced datasets.
+Multiclass version of the above. Usually used for [Neural Networks](Deep%20Learning/Neural%20Networks.md). Susceptible to imbalanced datasets.
 
 
 #### 5. Area Under ROC (AUC)
@@ -46,7 +46,7 @@ The integral of the receiver operating curve, plot of the true positive rate (Re
 
 
 
-## Regression Metrics
+## [Regression](Regression.md) Metrics
 
 #### 1. Mean Squared Error
 Squared loss, has the effect of inflating/magnifying large errors this has the effect of "punishing" models more for larger errors when MSE is used as a loss function. It also "punishes" models by inflating the average error score when used as a metric. This metric is also differentiable and this can be optimized better.
@@ -60,13 +60,13 @@ The root of the MSE function. RMSE cannot be calculated as the average of the ro
 Absolute value of the loss for each observation. MAE is linear, and does not give any additional weight to different types of errors. MAE is robust to outliers, this it is not suitable for situations where you want to pay more attention to outliers.
 
 
-#### 4. R^2 Error
+#### 4. $R^2$ Error
 
 $$R^2 = 1 - \frac{MSE(model)}{MSE(baseline)}$$
 MSE(baseline) is also just the mean. R^2 is a scale-free score that compares the model versus the mean.
 
 
-#### 5. Adjusted R^2
+#### 5. Adjusted $R^2$
 n = rows, K = Features
 $$R_a^2 = 1 - [\frac{n-1}{n-K-1} * (1-R^2)]$$
 This adjusts for the increasing predictors and only shows improvement if there is real improvement improves on the flaw that R^2 scores on increasing terms even though the model isn't improving.

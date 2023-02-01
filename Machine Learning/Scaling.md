@@ -2,8 +2,8 @@
 Scaling is the process of changing the distribution of values, this is required for many models which are influenced by scale.
 
 The following models are **NOT** sensitive to scale, and require no scaling
-1. Trees (CART, RF, GBDT)
-2. Linear/Logistic Regression **WITHOUT** Regularization
+1. [Decision Trees](Decision%20Trees.md) (including [Random Forests](Ensemble%20Learning.md) and Gradient Boosted Trees)
+2. [Linear Regression](Linear%20Regression.md)/[Logistic Regression](Logistic%20Regression.md) **WITHOUT** [Regularization](Regularization.md)
 3. Naïve Bayes
 
 #### 1. Normalization

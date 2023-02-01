@@ -10,7 +10,7 @@
 | Pros | Cons |
 | --- | --- |
 | Outputs have probabilistic interpretation | Performs poorly with multiple or non-linear relations |
-| Can be regularized (L1, L2, Elastic-Net) to avoid overfitting | Not flexible for complex interactions |
+| Can be [regularized](Regularization.md) (L1, L2, Elastic-Net) to avoid overfitting | Not flexible for complex interactions |
 | Can be updated easily with SGD | |
 
 

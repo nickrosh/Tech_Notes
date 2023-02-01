@@ -1,6 +1,6 @@
 
 
-With Session Authentication, the DB tracks when a user logs in and when they log off, also takes advantage of [Cookies](../Cookies.md). 
+With Session Authentication, the [DB](../../Databases/Relational%20Databases.md) tracks when a user logs in and when they log off, also takes advantage of [Cookies](../Cookies.md). 
 
 ![](../../Attachments/Pasted%20image%2020220831005557.png)
 

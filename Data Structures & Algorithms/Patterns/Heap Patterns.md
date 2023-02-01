@@ -1,7 +1,7 @@
 
 ## Heapq Package
 
-The Heapq package is in the Python Standard and is the main way you'll use heaps. Note that this package only implements a **MIN HEAP**.  The most important methods are the following:
+The Heapq package is in the Python Standard and is the main way you'll use [Heaps](../Data%20Structures/Heaps.md). Note that this package only implements a **MIN HEAP**.  The most important methods are the following:
 
 - `heapq.heappush(heap, item)` : This method adds a new item to the min heap. **Note:** your item can be a tuple, this will let you have one item to be minimized, and a number of others. E.g. `heapq.heappush(heap, (item_being_sorted, item2, item3, etc...))`
 - `heapq.heappop(heap)` : This methods pops the minimum value from the heap. 
