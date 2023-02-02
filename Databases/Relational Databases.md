@@ -1,5 +1,4 @@
 
-
 The classic SQL database is ubiquitous. Data is stored in tables, divided by columns with set data types, and the data itself is in fields. This defined schema provides great validation and consistency, but doesn't allow for the ease of custom data like in a [Document Databases](Document%20Databases.md). RDBs are characterized by its organization into tables
 
 ## RDB Organization

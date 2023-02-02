@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Distributed Systems/Stream Processing.md",
+                "file": "Databases/DB Partitions.md",
                 "mode": "source",
                 "source": false
               }
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Distributed Systems/Stream Processing.md",
+                "file": "Databases/DB Partitions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,15 +151,15 @@
   },
   "active": "e3e20010685c3a5b",
   "lastOpenFiles": [
-    "Software Engineering/C++/Overloading.md",
-    "Software Engineering/C++/Exceptions.md",
-    "Software Engineering/C++/C++ STL.md",
-    "Distributed Systems/Pub-Sub Model.md",
-    "Distributed Systems/Message Queue.md",
-    "Distributed Systems/Stream Processing.md",
     "Databases/Database Cache.md",
     "Databases/Data Modeling.md",
     "Databases/ACID.md",
-    "Databases/DB Partitions.md"
+    "Databases/DB Partitions.md",
+    "Databases/DB Replication.md",
+    "Databases/NoSQL.md",
+    "Databases/Relational Databases.md",
+    "Databases/Transactions.md",
+    "Databases/Underlying DB Data Structures.md",
+    "Distributed Systems/Batch Processing.md"
   ]
 }

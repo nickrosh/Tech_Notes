@@ -6,7 +6,7 @@ A load balancer is a type of [Reverse Proxy](../Internet%20&%20Networking/Proxy.
 
 
 ## Layer 4 Load Balancer
-With a transport layer load balancer, only the IP address and port of the request are looked at. You can distribute load depending on the IP address, like round robin
+With a transport layer load balancer, only the [IP](../Internet%20&%20Networking/IP.md) address and port of the request are looked at. You can distribute load depending on the IP address, like round robin
 
 Pros
 - Simpler load balancing

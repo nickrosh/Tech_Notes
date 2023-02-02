@@ -1,3 +1,4 @@
+
 Simply put, a transaction is a way for an application to group several reads and writes together in a logical unit. Conceptually, all of the reads and writes in a transaction are executed as one operation: either the entire transaction succeeds (*commit*) or it fails (*abort, rollback*). If it fails, the application can safely retry. This system is much safer as we will never have partial failures, cases where some operations are successful and others fail.
 
 The safety guarantees provided by transactions are often described by the well known acronym [ACID](ACID.md), which stands for *Atomicity, Consistency, Isolation, and Durability*. If we only used a single node database, we could easily ensure ACID, the difficulty comes with concurrency and distributed systems, where we have issues with the usual ACID guarantees, namely *Isolation*.

@@ -6,7 +6,7 @@ Pub-Sub is a system that uses [Message Queues](Message%20Queue.md) to asynchrono
 
 This scales very well with multiple receivers, and is used heavily in microservices applications. Additionally it is a loosely coupled system that works when the client isn't even running.
 
-On the downside there is the byzantine generals problems where it is very difficult to know whether another system has actually consumed the message. It is complex to implement, and causes network saturation for the message brokers that send messages via long polling
+On the downside there is the two generals problems where it is very difficult to know whether another system has actually consumed the message. It is complex to implement, and causes network saturation for the message brokers that send messages via long polling
 
 ![](../Attachments/Pasted%20image%2020220415202355.png)
 

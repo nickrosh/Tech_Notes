@@ -1,5 +1,4 @@
 
-
 There has been many new paradigms of database technology, these new ideas outside of the classic [Relational Databases](Relational%20Databases.md) are collectively called Not Only SQL, better known as NoSQL. The paradigms are as follows:
 
 
