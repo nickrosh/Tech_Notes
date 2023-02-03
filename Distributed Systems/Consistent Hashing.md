@@ -1,0 +1,6 @@
+
+*Consistent Hashing* is a strategy to use when we always want each users requests to go to the same server or database nodes. We can take advantage of this fact and add a [Cache](../Databases/Database%20Cache.md) to each server to have user data immediately available. We can also use this algorithm when using [DB Partitions](../Databases/DB%20Partitions.md) to always route requests to the correct partition.
+
+![](../Attachments/Pasted%20image%2020230202222355.png)
+
+Every client request is [Hashed](../Data%20Structures%20&%20Algorithms/Data%20Structures/Hash%20Maps.md), this hash is then mapped to a circle. Every request will go to the server that is "clockwise" rotated after it. This way, the same user will always go to the server. If a [server fails](Distribution%20Problems.md), then the users that used to call that server will now be redirected to the server that was "clockwise" from the failed one, and all the other requests stay as they are. In the above picture, if server "A" failed, then Casey would be redirected to server "D".

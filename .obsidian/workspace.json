@@ -49,14 +49,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databases/DB Partitions.md",
+                "file": "Distributed Systems/Load Balancer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6a4f8eefb4c61ab7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -114,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databases/DB Partitions.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,17 +161,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e3e20010685c3a5b",
+  "active": "6a4f8eefb4c61ab7",
   "lastOpenFiles": [
-    "Databases/Database Cache.md",
-    "Databases/Data Modeling.md",
-    "Databases/ACID.md",
-    "Databases/DB Partitions.md",
-    "Databases/DB Replication.md",
-    "Databases/NoSQL.md",
-    "Databases/Relational Databases.md",
-    "Databases/Transactions.md",
-    "Databases/Underlying DB Data Structures.md",
-    "Distributed Systems/Batch Processing.md"
+    "Systems Software/Virtual Memory.md",
+    "Systems Software/Shell.md",
+    "Systems Software/Reference Counting.md",
+    "Systems Software/Processes & Threads.md",
+    "Systems Software/Operating System.md",
+    "Systems Software/Interpreter.md",
+    "Systems Software/Garbage Collection.md",
+    "Systems Software/Compiler.md",
+    "Systems Software/Bootloader.md",
+    "Software Engineering/XPath & JSONPath.md"
   ]
 }
