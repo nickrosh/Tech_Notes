@@ -2,10 +2,11 @@
 
 **Classification** is predicting discrete values or **classes** for each input
 
+![](../Attachments/Pasted%20image%2020230225144653.png)
 
 ## Comparison of Algorithms
 
-### Logistic Regression
+### [Logistic Regression](Logistic%20Regression.md)
 
 | Pros | Cons |
 | --- | --- |
@@ -14,7 +15,7 @@
 | Can be updated easily with SGD | |
 
 
-### Classification Trees
+### [Classification Trees](Decision%20Trees.md)
 
 | Pros | Cons |
 | --- | --- |
@@ -23,12 +24,12 @@
 | Boosted Trees usually the best Model for Tabulated Data | |
 
 
-### Deep Learning
+### [Neural Networks](Deep%20Learning/Neural%20Networks.md)
 
 | Pros | Cons |
 | --- | --- |
 | State-of-the-art for CV, NLP, text, etc. | Very data hungry |
-| Reduces need for [Feature Engineering](Feature%20Engineering.md) | Computationally expensive |
+| Reduces need for [feature engineering](MLOps/Preprocessing.md) | Computationally expensive |
 | Easily updated with batch propagation | Much more difficulty with tuning |
 
 
@@ -40,7 +41,7 @@
 | Robust against overfitting, especially in high dimension space | Doesn't scale well |
 
 
-### Naïve Bayes
+### [Naïve Bayes](Bayes%20Theorem.md)
 
 | Pros | Cons |
 | --- | --- |

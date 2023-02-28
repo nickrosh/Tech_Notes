@@ -2,9 +2,11 @@
 
 **Regression** is predicting continuous/numeric variables. Mostly used for forecasting and optimizer systems
 
+![](../Attachments/Pasted%20image%2020230225144752.png)
+
 ## Comparison of Algorithms
 
-### Linear Regression
+### [Linear Regression](Linear%20Regression.md)
 
 | Pros | Cons |
 | --- | --- |
@@ -13,7 +15,7 @@
 | Can be updated easily with SGD | |
 
 
-### Regression Trees
+### [Regression Trees](Decision%20Trees.md)
 
 | Pros | Cons |
 | --- | --- |
@@ -22,12 +24,12 @@
 | Boosted Trees usually the best Model for Tabulated Data | |
 
 
-### Deep Learning
+### [Neural Networks](Deep%20Learning/Neural%20Networks.md)
 
 | Pros | Cons |
 | --- | --- |
 | State-of-the-art for CV, NLP, text, etc. | Very data hungry |
-| Reduces need for [Feature Engineering](Feature%20Engineering.md) | Computationally expensive |
+| Reduces need for [feature engineering](MLOps/Preprocessing.md) | Computationally expensive |
 | Easily updated with batch propagation | Much more difficulty with tuning |
 
 
@@ -35,5 +37,5 @@
 
 | Pros | Cons |
 | --- | --- |
-| Simple concept | Memory Intensive |
+| Simple concept | [Memory](../Electrical%20Engineering/Digital/Memory%20&%20Cache.md) Intensive |
 | | Performs poorly for high-dimension data |

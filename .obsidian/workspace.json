@@ -8,67 +8,30 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bb65ea48d5ddbb45",
+            "id": "c82848bd8c791292",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Ensemble Learning.md",
+                "file": "Machine Learning/Deep Learning/Convolutional Neural Net.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4ce9b43995f12481",
+            "id": "7c8482067e41b412",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Deep Learning/Loss Functions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9586ab700eab5507",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Databases/NoSQL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e3e20010685c3a5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Distributed Systems/Load Balancer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6a4f8eefb4c61ab7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
+                "file": "Machine Learning/Deep Learning/Optimizers.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -126,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Machine Learning/Deep Learning/Convolutional Neural Net.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,17 +124,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6a4f8eefb4c61ab7",
+  "active": "c82848bd8c791292",
   "lastOpenFiles": [
-    "Systems Software/Virtual Memory.md",
-    "Systems Software/Shell.md",
-    "Systems Software/Reference Counting.md",
-    "Systems Software/Processes & Threads.md",
-    "Systems Software/Operating System.md",
-    "Systems Software/Interpreter.md",
-    "Systems Software/Garbage Collection.md",
-    "Systems Software/Compiler.md",
-    "Systems Software/Bootloader.md",
-    "Software Engineering/XPath & JSONPath.md"
+    "Machine Learning/Deep Learning/Transformers.md",
+    "Machine Learning/Deep Learning/Attention.md",
+    "Machine Learning/Deep Learning/Activation Functions.md",
+    "Machine Learning/Deep Learning/Computer Vision.md",
+    "Machine Learning/Deep Learning/NLP.md",
+    "Machine Learning/Deep Learning/Convolutional Neural Net.md",
+    "Machine Learning/Deep Learning/Embeddings.md",
+    "Machine Learning/Deep Learning/Loss Functions.md",
+    "Machine Learning/Deep Learning/Neural Networks.md",
+    "Machine Learning/Deep Learning/Optimizers.md",
+    "Machine Learning/Deep Learning/Recommender Systems.md",
+    "Machine Learning/Deep Learning/Recurrent Neural Net.md",
+    "Machine Learning/MLOps/Preprocessing.md",
+    "Attachments/Pasted image 20230227004751.png",
+    "Attachments/Pasted image 20230227001802.png",
+    "Machine Learning/Bias vs. Variance.md",
+    "Attachments/Pasted image 20230226233404.png",
+    "Machine Learning/Bayes Theorem.md",
+    "Machine Learning/Classification.md",
+    "Machine Learning/Clustering.md",
+    "Machine Learning/Decision Trees.md",
+    "Machine Learning/Ensemble Learning.md",
+    "Machine Learning/K Means.md",
+    "Machine Learning/Linear Regression.md",
+    "Machine Learning/Logistic Regression.md",
+    "Machine Learning/Maximum Likelihood.md",
+    "Machine Learning/ML Metrics.md",
+    "Machine Learning/PCA.md",
+    "Machine Learning/Regression.md",
+    "Attachments/Pasted image 20230226230446.png",
+    "Attachments/Pasted image 20230226195317.png",
+    "Attachments/Pasted image 20230226190438.png",
+    "Attachments/Pasted image 20230226174822.png",
+    "Attachments/Pasted image 20230226174741.png",
+    "Attachments/Pasted image 20230226150123.png",
+    "Attachments/Pasted image 20230226150110.png",
+    "Machine Learning/MLOps"
   ]
 }

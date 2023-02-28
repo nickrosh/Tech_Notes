@@ -29,3 +29,7 @@ Binary JSON. This format looks almost identical to JSON, but it is a binary form
 
 ### Protocol Buffer
 Google's encoding format that is used in gRPC. It is meant for very fast processing by programming languages. The schema of the message must be known beforehand. It guarantees type safety, backwards compatibility, and a smaller footprint.
+
+
+### Base64
+Base64 is an encoding algorithm to convert [Binary](../Electrical%20Engineering/Digital/Binary.md) data into an ASCII string which can be sent as a regular string over the network. This is not necessarily a serialization format, but is used in combination with one of the above formats to safely deliver binary data over the web.

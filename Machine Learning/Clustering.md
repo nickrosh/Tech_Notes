@@ -2,6 +2,8 @@
 
 **Clustering** is unsupervised learning technique that clusters data into a number of groups
 
+![](../Attachments/Pasted%20image%2020230222025546.png)
+
 
 ## Comparison of Algorithms
 

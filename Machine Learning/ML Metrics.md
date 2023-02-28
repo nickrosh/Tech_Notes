@@ -1,6 +1,7 @@
 
 
-## [Classification](Classification.md) Metrics
+## [Classification](Classification.md)
+
 
 #### 1. Accuracy, Precision, and Recall
 
@@ -37,16 +38,18 @@ When the model output is prediction probabilities, log loss takes into account t
 
 #### 4. Categorical Cross Entropy
 
-Multiclass version of the above. Usually used for [Neural Networks](Deep%20Learning/Neural%20Networks.md). Susceptible to imbalanced datasets.
+Multiclass version of the above. Usually used as the [Loss Functions](Deep%20Learning/Loss%20Functions.md) for training. Susceptible to imbalanced datasets.
 
 
 #### 5. Area Under ROC (AUC)
 
-The integral of the receiver operating curve, plot of the true positive rate (Recall) and the false positive rate. AUC is scale invariant.
+![](../Attachments/Pasted%20image%2020230225023235.png)
+
+The integral of the receiver operating curve, plot of the true positive rate (Recall) and the false positive rate. This metric gives the aggregate performance across all possible classification thresholds. AUC is scale invariant, it measures how well predications are ranked, rather than their absolute values. It is also classification-threshold-invariant. It measures the quality of the model's predictions irrespective of what classification threshold is chosen.
 
 
 
-## [Regression](Regression.md) Metrics
+## [Regression](Regression.md)
 
 #### 1. Mean Squared Error
 Squared loss, has the effect of inflating/magnifying large errors this has the effect of "punishing" models more for larger errors when MSE is used as a loss function. It also "punishes" models by inflating the average error score when used as a metric. This metric is also differentiable and this can be optimized better.
@@ -63,10 +66,10 @@ Absolute value of the loss for each observation. MAE is linear, and does not giv
 #### 4. $R^2$ Error
 
 $$R^2 = 1 - \frac{MSE(model)}{MSE(baseline)}$$
-MSE(baseline) is also just the mean. R^2 is a scale-free score that compares the model versus the mean.
+MSE(baseline) is also just the mean. $R^2$ is a scale-free score that compares the model versus the mean. This tells you how much of the variation between the target variable can be explained by the explanatory variables. If $R^2$ is 1 (or 100%) that means 100% of the target variable can be explained by the explanatory variables, i.e. they are perfectly linear.
 
 
 #### 5. Adjusted $R^2$
 n = rows, K = Features
 $$R_a^2 = 1 - [\frac{n-1}{n-K-1} * (1-R^2)]$$
-This adjusts for the increasing predictors and only shows improvement if there is real improvement improves on the flaw that R^2 scores on increasing terms even though the model isn't improving.
+This adjusts for the increasing predictors and only shows improvement if there is real improvement improves on the flaw that $R^2$ scores on increasing terms even though the model isn't improving.

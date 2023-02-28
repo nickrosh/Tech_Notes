@@ -1,4 +1,6 @@
 
+Backtracking is a technique to [Depth First Search](../Algorithms/Depth%20First%20Search.md) through an entire decision tree, and returning all nodes that satisfy some condition. This algorithm usually runs in $O(2^n)$ as it has to traverse the entire binary tree
+
 ## Subsets
 
 
