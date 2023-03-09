@@ -67,3 +67,19 @@ Gated Recurrent Units (GRU) are another innovation on LSTMs that simplifies the 
 ![](../../Attachments/Pasted%20image%2020230301220710.png)
 
 In a GRU, the sigmoid of the left is the *forget gate* which decides how much past memory to forget. The sigmoid and tanh on the right are the *update gate*, which is similar to the "forget" and "input" gates of the LSTM combined. It decides what information to throw away and what new information to add.
+
+
+## Seq2Seq
+
+A sequence to sequence model (seq2seq) is a model that takes a sequence of items (words, chars, images, etc.) and outputs another sequence of items. The most famous example is machine translation from one language to another.
+
+![](../../Attachments/Pasted%20image%2020230308214440.png)
+
+The *Encoder* processes each item in the input sequence. It compiles the information it captures into a vector (called the *context*). After processing the entire input sequence, the encoder sends the context over to the decoder, which begins producing the output sequence item by item. The size of the context vector is decided by the number of hidden units in the encoder RNN. By design, a RNN takes two inputs at each time step: an input (in the case of the encoder, one word from the input sentence) and a hidden state. The input word is inputted as an [Embedding](Embeddings.md). The last hidden state of the encoder RNN is actually the context passed to the decoder.
+
+This context vector actually turns out to be a bottleneck to the system. A technique called [Encoder-Decoder Attention](Attention.md) allows the model to focus on the relevant parts of the input sequence as needed. An attention model differs in a few key ways:
+- First, the encoder passes **all** hidden states to the decoder instead of just the last one
+- Second, an attention decoder does an extra step before producing its output. It does the following
+1. Look at the set of encoder hidden states it received, each hidden state is most associated with a certain word in the input sentence
+2. Give each hidden state a [score](Attention.md)
+3. Multiply each hidden state by its softmaxed score. Thus amplifying hidden states with high scores, and drowning out hidden states with low scores.

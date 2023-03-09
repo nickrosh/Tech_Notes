@@ -13,38 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Deep Learning/Computer Vision.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "94f6c4cd3f02d2a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Machine Learning/MLOps/Preprocessing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7c8482067e41b412",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Machine Learning/Deep Learning/Optimizers.md",
+                "file": "Machine Learning/Deep Learning/NLP.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/MLOps/Preprocessing.md",
+                "file": "Machine Learning/Deep Learning/NLP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,43 +112,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "94f6c4cd3f02d2a1",
+  "active": "c82848bd8c791292",
   "lastOpenFiles": [
-    "Machine Learning/Scaling.md",
-    "Machine Learning/Deep Learning/Recurrent Neural Net.md",
-    "Machine Learning/Deep Learning/Embeddings.md",
-    "Machine Learning/Deep Learning/Vision Transformers.md",
+    "Attachments/Pasted image 20230309020500.png",
     "Machine Learning/Deep Learning/Transformers.md",
-    "Attachments/Pasted image 20230301220710.png",
-    "Attachments/Pasted image 20230301215933.png",
-    "Attachments/Pasted image 20230301215630.png",
-    "Attachments/Pasted image 20230301215424.png",
-    "Attachments/Pasted image 20230301215113.png",
-    "Attachments/Pasted image 20230301214827.png",
-    "Attachments/Pasted image 20230301214624.png",
-    "Attachments/Pasted image 20230301214609.png",
-    "Attachments/Pasted image 20230301214510.png",
-    "Machine Learning/Deep Learning/Neural Networks.md",
-    "Attachments/Pasted image 20230301211038.png",
-    "Machine Learning/Deep Learning/Recommender Systems.md",
-    "Machine Learning/Deep Learning/Optimizers.md",
-    "Machine Learning/Deep Learning/NLP.md",
-    "Machine Learning/Deep Learning/Loss Functions.md",
-    "Machine Learning/Deep Learning/Convolutional Neural Net.md",
-    "Machine Learning/Deep Learning/Computer Vision.md",
-    "Machine Learning/Deep Learning/Attention.md",
+    "Attachments/Pasted image 20230309015202.png",
     "Machine Learning/Deep Learning/Activation Functions.md",
-    "Machine Learning/Deep Learning/Transfer Learning.md",
-    "Machine Learning/MLOps/Model Drift.md",
-    "Machine Learning/MLOps/Preprocessing.md",
-    "Machine Learning/MLOps/Experiment Tracking.md",
+    "Machine Learning/Deep Learning/Attention.md",
+    "Machine Learning/Deep Learning/Computer Vision.md",
+    "Machine Learning/Deep Learning/Convolutional Neural Net.md",
+    "Machine Learning/Deep Learning/Embeddings.md",
+    "Machine Learning/Deep Learning/Loss Functions.md",
+    "Machine Learning/Deep Learning/Neural Networks.md",
+    "Machine Learning/Deep Learning/NLP.md",
+    "Machine Learning/Deep Learning/Optimizers.md",
+    "Machine Learning/Deep Learning/Recommender Systems.md",
+    "Machine Learning/Deep Learning/Recurrent Neural Net.md",
+    "Machine Learning/Deep Learning/Vision Transformers.md",
+    "Attachments/Pasted image 20230309013904.png",
+    "Attachments/Pasted image 20230309013629.png",
+    "Attachments/Pasted image 20230309012834.png",
+    "Attachments/Pasted image 20230309012542.png",
+    "Attachments/Pasted image 20230309012141.png",
+    "Attachments/Pasted image 20230309011856.png",
+    "Attachments/Pasted image 20230309011536.png",
+    "Attachments/Pasted image 20230309011353.png",
+    "Attachments/Pasted image 20230309010604.png",
+    "Databases/ACID.md",
+    "Databases/Data Modeling.md",
+    "Databases/Database Cache.md",
+    "Databases/DB Partitions.md",
+    "Databases/DB Replication.md",
+    "Databases/Document Databases.md",
+    "Databases/NoSQL.md",
+    "Databases/Relational Databases.md",
+    "Databases/Transactions.md",
+    "Databases/Underlying DB Data Structures.md",
     "Machine Learning/MLOps/Distributed Training.md",
-    "Machine Learning/Bayes Theorem.md",
-    "Machine Learning/Regularization.md",
-    "Machine Learning/Regression.md",
-    "Machine Learning/PCA.md",
-    "Machine Learning/ML Metrics.md",
-    "Machine Learning/Maximum Likelihood.md",
+    "Machine Learning/MLOps/Experiment Tracking.md",
     "Machine Learning/MLOps"
   ]
 }

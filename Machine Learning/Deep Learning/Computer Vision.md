@@ -1,5 +1,5 @@
 
-*Computer Vision* or CV is one of the biggest areas for Deep Learning, along with [NLP](NLP.md). Computer vision deals with the realm of images and videos, both their understand and other transformations. Computer vision tasks are generally implemented with [Convolutional Neural Networks](Convolutional%20Neural%20Net.md) and more increasingly, [Vision Transformers](Vision%20Transformers.md).
+*Computer Vision* or CV is one of the biggest areas for Deep Learning, along with [NLP](NLP.md). Computer vision deals with the realm of images and videos, both their understand and other transformations. Computer vision tasks are generally implemented with [Convolutional Neural Networks](Convolutional%20Neural%20Net.md) and more increasingly, Vision [Transformers](Transformers.md) are becoming the state-of-the art.
 
 ## Image Augmentation
 

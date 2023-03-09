@@ -1,4 +1,11 @@
 
+
+## Binary Search Range
+
+A lot of the time, you won't just look for a target number. The question will disguise that it is asking for binary search. In normal binary search, you shift the pointers when the midpoint is less than or greater than the target. In this twist, you compare the midpoint to the value of some other function  or calculation. This is how you can find the optimal input to a calculation in log time. 
+
+Famous example is Koko eating bananas (LC-875) where you are trying to find the minimum rate of banana consumption. You simply binary search through rates of consumption and return the minimum value.
+
 ## Rotated Sorted Array
 
 An ascending sorted [Array](../Data%20Structures/Arrays.md) can be rotated as the following:
