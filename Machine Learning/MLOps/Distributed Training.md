@@ -16,8 +16,11 @@ So we can see that the first task should happen once per training, but the last 
 
 The newest innovation is Fully Sharded Data Parallel (FSDP). FSDP is a type of data-parallel training, but unlike traditional data-parallel, which maintains a per-[GPU](../../Electrical%20Engineering/Digital/GPU.md) copy of a model's parameters, gradients, and optimizer states, it shards all of these states across data-parallel workers and can optionally offload the sharded model parameters to [CPU's](../../Electrical%20Engineering/Digital/CPU.md).
 
-Usually, model layers are wrapped with FSDP in a nested way, so that only layers in a single FSDP instance need to gather the full parameters to a single device during forward or backwards computation. In this way, peak GPU [Memory](../../Electrical%20Engineering/Digital/Memory%20&%20Cache.md) could be saved and thus training can be scaled to use a larger model size or batch size.
+Usually, model layers are wrapped with FSDP in a nested way, so that only layers in a single FSDP instance need to gather the full parameters to a single device during forward or backwards computation. In this way, peak GPU [Memory](../../Electrical%20Engineering/Digital/Memory%20&%20Cache.md) could be saved and thus training can be scaled to use a larger model size or batch size. Below is a picture showing how this sharding (similar to [DB Partitions](../../Databases/DB%20Partitions.md)) reduce the memory footprint to 10% of the baseline.
 
+![](../../Attachments/Pasted%20image%2020230310145213.png)
+
+In can be difficult to wrap one's head around it, but in reality, the concept is quite simple. This is just the usual Distributed Data Parallelizing, except instead of replicating the full model parameters, gradients, and optimizer states (saved minibatch statistics for calculating the training step in [SGD](../Deep%20Learning/Optimizers.md)), each [GPU](../../Electrical%20Engineering/Digital/GPU.md) stores only a slice of it. And then at run-time when the full layer parameters are needed just for the given layer, all GPUs synchronize to give each other parts that they miss- this is it.
 
 ## Model Parallelism
 
@@ -25,22 +28,50 @@ Usually, model layers are wrapped with FSDP in a nested way, so that only layers
 
 ![](../../Attachments/Pasted%20image%2020230310014007.png)
 
+Naively, this results in only GPU being used at a time. Modern libraries make it better by pipelining computation so that the GPUs are fully utilized. You need to tune the amount of pipelining on the batch size to the exact degree of how you will split up the model on the GPU. Pipeline parallelism solves the GPU idling problem by chunking the incoming batch into micro-batches and artificailly creating a pipeline, which allows different GPUs to concurrently participate in the computation process. 
 
-## Gradient Accumulation
+![](../../Attachments/Pasted%20image%2020230310150829.png)
 
-Gradient accumulation is a technique where you can train on bigger batch sizes than your machine would normally be able to fit into memory. This is done by accumulating gradients over several batches, and only stepping the [Optimizer](../Deep%20Learning/Optimizers.md) and updating the gradients after a certain number of batches have been performed. Thus, you can essentially "emulate" a batch size of 64 if you do a batch size of 16 and accumulate it over 4 batches.
+This is actually like a distributed version of [CPU](../../Electrical%20Engineering/Digital/CPU.md) [Instruction Pipelining](../../Electrical%20Engineering/Digital/Instruction%20Pipelining.md). The above picture shows 4 GPUs in the pipeline. This method introduces a new hyper-parameter called *chunks*. It defines how many chunks of data are sent in a sequence through the same pipe stage. For example, in the bottom diagram, you can see chunks = 4. Device 0 completes its forward pass, and then waits for other GPUs to do their work, and only starts the backwards pass when their work is starting to complete. We strive to minimize the "bubble" of GPU down time.
+
+## Tensor Parallelism
+
+*Tensor Parallelism* is another approach, which observes that there is nothing special about matrix multiplication that requires the whole matrix to be on one GPU. You can distribute the matrix itself over multiple GPUs. The main building block of any [Transformer](../Deep%20Learning/Transformers.md) is a fully connected [linear layer](../Deep%20Learning/Neural%20Networks.md) followed by a nonlinear [Activation Function](../Deep%20Learning/Activation%20Functions.md) GeLU. We can write the dot product part of it as
+$$Y = \text{GeLU}(XA)$$
+where X and Y are the input and output vectors, and A is the weight matrix. If we look at the computation in matrix form, it's easy to see how the matrix multiplcation can be split between multiple GPUs:
+
+![](../../Attachments/Pasted%20image%2020230310151713.png)
+
+If we split the weight matrix A column-wise across N GPUs and perform matrix multiplication, we will end up with N output vectors, which can be fed into GeLU independently. Thus we can update a feed forward net of arbitrary depth, while synchronizing the GPUs after each row-column sequence:
+
+![](../../Attachments/Pasted%20image%2020230310151937.png)
+
+Parallelizing the [Multi-Head Attention](../Deep%20Learning/Attention.md) layers is even simpler, since they are already inherently parallel, due to having multiple independent heads:
+
+![](../../Attachments/Pasted%20image%2020230310152037.png)
+
+Due to the two all-reduces per layer in both the forward and backward passes, tensor parallelism requires a very fast interconnect between devices. Therefore it is not advisable to do TP across more than one node, unless you have a very fast network. Your degree of TP will be the number of GPUs in a node.
+
 
 ## Optimization
 
-Distributed training strategies are great for when our data or models are too large for training, but what about when our model are too large to deploy for inference? The following model compression techniques are commonly used to make large models fir within existing infrastructure
+Distributed training strategies are great for when our data or models are too large for training, but what about when our model are too large to deploy for inference? The following model compression techniques are commonly used to make large models fit within existing infrastructure.
 
 #### Pruning
 
-Remove weights (unstructured) or entire channels (structured) to reduce the size of the network. The objective is to preserve the model's performance while increasing its sparsity.
+Remove weights (unstructured) or entire channels (structured) to reduce the size of the network. The objective is to preserve the model's performance while increasing its sparsity. For example, many heads in [Multi-Head Attention](../Deep%20Learning/Attention.md) have been shown to provide little to model performance, and can thus be eliminated without a big hit.
 
 #### Quantization
 
-Reduce the memory footprint of the weights by reducing their precision (e.g. 32 bit to 8 bit). We may lose some precision but it shouldn't affect performance too much. There are special [Floating Point](../../Electrical%20Engineering/Digital/Floating%20Point%20Numbers.md) formats for ML that have lower precision and higher exponent precision than mantissa.
+Reduce the memory footprint of the weights by reducing their precision (e.g. 32 bit to 8 bit). We may lose some precision but it shouldn't affect performance too much. There are special [Floating Point](../../Electrical%20Engineering/Digital/Floating%20Point%20Numbers.md) formats for ML that have lower precision and higher exponent precision than mantissa. In training, we worry about overflow, which his when we exceed the max numerical range of a weight. This is why BF16 is much better than the same sized FP16. The exponent term of BF16 is just as large as FP32 so the numerical range is much better, at the cost of much lower precision. However, since our [Optimizers](../Deep%20Learning/Optimizers.md) are not exact anyway and have a component of randomness, perfect precision is not needed in training
+
+Note that regardless of whether one uses BF16 or FP16, there is also a copy of weights which is always in FP32. This is what gets updated by the optimizer. So the 16-[bit](../../Electrical%20Engineering/Digital/Binary.md) formats are only used for the computation, the optimizer updates the FP32 weights will full precision and then casts them into the 16-bit format for the next iteration.
+
+#### Gradient Accumulation
+
+Gradient accumulation is a technique where you can train on bigger batch sizes than your machine would normally be able to fit into memory. This is done by accumulating gradients over several batches, and only stepping the [Optimizer](../Deep%20Learning/Optimizers.md) and updating the gradients after a certain number of batches have been performed. Thus, you can essentially "emulate" a batch size of 64 if you do a batch size of 16 and accumulate it over 4 batches.
+
+One crucial point about gradient accumulation is that it must be implemented with FP32 (not 16-bit) to keep the training precise. This is what accumulation libraries should be doing anyway.
 
 
 #### Distillation
