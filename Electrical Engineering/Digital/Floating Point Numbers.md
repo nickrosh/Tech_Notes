@@ -19,3 +19,15 @@ While this system solves many problems, there are still some issues with floatin
 `0.1 + 0.1 + 0.1 == 0.3`
 
 But many times, due to minute rounding differences, this will evaluate to False. A solution is to use ranges to look for approximate equality rather than absolute equal floating point numbers.
+
+## Half Precision
+
+The half-precision floating point is 16 bits and reduces the precision of the exponent term to 5 bits and the mantissa to 10 bits
+
+![](../../Attachments/Pasted%20image%2020230310020346.png)
+
+## bfloat16
+
+The bfloat16 (Brain Floating Point) format occupies 16 bits. It has a greater exponent term than the Half Precision FP16 format. This is specifically to be used in [Neural Networks](../../Machine%20Learning/Deep%20Learning/Neural%20Networks.md) quantization.
+
+![](../../Attachments/Pasted%20image%2020230310020513.png)

@@ -25,9 +25,9 @@ In classical gradient descent , each step of descent is computed on the average 
 
 ![](../../Attachments/Pasted%20image%2020230226230446.png)
 
-So we see two extremes. Classical gradient descent which uses the full dataset to compute gradients and to update parameters, one pass at a time. And Stochastic Gradient Descent, which processes one training example at a time to make progress, which is also inefficient as you cannot make use of the vectorization available through GPUs and [SIMD](../../Electrical%20Engineering/Digital/SIMD.md) instructions. The solution is *Mini-Batch Stochastic Gradient Descent*, where we process mini-batches of randomly selected data at a time. This technique is so effective, this is what people actually refer to when they reference Stochastic Gradient Descent. Here Batch size is $\mathcal{B}$:
+So we see two extremes. Classical gradient descent which uses the full dataset to compute gradients and to update parameters, one pass at a time. And Stochastic Gradient Descent, which processes one training example at a time to make progress, which is also inefficient as you cannot make use of the vectorization available through [GPUs](../../Electrical%20Engineering/Digital/GPU.md) and [SIMD](../../Electrical%20Engineering/Digital/SIMD.md) instructions. The solution is *Mini-Batch Stochastic Gradient Descent*, where we process mini-batches of randomly selected data at a time. This technique is so effective, this is what people actually refer to when they reference Stochastic Gradient Descent. Here Batch size is $\mathcal{B}$:
 $$\mathbf{g}_t = \partial_{\mathbf{w}} \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} f(\mathbf{x}_{i}, \mathbf{w})$$
-In practice, we pick a batch size that is large enough to offer good computational efficiency while still fitting into the [Memory](../../Electrical%20Engineering/Digital/Memory%20&%20Cache.md) of a GPU.
+In practice, we pick a batch size that is large enough to offer good computational efficiency while still fitting into the [Memory](../../Electrical%20Engineering/Digital/Memory%20&%20Cache.md) of a [GPU](../../Electrical%20Engineering/Digital/GPU.md).
 
 #### Adam
 
