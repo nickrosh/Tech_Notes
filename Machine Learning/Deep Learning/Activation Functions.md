@@ -17,6 +17,14 @@ One primary concern when selecting activation functions is trying to avoid funct
 $$\sigma(z) = \max(0, z)$$
  When initializing, it can be a good idea to set to bias very small, this way the ReLU units won't start at zero. The fact that all input <=0 go to zero weight causes some problems. This also means ReLU can't learn via [gradient methods](Optimizers.md) on examples for which the activation is zero, this is called the *Dying ReLU* problem. There are some variations like *Leaky ReLU* that try to get around this by having the left side be very slightly negative, so as not to crush all the weights to zero.
 
+#### GeLU
+
+![](../../Attachments/Pasted%20image%2020230310143043.png)
+
+The *Gaussian Error Linear Unit* activation function is compatible with top [NLP](NLP.md) [Transformers](Transformers.md) models. This activation function is motivated by combining properties from [dropout](Neural%20Networks.md), zone-out, and ReLU. ReLU and dropout together yield a neuron's output. ReLU does  it deterministically by multiplying the input by zero or one (depending on the input) and dropout stochastically multiplying by zero. [Recurrent Neural Net](Recurrent%20Neural%20Net.md) regularizer called zone-out stochastically multiplies inputs by one. We merge this functionality by multiplying the input by either zero or one which is stochastically determined and is dependent upon the input. We multiply the neuron input x by the cumulative distribution function of the standard normal distribution. We do this because neuron inputs tend to follow a normal distribution, especially after batch normalization.
+
+GeLU nonlinearity is better than ReLU and ELU (exponential linear unit) activations and finds performance improvements across all tasks in domains of [Computer Vision](Computer%20Vision.md), [NLP](NLP.md), etc.
+
 #### Sigmoid
 
 ![](../../Attachments/Pasted%20image%2020230226150023.png)
