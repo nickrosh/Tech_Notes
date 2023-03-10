@@ -4,19 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "99a1a5d4676e2d65",
+        "id": "922b07052a811dca",
         "type": "tabs",
         "children": [
           {
-            "id": "c82848bd8c791292",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "dff59b4d61dc63b8",
+            "id": "d4dd9c42f85c88b9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -27,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,44 +112,43 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dff59b4d61dc63b8",
+  "active": "d4dd9c42f85c88b9",
   "lastOpenFiles": [
-    "Software Engineering/XPath & JSONPath.md",
-    "Software Engineering/Test Driven Development.md",
+    "Electrical Engineering/Digital/GPU.md",
+    "README.md",
+    "Attachments/Pasted image 20230310121816.png",
+    "Attachments/Pasted image 20230310121009.png",
+    "Attachments/Pasted image 20230310120638.png",
+    "Attachments/Pasted image 20230310114456.png",
+    "Electrical Engineering/Digital/CPU.md",
+    "Attachments/Pasted image 20230310114024.png",
     "Software Engineering/SOLID Principles.md",
-    "Software Engineering/Regex.md",
-    "Software Engineering/Git.md",
-    "Software Engineering/Design Patterns.md",
-    "Software Engineering/Containers.md",
-    "Software Engineering/Common Linux Commands.md",
+    "Software Engineering/Test Driven Development.md",
     "Software Engineering/CI & CD.md",
+    "Software Engineering/Common Linux Commands.md",
+    "Software Engineering/Containers.md",
+    "Software Engineering/Design Patterns.md",
+    "Software Engineering/Git.md",
+    "Software Engineering/XPath & JSONPath.md",
+    "Systems Software/Virtual Memory.md",
+    "Systems Software/Shell.md",
+    "Systems Software/Reference Counting.md",
+    "Systems Software/Processes & Threads.md",
+    "Systems Software/Operating System.md",
+    "Systems Software/Interpreter.md",
+    "Systems Software/Garbage Collection.md",
+    "Systems Software/Compiler.md",
+    "Systems Software/Bootloader.md",
+    "Software Engineering/Regex.md",
     "Software Engineering/Bitwise Operations.md",
     "Software Engineering/Asynchronous Execution.md",
     "Software Engineering/JavaScript/React.md",
     "Software Engineering/JavaScript/Event Loop.md",
-    "Software Engineering/C++/Templates.md",
-    "Software Engineering/C++/Smart Pointers.md",
-    "Software Engineering/C++/Scope, Duration, & Linkage.md",
-    "Software Engineering/C++/References.md",
-    "Software Engineering/C++/RAII.md",
-    "Software Engineering/C++/Overloading.md",
-    "Software Engineering/C++/Lambdas.md",
-    "Software Engineering/C++/Exceptions.md",
-    "Software Engineering/C++/C++ STL.md",
-    "Software Engineering/C++/C++ OOP.md",
-    "Software Engineering/C/The Stack & The Heap.md",
-    "Software Engineering/C/Structs.md",
-    "Software Engineering/C/Pointers.md",
     "Attachments/Pasted image 20230310021829.png",
     "Attachments/Pasted image 20230310021325.png",
     "Attachments/Pasted image 20230310020618.png",
     "Attachments/Pasted image 20230310020513.png",
     "Attachments/Pasted image 20230310020346.png",
-    "Attachments/Pasted image 20230310014007.png",
-    "Attachments/Pasted image 20230310013412.png",
-    "Attachments/Pasted image 20230310010104.png",
-    "Attachments/Pasted image 20230310005825.png",
-    "Attachments/Pasted image 20230310005356.png",
     "Machine Learning/MLOps"
   ]
 }
