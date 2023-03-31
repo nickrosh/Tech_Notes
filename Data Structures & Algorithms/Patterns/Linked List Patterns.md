@@ -40,3 +40,6 @@ Look at the image above, "A" is the distance from the Head to the start of node.
 ## Dummy Node
 
 Whenever you are making a new list, or even changing a list in place such a way that the head goes in different places, making a dummy node is helpful. The dummy node is an empty node that points to the beginning of the list, so that at the end of the function you simply `return dummy.next` to return the whole list. This simplifies the return process.
+
+
+## Merge K Sorted Lists

@@ -38,7 +38,9 @@ The fifth step is to multiply each value vector by the softmax score (in prepara
 
 ![](../../Attachments/Pasted%20image%2020230309002728.png)
 
-We thus arrive to the understanding of the three vectors. The query is used when a token looks at others - it's seeking the information to understand itself better. The key is responding to the query's request: it is used to compute attention weights. The value is used to compute attention output: it gives information to the tokens which "say" they need it (i.e. assigned large weights to this token).
+We thus arrive to the understanding of the three vectors. The Query matrix is used to compute the similarity between the current word and every other word in the sentence. The Key matrix is used to compute the similarity between every other word in the sentence and the current word. The Value matrix is used to store the actual value of each word.
+
+The query is used when a token looks at others - it's seeking the information to understand itself better. The key is responding to the query's request: it is used to compute attention weights. The value is used to compute attention output: it gives information to the tokens which "say" they need it (i.e. assigned large weights to this token).
 
 ![](../../Attachments/Pasted%20image%2020230309002951.png)
 

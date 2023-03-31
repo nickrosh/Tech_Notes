@@ -45,6 +45,8 @@ On your phone keyboard, the next word is predicted for every word. Next-word pre
 ![](../../Attachments/Pasted%20image%2020230307224744.png)
 
 
+
+
 #### Machine Translation
 
 Translation between different languages has been the impetus for most of our greatest advancements. [Attention](Attention.md) was invented to improve the performance of [Recurrent Neural Net](Recurrent%20Neural%20Net.md) models. Then [Transformers](Transformers.md) were originally made to deal with translation. 

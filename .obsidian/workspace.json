@@ -18,8 +18,69 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4d2487fe0f68a937",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Machine Learning/PCA.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "658477749ccaf784",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Machine Learning/Deep Learning/Transformers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f0aeb0e0df18d8e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Structures & Algorithms/Data Structures/Tries.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bff56bce33275f66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Structures & Algorithms/Data Structures/Union-Find.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "74c59f1284da7e9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -112,44 +173,43 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d4dd9c42f85c88b9",
+  "active": "74c59f1284da7e9b",
   "lastOpenFiles": [
-    "Machine Learning/MLOps/Distributed Training.md",
+    "Data Structures & Algorithms/Patterns/Heap Patterns.md",
+    "Attachments/Pasted image 20230331184942.png",
+    "Data Structures & Algorithms/Data Structures/Heaps.md",
+    "Data Structures & Algorithms/Patterns/Graph Patterns.md",
+    "Data Structures & Algorithms/Patterns/Linked List Patterns.md",
+    "Data Structures & Algorithms/Patterns/Stack Patterns.md",
+    "Data Structures & Algorithms/Patterns/Tree Patterns.md",
+    "Data Structures & Algorithms/Patterns/Two Pointers.md",
+    "README.md",
+    "Data Structures & Algorithms/Data Structures/Segment Tree.md",
+    "Data Structures & Algorithms/Data Structures/Union-Find.md",
+    "Data Structures & Algorithms/Algorithms/Depth First Search.md",
+    "Data Structures & Algorithms/Data Structures/Tries.md",
+    "Data Structures & Algorithms/Data Structures/Trees.md",
+    "Data Structures & Algorithms/Data Structures/Stacks.md",
+    "Attachments/Pasted image 20230331171411.png",
+    "Attachments/Pasted image 20230331163750.png",
+    "Attachments/Pasted image 20230331162601.png",
+    "Attachments/Pasted image 20230331162345.png",
+    "Software Engineering/Python/Hugging Face.md",
+    "Software Engineering/Python/PyTorch.md",
+    "Software Engineering/C++/Scope, Duration, & Linkage.md",
+    "Software Engineering/C++/Smart Pointers.md",
+    "Software Engineering/C++/Templates.md",
+    "Software Engineering/JavaScript/Event Loop.md",
+    "Software Engineering/JavaScript/React.md",
+    "Attachments/Pasted image 20230317005142.png",
+    "Machine Learning/Deep Learning/Transformers.md",
+    "Machine Learning/Deep Learning/NLP.md",
+    "Machine Learning/Deep Learning/Optimizers.md",
+    "Machine Learning/Deep Learning/Recommender Systems.md",
     "Attachments/Pasted image 20230310152037.png",
     "Attachments/Pasted image 20230310151937.png",
     "Attachments/Pasted image 20230310151713.png",
     "Attachments/Pasted image 20230310150829.png",
-    "Attachments/Pasted image 20230310145213.png",
-    "README.md",
-    "Machine Learning/Deep Learning/Activation Functions.md",
-    "Attachments/Pasted image 20230310143043.png",
-    "Systems Software/Virtual Memory.md",
-    "Systems Software/Shell.md",
-    "Systems Software/Reference Counting.md",
-    "Systems Software/Processes & Threads.md",
-    "Systems Software/Operating System.md",
-    "Systems Software/Interpreter.md",
-    "Systems Software/Garbage Collection.md",
-    "Systems Software/Compiler.md",
-    "Systems Software/Bootloader.md",
-    "Internet & Networking/HTTP.md",
-    "Internet & Networking/Cookies.md",
-    "Databases/Relational Databases.md",
-    "Databases/Data Modeling.md",
-    "Internet & Networking/REST API.md",
-    "Distributed Systems/Pub-Sub Model.md",
-    "Software Engineering/XPath & JSONPath.md",
-    "Software Engineering/Test Driven Development.md",
-    "Software Engineering/SOLID Principles.md",
-    "Software Engineering/Regex.md",
-    "Software Engineering/Git.md",
-    "Software Engineering/Design Patterns.md",
-    "Software Engineering/Containers.md",
-    "Software Engineering/Common Linux Commands.md",
-    "Attachments/Pasted image 20230310121816.png",
-    "Attachments/Pasted image 20230310121009.png",
-    "Attachments/Pasted image 20230310120638.png",
-    "Attachments/Pasted image 20230310114456.png",
-    "Machine Learning/MLOps"
+    "Machine Learning/ML Engineering"
   ]
 }

@@ -5,7 +5,7 @@ Recommender Systems generate recommendations for users on items. This ranges fro
 
 ## Content-Based Filtering
 
-*Content-Based* recommender systems takes handmade [features](../MLOps/Preprocessing.md) and uses them to recommend other items similar to what the user likes, based on their previous actions or explicit feedback. Content-based filtering doesn't look at other users, this makes it easier to scale to a large number of users. This method can also capture the specific interests of a user, and can recommend niche items that very few other users are interested in.
+*Content-Based* recommender systems takes handmade [features](../ML%20Engineering/Preprocessing.md) and uses them to recommend other items similar to what the user likes, based on their previous actions or explicit feedback. Content-based filtering doesn't look at other users, this makes it easier to scale to a large number of users. This method can also capture the specific interests of a user, and can recommend niche items that very few other users are interested in.
 
 However, since the feature representation of the items are hand-engineered to some extent, this technique requires a lot of domain knowledge. Therefore, the model can only be as good as the hand-engineered features. Also, the model can only make recommendations based on existing interest of the user. In other words, the model has limited ability to expand on the user's existing interests.
 

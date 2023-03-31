@@ -29,7 +29,7 @@
 | Pros | Cons |
 | --- | --- |
 | State-of-the-art for CV, NLP, text, etc. | Very data hungry |
-| Reduces need for [feature engineering](MLOps/Preprocessing.md) | Computationally expensive |
+| Reduces need for [feature engineering](ML%20Engineering/Preprocessing.md) | Computationally expensive |
 | Easily updated with batch propagation | Much more difficulty with tuning |
 
 

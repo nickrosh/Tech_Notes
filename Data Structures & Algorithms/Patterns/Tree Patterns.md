@@ -71,3 +71,11 @@ def level_order(root):
 ```
 
 This is a simple level-order traversal that returns a list of levels.
+
+
+## Building a Tree from Pre/Inorder Traversal
+
+You can actually rebuild a binary tree in its entirety if you have the preorder and inorder traversals. The preorder traversal tells you the full order of the root to its left children to its right children. You can then refer to the inorder traversal to tell you which nodes are in the left tree and the right tree. The first element in the preorder is the root, thus if you find the root in the inorder list, all the nodes to its left are in the left subtree, and all the nodes to its right are the right subtree. Then you simply build the nodes going through the preorder list one at a time, and using the inorder list to tell you what children it has
+
+
+## Word Search II

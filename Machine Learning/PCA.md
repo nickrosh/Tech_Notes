@@ -1,5 +1,5 @@
 
-*Principal Component Analysis* is a method of [feature extraction](MLOps/Preprocessing.md) to reduce dimensionality of a dataset while retaining the distribution of the dataset.
+*Principal Component Analysis* is a method of [feature extraction](ML%20Engineering/Preprocessing.md) to reduce dimensionality of a dataset while retaining the distribution of the dataset.
 
 ![](../Attachments/Pasted%20image%2020230223012536.png)
 

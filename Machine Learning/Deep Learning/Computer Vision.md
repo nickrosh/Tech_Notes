@@ -5,7 +5,7 @@
 
 Large datasets are crucial in deep learning. *Image Augmentation* generates similar but distinct training examples after a series of random changes to the training images, thereby expanding the size of the training set. Alternatively, image augmentation can be motivated by the fact that random tweaks of training examples allow models to less rely on certain attributes, thereby improving their [generalization](../Bias%20vs.%20Variance.md) ability.
 
-For example, we can crop an image in different ways to make the object of interest appear in different positions, reducing the dependence of a model on the position of the object. We can also adjust factors such as brightness and color to reduce a model's sensitivity to color. Image augmentation is an indispensable part of computer vision [Preprocessing](../MLOps/Preprocessing.md).
+For example, we can crop an image in different ways to make the object of interest appear in different positions, reducing the dependence of a model on the position of the object. We can also adjust factors such as brightness and color to reduce a model's sensitivity to color. Image augmentation is an indispensable part of computer vision [Preprocessing](../ML%20Engineering/Preprocessing.md).
 
 
 ## Computer Vision Applications

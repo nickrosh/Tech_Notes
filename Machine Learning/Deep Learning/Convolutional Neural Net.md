@@ -45,7 +45,7 @@ In vision tasks, the units of our final layer should be sensitive to the entire 
 
 ## Batch Normalization
 
-Getting deep networks to [converge](Optimizers.md) in a reasonable amount of time is difficult. *batch normalization* is a popular and effective technique that consistently accelerates the convergence of deep networks. We often [preprocess](../MLOps/Preprocessing.md) our data before training, which often improves model performance. This normalization in the model itself can provide the same benefits. When one layer's activations are 100 times that of another layer, this might necessitate compensatory adjustments in the learning rates, and could hurt convergence. Adaptive solvers like Adam seek to solve this problem with second-order methods. Batch Norm prevents to problem from happening, with adaptive normalization.
+Getting deep networks to [converge](Optimizers.md) in a reasonable amount of time is difficult. *batch normalization* is a popular and effective technique that consistently accelerates the convergence of deep networks. We often [preprocess](../ML%20Engineering/Preprocessing.md) our data before training, which often improves model performance. This normalization in the model itself can provide the same benefits. When one layer's activations are 100 times that of another layer, this might necessitate compensatory adjustments in the learning rates, and could hurt convergence. Adaptive solvers like Adam seek to solve this problem with second-order methods. Batch Norm prevents to problem from happening, with adaptive normalization.
 
 ![](../../Attachments/Pasted%20image%2020230301005600.png)
 

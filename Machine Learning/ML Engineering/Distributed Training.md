@@ -38,7 +38,7 @@ This is actually like a distributed version of [CPU](../../Electrical%20Engineer
 
 *Tensor Parallelism* is another approach, which observes that there is nothing special about matrix multiplication that requires the whole matrix to be on one GPU. You can distribute the matrix itself over multiple GPUs. The main building block of any [Transformer](../Deep%20Learning/Transformers.md) is a fully connected [linear layer](../Deep%20Learning/Neural%20Networks.md) followed by a nonlinear [Activation Function](../Deep%20Learning/Activation%20Functions.md) GeLU. We can write the dot product part of it as
 $$Y = \text{GeLU}(XA)$$
-where X and Y are the input and output vectors, and A is the weight matrix. If we look at the computation in matrix form, it's easy to see how the matrix multiplcation can be split between multiple GPUs:
+where X and Y are the input and output vectors, and A is the weight matrix. If we look at the computation in matrix form, it's easy to see how the matrix multiplication can be split between multiple GPUs:
 
 ![](../../Attachments/Pasted%20image%2020230310151713.png)
 
@@ -63,7 +63,7 @@ Remove weights (unstructured) or entire channels (structured) to reduce the size
 
 #### Quantization
 
-Reduce the memory footprint of the weights by reducing their precision (e.g. 32 bit to 8 bit). We may lose some precision but it shouldn't affect performance too much. There are special [Floating Point](../../Electrical%20Engineering/Digital/Floating%20Point%20Numbers.md) formats for ML that have lower precision and higher exponent precision than mantissa. In training, we worry about overflow, which his when we exceed the max numerical range of a weight. This is why BF16 is much better than the same sized FP16. The exponent term of BF16 is just as large as FP32 so the numerical range is much better, at the cost of much lower precision. However, since our [Optimizers](../Deep%20Learning/Optimizers.md) are not exact anyway and have a component of randomness, perfect precision is not needed in training
+Reduce the memory footprint of the weights by reducing their precision (e.g. 32 bit to 16 bit). We may lose some precision but it shouldn't affect performance too much. There are special [Floating Point](../../Electrical%20Engineering/Digital/Floating%20Point%20Numbers.md) formats for ML that have lower precision and higher exponent precision than mantissa. In training, we worry about overflow, which his when we exceed the max numerical range of a weight. This is why BF16 is much better than the same sized FP16. The exponent term of BF16 is just as large as FP32 so the numerical range is much better, at the cost of much lower precision. However, since our [Optimizers](../Deep%20Learning/Optimizers.md) are not exact anyway and have a component of randomness, perfect precision is not needed in training
 
 Note that regardless of whether one uses BF16 or FP16, there is also a copy of weights which is always in FP32. This is what gets updated by the optimizer. So the 16-[bit](../../Electrical%20Engineering/Digital/Binary.md) formats are only used for the computation, the optimizer updates the FP32 weights will full precision and then casts them into the 16-bit format for the next iteration.
 
