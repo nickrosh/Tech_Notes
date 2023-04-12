@@ -9,7 +9,7 @@ One method is a frequency [Hash Map](../Data%20Structures/Hash%20Maps.md), anoth
 
 ## Top K Frequent Elements
 
-You can get the top k frequent elements in an array in linear time by doing something similar to bucket sort
+You can get the top k frequent elements in an array in linear time by doing something similar to [Bucket Sort](../Algorithms/Bucket%20Sort.md).
 
 ![](../../Attachments/Pasted%20image%2020221207171047.png)
 

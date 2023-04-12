@@ -1,7 +1,7 @@
 
 
 
-Trees are a non-linear data structure that consists of a cascading number of nodes and child nodes. The head node is called the **root** and its subsequent nodes are its **children**. When a node doesn't have any children, it is referred to as a **lead node**. Trees are a special case of [Graphs](Graphs.md) which are acyclic and sometimes directed.
+Trees are a non-linear data structure that consists of a cascading number of nodes and child nodes. The head node is called the **root** and its subsequent nodes are its **children**. When a node doesn't have any children, it is referred to as a **lead node**. Trees are a special case of [Graphs](Graphs.md) which are acyclic and fully connected.
 ![](../../Attachments/Pasted%20image%2020220412234227.png)
 
 ### Binary Search Trees

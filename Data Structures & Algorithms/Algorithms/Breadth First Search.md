@@ -1,6 +1,6 @@
 
 
-Breadth first search is a graph and tree search algorithm that searches level-by-level away from the search point of origin. The algorithm works as follows
+Breadth first search is a [Graph](../Data%20Structures/Graphs.md) and [Tree](../Data%20Structures/Trees.md) search algorithm that searches level-by-level away from the search point of origin. The algorithm works as follows
 
 1. Start at arbitrary root node
 2. Scan all adjacent node to the root and add them to a queue

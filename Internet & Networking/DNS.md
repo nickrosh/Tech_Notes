@@ -12,3 +12,12 @@ Let's say you want to navigate to `www.example.com`. There are authoritative roo
 1. you first go to the DNS root name server. It will then tell you the address for the name server for the `.com` top level domain. 
 2. Then you go to the `.com` name server. This name server then sends you the address for the name server of the website you want to visit, `www.example.com`
 3. Finally, you visit the name server for `www.example.com`, and it returns the [IP](IP.md) address of the actual website. Now you can send a [GET request](HTTP.md) to the IP address of the site to visit it.
+
+## DNS Records
+
+DNS records are the actual instructions that live in the DNS servers and provide information about a domain including what IP address is associated with what domain. All DNS records also  have a "TTL" time-to-live, and indicates how often a DNS server will refresh that record. Here are the most common types of records:
+- **A Record**: The record that holds the IPv4 address of a domain (`google.com -> 132.290.340.001`)
+- **AAAA Record**: The record that holds the IPv6 address of a domain (`google.com -> 6cfa.7002...`)
+- **CNAME Record**: Forwards one domain or subdomain to another domain (`google.com -> www.google.com`)
+- **MX Record**: directs mail to an email server
+- **NS Record**: stores the name server for a DNS entry

@@ -27,6 +27,15 @@ A response contains the following elements:
 - HTTP Headers, like those for requests
 - Optionally, a body containing the fetched resource.
 
+#### Status Codes
+
+The status codes are 3 digit codes that tell you the status of the request. There are many many different codes to be used for various reasons, but the high level definition is the following:
+
+- Informational responses (100-199)
+- Successful responses (200-299)
+- Redirection messages (300-399)
+- Client error responses (400-499)
+- Server error responses (500-599)
 
 ## Methods
 
