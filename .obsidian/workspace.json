@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Engineering/AWS/Amazon Web Services.md",
+                "file": "Data Structures & Algorithms/DS&A Coding Interviews.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8526cf5365e362b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Structures & Algorithms/Solving DS&A Questions.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering/AWS/Amazon Web Services.md",
+                "file": "Data Structures & Algorithms/DS&A Coding Interviews.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,15 +126,22 @@
   },
   "active": "36dea10097a567c9",
   "lastOpenFiles": [
+    "Data Structures & Algorithms/Solving DS&A Questions.md",
+    "Data Structures & Algorithms/Time & Space Complexity.md",
+    "Data Structures & Algorithms/DS&A Coding Interviews.md",
+    "README.md",
+    "Machine Learning/ML Engineering/Distributed Training.md",
+    "Machine Learning/ML Engineering/MLOps.md",
+    "Machine Learning/ML Engineering/Model Monitoring.md",
+    "Machine Learning/ML Engineering/Preprocessing.md",
+    "Software Engineering/AWS/Amazon Web Services.md",
     "Software Engineering/AWS/AWS Compute.md",
     "Software Engineering/AWS/AWS Data & Storage.md",
     "Software Engineering/AWS/AWS Integration.md",
     "Software Engineering/AWS/AWS Networking.md",
-    "Software Engineering/AWS/Amazon Web Services.md",
     "Software Engineering/Regex.md",
     "Software Engineering/HTML.md",
     "Software Engineering/CSS.md",
-    "README.md",
     "Data Structures & Algorithms/Algorithms/Quick Select.md",
     "Electrical Engineering/Digital/CPU.md",
     "Data Structures & Algorithms/Patterns/Dynamic Programming Patterns.md",
@@ -133,14 +152,7 @@
     "Data Structures & Algorithms/Patterns/Linked List Patterns.md",
     "Data Structures & Algorithms/Patterns/Sliding Window.md",
     "Data Structures & Algorithms/Patterns/Stack Patterns.md",
-    "Data Structures & Algorithms/Patterns/Tree Patterns.md",
-    "Data Structures & Algorithms/Patterns/Two Pointers.md",
-    "Data Structures & Algorithms/DS&A Coding Interviews.md",
-    "Data Structures & Algorithms/Time & Space Complexity.md",
-    "Data Structures & Algorithms/Algorithms/Dynamic Programming.md",
     "Attachments/Pasted image 20230420191856.png",
-    "Distributed Systems/System Design/Design a Rate Limiter.md",
-    "Distributed Systems/System Design/Design Requirements.md",
     "Attachments/Pasted image 20230419004722.png",
     "Attachments/Pasted image 20230419001212.png",
     "Attachments/Pasted image 20230419000914.png",
