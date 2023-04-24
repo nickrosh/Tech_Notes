@@ -9,7 +9,7 @@ The pipeline is triggered by a code commit. There are no codified practices, but
 Committing code starts CI Pipeline:
 1. Pull source code from [Git](Git.md) repository
 2. Install dependencies
-3. Run Automated Tests
+3. Run Automated [Tests](Test%20Driven%20Development.md)
 4. Build [Containers](Containers.md) Images/Compile Code
 
 This then leads to the CD Pipeline:

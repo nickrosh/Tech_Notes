@@ -8,91 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d4dd9c42f85c88b9",
+            "id": "36dea10097a567c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures & Algorithms/Patterns/Graph Patterns.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9d6a0d3198a58120",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software Engineering/C/C 101.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a5d5aac87305f4bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software Engineering/JavaScript/JavaScript 101.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0567f7b621d263cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Structures & Algorithms/Patterns/Graph Patterns.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "561dc6886fa978bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Machine Learning/ML Engineering/MLOps.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eb14f7303e9ab9ce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Structures & Algorithms/Algorithms/Breadth First Search.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3a482903b6838ad4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Structures & Algorithms/Data Structures/Graphs.md",
+                "file": "Software Engineering/AWS/Amazon Web Services.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -150,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/ML Engineering/MLOps.md",
+                "file": "Software Engineering/AWS/Amazon Web Services.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,45 +112,48 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "561dc6886fa978bc",
+  "active": "36dea10097a567c9",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20230411115834.png",
-    "Data Structures & Algorithms/Algorithms/Topological Sort.md",
+    "Software Engineering/AWS/AWS Compute.md",
+    "Software Engineering/AWS/AWS Data & Storage.md",
+    "Software Engineering/AWS/AWS Integration.md",
+    "Software Engineering/AWS/AWS Networking.md",
+    "Software Engineering/AWS/Amazon Web Services.md",
+    "Software Engineering/Regex.md",
+    "Software Engineering/HTML.md",
+    "Software Engineering/CSS.md",
     "README.md",
+    "Data Structures & Algorithms/Algorithms/Quick Select.md",
+    "Electrical Engineering/Digital/CPU.md",
+    "Data Structures & Algorithms/Patterns/Dynamic Programming Patterns.md",
     "Data Structures & Algorithms/Patterns/Graph Patterns.md",
-    "Data Structures & Algorithms/Data Structures/Graphs.md",
-    "Attachments/Pasted image 20230410191014.png",
+    "Data Structures & Algorithms/Patterns/Greedy Patterns.md",
     "Data Structures & Algorithms/Patterns/Heap Patterns.md",
+    "Data Structures & Algorithms/Patterns/Interval Patterns.md",
+    "Data Structures & Algorithms/Patterns/Linked List Patterns.md",
+    "Data Structures & Algorithms/Patterns/Sliding Window.md",
     "Data Structures & Algorithms/Patterns/Stack Patterns.md",
     "Data Structures & Algorithms/Patterns/Tree Patterns.md",
     "Data Structures & Algorithms/Patterns/Two Pointers.md",
-    "Data Structures & Algorithms/Patterns/Sliding Window.md",
-    "Data Structures & Algorithms/Patterns/Linked List Patterns.md",
-    "Data Structures & Algorithms/Patterns/Binary Search Patterns.md",
-    "Data Structures & Algorithms/Patterns/Backtracking Patterns.md",
-    "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
-    "Data Structures & Algorithms/Patterns/2-D Dynamic Programming.md",
-    "Data Structures & Algorithms/Patterns/1-D Dynamic Programming.md",
-    "Data Structures & Algorithms/Data Structures/Union-Find.md",
-    "Data Structures & Algorithms/Algorithms/Bucket Sort.md",
-    "Data Structures & Algorithms/Algorithms/Binary Search.md",
-    "Software Engineering/Python/Python 101.md",
-    "Software Engineering/JavaScript/JavaScript 101.md",
-    "Software Engineering/C/C 101.md",
-    "Data Structures & Algorithms/Algorithms/Breadth First Search.md",
-    "Data Structures & Algorithms/Data Structures/Trees.md",
-    "Attachments/Pasted image 20230407225209.png",
-    "Data Structures & Algorithms/Algorithms/Depth First Search.md",
-    "Data Structures & Algorithms/Data Structures/Queues.md",
-    "Attachments/Pasted image 20230407142349.png",
-    "Attachments/Pasted image 20230407010233.png",
-    "Attachments/Pasted image 20230405010141.png",
-    "Attachments/Pasted image 20230405003749.png",
-    "Attachments/Pasted image 20230401152838.png",
+    "Data Structures & Algorithms/DS&A Coding Interviews.md",
+    "Data Structures & Algorithms/Time & Space Complexity.md",
+    "Data Structures & Algorithms/Algorithms/Dynamic Programming.md",
+    "Attachments/Pasted image 20230420191856.png",
+    "Distributed Systems/System Design/Design a Rate Limiter.md",
+    "Distributed Systems/System Design/Design Requirements.md",
+    "Attachments/Pasted image 20230419004722.png",
+    "Attachments/Pasted image 20230419001212.png",
+    "Attachments/Pasted image 20230419000914.png",
+    "Attachments/Pasted image 20230418234342.png",
+    "Attachments/Pasted image 20230418231701.png",
+    "Attachments/Pasted image 20230418223255.png",
+    "Software Engineering/OOP/OOP Design",
+    "Software Engineering/OOP",
+    "Attachments/Pasted image 20230418004329.png",
+    "Attachments/Pasted image 20230415125502.png",
+    "Software Engineering/AWS",
+    "Attachments/Pasted image 20230411115834.png",
     "Distributed Systems/System Design",
-    "Attachments/Pasted image 20230331184942.png",
-    "Attachments/Pasted image 20230331171411.png",
-    "Attachments/Pasted image 20230331163750.png",
     "Machine Learning/ML Engineering"
   ]
 }

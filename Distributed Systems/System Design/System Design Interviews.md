@@ -22,6 +22,8 @@ These clarifying questions will determine how our end design will look like.
 
 ## Step 2: Back of the envelope calculations 
 
+![](../../Attachments/Pasted%20image%2020230419001212.png)
+
 Let's say you assume you have 100 million Daily Active Users (DAU). Let's say it's a read heavy system so we can assume 10 billion reads and 10 million writes every day. You can calculate the read throughput the following way:
 $$\text{Throughput} = \frac{10b}{\text{second}}$$
 We calculate the number of seconds to be approximately 100,000:

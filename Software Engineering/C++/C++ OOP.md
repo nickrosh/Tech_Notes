@@ -1,7 +1,7 @@
  
 ## Classes
 
-[Structs](../C/Structs.md) in C solve the issue of a custom user-defined object that contains different primitive types. However, with Object-Oriented Programming, we create  a new paradigm where we combine state and functionality. This combination of state and function is called a *Class*. So we can make a circle class, with radius as the variable being stored. Instead of making [Functions](../C/Functions.md) that are simply associated to the class, we can make a function in the class itself called a method or member function. We can make a function that returns the area of the circle.
+[Structs](../C/Structs.md) in C solve the issue of a custom user-defined object that contains different primitive types. However, with [Object Oriented Programming](../OOP/Object%20Oriented%20Programming.md), we create  a new paradigm where we combine state and functionality. This combination of state and function is called a *Class*. So we can make a circle class, with radius as the variable being stored. Instead of making [Functions](../C/Functions.md) that are simply associated to the class, we can make a function in the class itself called a method or member function. We can make a function that returns the area of the circle.
 
 ```C++
 class Circle {
@@ -112,7 +112,7 @@ public:
 ```
 
 
-*Inheritance* on the other hand is a "is-a" relationship, and was and still is a big focus in academic circles and people with chronic Java disease. You should probably never use inheritance, definitely never more than one layer deep. When a class inherits from another base class, it inherits all of its code. In fact, the base class constructor is called first, and then propagates down until the derived class in constructed. Here we make a class that inherits from a base Person class, and inherits all of its functionality.
+[Inheritance](../OOP/Inheritance.md) on the other hand is a "is-a" relationship, and was and still is a big focus in academic circles and people with chronic Java disease. You should probably never use inheritance, definitely never more than one layer deep. When a class inherits from another base class, it inherits all of its code. In fact, the base class constructor is called first, and then propagates down until the derived class in constructed. Here we make a class that inherits from a base Person class, and inherits all of its functionality.
 
 ```cpp
 class BaseballPlayer : public Person
@@ -178,7 +178,7 @@ public:
 ## Virtual Functions
 
 
-Let's say you have a function that takes in any Employee. You want to be able to put in any subclass to employee to this function and still have it work ([Liskov Substitution Principle](../SOLID%20Principles.md)), but when you pass a derived class, you see the function is still calling the base class functions!
+Let's say you have a function that takes in any Employee. You want to be able to put in any subclass to employee to this function and still have it work ([Liskov Substitution Principle](../OOP/SOLID%20Principles.md)), but when you pass a derived class, you see the function is still calling the base class functions!
 
 This is due to the way inherited classes are built, the base classes are built first and contain all of their functionality, and then the derived classes are made. We can use *Virtual Functions* to tell the program to always go for the most derived version of a function.
 

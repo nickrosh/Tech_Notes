@@ -3,7 +3,6 @@
 These principles help you write better, more modular object oriented code that can be extended and used by a large team.
 
 
-
 ### Single Responsibility Principle
 Every component of code, classes, or functions should have one and only one responsibility. This makes it much easier to test and localize errors.
 
@@ -21,4 +20,4 @@ Many client-specific interface are better than one general purpose interface. A 
 
 
 ### Dependency Inversion Principle
-Abstractions should not depend on abstractions. So rather than pushing info from **Object A** to **Object B**, we create an interface that takes the info as input and passes to the others, like an API. That way, changes in the info in **Object A**  won't break **Object B**.
+Abstractions should not depend on abstractions. So rather than pushing info from **Object A** to **Object B**, we create an interface that takes the info as input and passes to the others, like an API. That way, changes in the info in **Object A**  won't break **Object B**. You wouldn't solder a light bulb directly to the electrical wires, you would use an outlet: don't depend on low-level implementation.

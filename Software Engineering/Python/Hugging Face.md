@@ -3,7 +3,7 @@
 
 ![](../../Attachments/Pasted%20image%2020230317005142.png)
 
-At the highest level, the `pipeline` function let's you do an entire Transformer inference in one function. This function is a combination of [NLP](../../Machine%20Learning/Deep%20Learning/NLP.md) Tokenizer, the [Transformer](../../Machine%20Learnig/Deep%20Learning/Transformers.md) Model itself, and the postprocessing including turning the transformer output logits to [class](../../Machine%20Learning/Classification.md) probabilities with [Softmax](../../Machine%20Learning/Deep%20Learning/Activation%20Functions.md).
+At the highest level, the `pipeline` function let's you do an entire Transformer inference in one function. This function is a combination of [NLP](../../Machine%20Learning/Deep%20Learning/NLP.md) Tokenizer, the Transformer model itself, and the postprocessing including turning the transformer output logits to [class](../../Machine%20Learning/Classification.md) probabilities with [Softmax](../../Machine%20Learning/Deep%20Learning/Activation%20Functions.md).
 
 ## Model
 

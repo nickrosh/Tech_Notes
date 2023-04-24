@@ -29,3 +29,30 @@ Besides the input and output data drifting, we can have the actual relationship 
 - Periodically as a result of recurring events
 
 Additionally, all of the types of drift discussed can happen simultaneously, which further complicates identifying the sources of drift.
+
+
+
+## Model Fairness
+
+Both for reasons of ethics and even legal requirements, it becomes critical to monitor model performance for bias and explainability.
+
+#### Bias
+
+Checking your model for bias is important. This can be any view of the dataset such as looking at race, sex, class, etc. The following are some metrics that can reveals bias issues in a model:
+
+- **Class Imbalance**: This metric simply detects if an advantaged group is represented in the dataset at a substantially higher rate than another group, or vice versa
+- **Total Variation Distance**: This measure of distance in label distribution is half of Hamming distance between the probability distribution of labels of the advantage and disadvantaged group.
+- **Conditional Demographic Disparity in Predicted Labels (CDDPL)**: This metric examines whether the model predicted a bigger proportion of rejected outcomes for the disadvantaged class than the proportion of accepted outcomes for the same class.
+
+#### Explainability
+
+Deep Learning models are generally black boxes. It is difficult to discern why a [Neural Network](../Deep%20Learning/Neural%20Networks.md) made its decision based on its model weights and activations. SHAP Values (Shapley Additive Explanations) is a method to discern roughly how much each feature contributes to the model decisions. Here are the steps to calculate the SHAP values for a single feature *F*:
+
+1. Create the set of all possible feature combinations
+2. Calculate the average model prediction
+3. For each combination, calculate the difference between the model's prediction *without* F and the average prediction
+4. For each combination, calculate the difference between the model's prediction *with* F and the average prediction
+5. For each combination, calculate how much F changed the model's prediction from the average (i.e. step 4 minus step 3), this is the *marginal contribution* of F.
+6. Shapley Value = the average of all the values calculated in step 5 (i.e. the average of F's marginal contributions)
+
+We can use Shapley values to see the influence of sensitive features like sex or race.
