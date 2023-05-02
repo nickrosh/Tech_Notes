@@ -7,7 +7,7 @@ You must ask clarifying questions of the exact scope of the problem we are tryin
 
 You must clarify all requirements, and differentiate between functional and non-functional requirements. Functional requirements are the actual functioning of the application, like adding likes to a tweet, or news feed generation. This can be very open ended and must be clarified with the interviewer.
 
-Non-functional requirements are everything other than the actual functions of the application including things like [scalability, throughput, latency, etc.](Design%20Requirements.md). Handling very large scale is usually the hardest part of the interview, and real life [distributed systems](../Distribution%20Problems.md). The choice of availability versus consistency as laid out in [CAP Theorem](../CAP%20Theorem.md) is also a non-functional requirement that needs to be spelled out. Also the specific availability percent target needs to be defined.
+Non-functional requirements are everything other than the actual functions of the application including things like [scalability, throughput, latency, etc.](../Design%20Requirements.md). Handling very large scale is usually the hardest part of the interview, and real life [distributed systems](../Distribution%20Problems.md). The choice of availability versus consistency as laid out in [CAP Theorem](../CAP%20Theorem.md) is also a non-functional requirement that needs to be spelled out. Also the specific availability percent target needs to be defined.
 
 Here are some questions for designing a Twitter-like service that should be answered before moving on:
 - Will users of our service be able to post tweets and follow other people?

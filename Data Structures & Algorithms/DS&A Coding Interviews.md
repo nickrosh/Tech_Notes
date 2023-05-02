@@ -95,7 +95,7 @@ Before the interview, make sure you have pen and paper to jot down notes and vis
 - Do not spend too long on your self-introduction as you will have less time left to code
 
 #### 2. Upon Receiving the Question, Make Clarifications
-**Do not jump into coding right away.** Coding questions tend to be vague and underspecifed on purpose to allow the interview to gauge the candidate's attention to detail and carefulness. Ask at least 2-3 clarifying questions.
+**Do not jump into coding right away.** Coding questions tend to be vague and unspecified on purpose to allow the interview to gauge the candidate's attention to detail and carefulness. Ask at least 2-3 clarifying questions.
 - Paraphrase and repeat the question back at the interviewer
 - Clarify assumptions
 	- A [Trees](Data%20Structures/Trees.md) like diagram could very well be a [Graph](Data%20Structures/Graphs.md) that allows for cycles and a naive recursive solution would not work. Clarify if the given diagram is a tree or a graph.

@@ -7,7 +7,7 @@
 
 ## RDS
 
-*Relational Database Service* is the classic managed [Relational Database](../../Databases/Relational%20Databases.md) offered by AWS. This is essentially like installing Postgres or MySQL on an [EC2](AWS%20Compute.md) instance, except all the configuration and management overhead is taken care of. It looks a lot like classic database solutions and is a quick swap in for on-premise databases. You can have a maximum of 5 read replicas to increase read [throughput](../../Distributed%20Systems/System%20Design/Design%20Requirements.md).
+*Relational Database Service* is the classic managed [Relational Database](../../Databases/Relational%20Databases.md) offered by AWS. This is essentially like installing Postgres or MySQL on an [EC2](AWS%20Compute.md) instance, except all the configuration and management overhead is taken care of. It looks a lot like classic database solutions and is a quick swap in for on-premise databases. You can have a maximum of 5 read replicas to increase read [throughput](../../Distributed%20Systems/Design%20Requirements.md).
 
 #### Aurora
 

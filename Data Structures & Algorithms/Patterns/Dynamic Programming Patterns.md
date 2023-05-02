@@ -22,13 +22,15 @@ Much like 0/1 Knapsack, we convert this problem into a Decision Tree. The differ
 
 ## Longest Common Subsequence
 
-
+[2D - Dynamic Programming](../Algorithms/Dynamic%20Programming.md) pattern where we are trying to find the longest subsequence that is shared by two strings. There are many problems that are similar to this. The key to this problem is that as we iterate through both strings and compare letters, the indexes at each string are the state variables for DP. Thus our recursion/DP Table is looking at both indexes and the longest subsequence up to that index. The solution to the overall problem is just the value at which both indexes reach the end of their respective strings.  
+  
+For example, in the prototypical example of LCS, our key decision is whether the letters at each index match, and what to do with the indexes. If they match, then we simply increment both indexes and add "1" to the result for a found match. If they don't match, then we have a split decision. We branch two different decisions of keeping one the same and incrementing the other. We then take the max of these two branches and return that. In a DP table, we would take the diagonal value and add 1 when there's a match. When there's not a match, we take the max of the above and left values, assuming we're going left to right top to bottom.
 
 ## Palindromes
 
-The easiest way to get Palindrome substrings in a string is to iterate through the word and search starting at every letter. For every character, use [Two Pointers](Two%20Pointers.md) and check if the letter to the left and the letter to the right are equal. If they are then you have a palindrome and you can continue the while loop
+Palindromes are another DP problem where we can optimize a problem by focusing on its subproblems. When we want to see if a string is a palindrome, we put [Two Pointers](Two%20Pointers.md) at either end and go in checking equality. In order to find palindromic substrings within the string, we need to iterate through every character, and do this same equality check going out from the iterated character. This means we do a palindrome sweep for every character. 
 
-You must do this for both Even and Odd palindromes. For the odd case at letter index = i, simply set left = i and right = i. For the even case: left = i and right = i + 1.
+Also, checking either side of a single character will only give you the case for Odd length palindromes. To check for Even palindromes, at every index i, set the initial left pointer to "i" and the right pointer to "i+1". As soon as a pointer goes out of bound or the pointer's letters do not match, you can stop iterating.
 
 
 

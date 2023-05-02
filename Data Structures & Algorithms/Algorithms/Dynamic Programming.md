@@ -103,21 +103,25 @@ Base cases need to relate directly to the conditions required by the answer we a
 
 #### 5. Code
 
-At this point, it should be trivial to code up the answer once you fully understand the question and all of the above components. Coding up the [Depth First Search](Depth%20First%20Search.md) Memoization solution requires correct recurrence and outputs. The Memoization solution will give you the optimal [Time Complexity](../Time%20&%20Space%20Complexity.md). Below is a very rough outline of what you will expect to see in a 
+At this point, it should be trivial to code up the answer once you fully understand the question and all of the above components. Coding up the [Depth First Search](Depth%20First%20Search.md) Memoization solution requires correct recurrence and outputs. The Memoization solution will give you the optimal [Time Complexity](../Time%20&%20Space%20Complexity.md). Below is a rough template of how a Memoization solution will look.
 
 ```python
-dp = {}
-def dfs(state1, state2):
-	if base_case1:
-		return 1
-	if base_case2:
-		return 2
-	if (state1, state2) in dp:
-		return dp[(state1, state2)]
+def dp(dp_state, cache):
+	if dp_state in cache:
+		return cache[dp_state]
+	if dp_state is the base cases:
+		return things like 0 or None
 
-	dp[(state1, state2)] = dfs(state1, state2+1) + dfs(state1+1, state2)
-	return dp[(state1, state2)]
+	result = calculate dp(dp_state) from dp(other_state)
+	cache[dp_state] = result
+	return dp[dp_state]
 ```
+
+When customizing this template to your specific problem, there are four key items that need to be filled in:
+1. What is `dp_state`?
+2. What does the `dp` function return?
+3. What is the base case(s)?
+4. How to calculate `dp(dp_state)` from `dp(other_state)`?
 
 #### 6. Optimize
 
