@@ -2,8 +2,8 @@
 Data must be serialized so it can be sent over the wire, such has in [HTTP](HTTP.md) requests or RCP calls.
 
 
-### HTML
-The declarative markup language of the internet. You can add in content and add dynamic rendering with JavaScript. Using CSS, you can add styling to the HTML. Browsers render HTML for the user
+### [HTML](../Software%20Engineering/HTML.md)
+The declarative markup language of the internet. You can add in content and add dynamic rendering with JavaScript. Using [CSS](../Software%20Engineering/CSS.md), you can add styling to the HTML. Browsers render HTML for the user
 
 
 ### XML

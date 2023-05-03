@@ -1,0 +1,11 @@
+
+Intervals are a common pattern where you are given multiple intervals with a start and end point and asked to perform some task on them. You are usually given an [Array](../Data%20Structures/Arrays.md) of arrays of the form `intervals[i] = [start, end]`. The problems usually revolve around overlapping intervals and what to do with them. An important clarification to ask in [DS&A Coding Interviews](../DS&A%20Coding%20Interviews.md) is if two intervals are considered overlapping if the start of one interval is equal to the end of another, it varies by question.
+
+
+## Merge Intervals
+
+Many times, you will be asked to merge all overlapping intervals. The resulting array will be non-overlapping intervals that cover all the intervals in the input. When faced with this type of problem, your first step is to sort the list of intervals by their start values. Then, you simply iterate through the list, if an overlap is detected (previous end is greater than current start) then merge the two intervals. Merging in this case would just be extending the end of the most recent interval to be the max of the current end and the previous end, whichever is larger. If there is no overlap, you can simply add the interval to the output
+
+## Meeting Rooms
+
+A classic string of problems is "Meeting Rooms" where meeting times are designated by intervals with start and end times. Meeting Rooms 1 asks if one person can attend all meetings, this is simply a check to see if there are any overlapping intervals. Meeting Rooms 2 asks how many conference rooms are needed. This is asking for the maximum number of concurrent intervals at any one time. You can solve this by making separate sorted start times and end times, and indexes for both. While your start index hasn't reached the end, compare the start and end at each index. If the start is lower than the end, this means there is a meeting occurring: increment the count and the start index. Conversely, if the start is greater or equal to the end, then decrement the count and increment the end index. You are looking at overall overlapping times, thus it doesn't matter which start correlates to what end.

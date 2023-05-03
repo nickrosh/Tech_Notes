@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures & Algorithms/Patterns/Greedy Patterns.md",
+                "file": "Data Structures & Algorithms/Patterns/Interval Patterns.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cc60e005d4b6198c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -90,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Structures & Algorithms/Patterns/Greedy Patterns.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,8 +138,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "980fbdba4a092142",
+  "active": "cc60e005d4b6198c",
   "lastOpenFiles": [
+    "Data Structures & Algorithms/Patterns/Math & Geometry Patterns.md",
+    "Data Structures & Algorithms/Patterns/Interval Patterns.md",
+    "Attachments/Pasted image 20230503002027.png",
+    "Data Structures & Algorithms/Patterns/Two Pointers.md",
+    "Data Structures & Algorithms/Patterns/Tree Patterns.md",
+    "Data Structures & Algorithms/Patterns/Stack Patterns.md",
+    "Data Structures & Algorithms/Patterns/Sliding Window.md",
+    "Data Structures & Algorithms/Patterns/Linked List Patterns.md",
+    "Data Structures & Algorithms/Patterns/Heap Patterns.md",
+    "Data Structures & Algorithms/Patterns/Greedy Patterns.md",
+    "Data Structures & Algorithms/Patterns/Graph Patterns.md",
+    "Data Structures & Algorithms/Patterns/Dynamic Programming Patterns.md",
+    "Data Structures & Algorithms/Patterns/Bit Manipulation Patterns.md",
+    "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
+    "Data Structures & Algorithms/Patterns/Backtracking Patterns.md",
+    "Data Structures & Algorithms/Patterns/Binary Search Patterns.md",
+    "Internet & Networking/Serialization.md",
+    "Software Engineering/HTML.md",
+    "Systems Software/Bootloader.md",
     "Distributed Systems/System Design/Design a Rate Limiter.md",
     "Distributed Systems/System Design/Design TinyURL.md",
     "Distributed Systems/System Design/System Design Interviews.md",
@@ -137,25 +168,6 @@
     "README.md",
     "Attachments/Pasted image 20230501192740.png",
     "Attachments/Pasted image 20230501184236.png",
-    "Data Structures & Algorithms/Patterns/Greedy Patterns.md",
-    "Data Structures & Algorithms/Patterns/Heap Patterns.md",
-    "Data Structures & Algorithms/Patterns/Graph Patterns.md",
-    "Data Structures & Algorithms/Patterns/Interval Patterns.md",
-    "Data Structures & Algorithms/Patterns/Linked List Patterns.md",
-    "Data Structures & Algorithms/Patterns/Dynamic Programming Patterns.md",
-    "Data Structures & Algorithms/Patterns/Bit Manipulation Patterns.md",
-    "Systems Software/Garbage Collection.md",
-    "Systems Software/Bootloader.md",
-    "Systems Software/Compiler.md",
-    "Systems Software/Interpreter.md",
-    "Systems Software/Operating System.md",
-    "Systems Software/Processes & Threads.md",
-    "Systems Software/Reference Counting.md",
-    "Systems Software/Shell.md",
-    "Systems Software/Virtual Memory.md",
-    "Software Engineering/OOP/Object Oriented Programming.md",
-    "Software Engineering/OOP/Polymorphism.md",
-    "Software Engineering/OOP/Inheritance.md",
     "Attachments/Pasted image 20230420191856.png",
     "Attachments/Pasted image 20230419004722.png",
     "Attachments/Pasted image 20230419001212.png",
@@ -165,7 +177,6 @@
     "Attachments/Pasted image 20230418223255.png",
     "Software Engineering/OOP/OOP Design",
     "Software Engineering/OOP",
-    "Attachments/Pasted image 20230418004329.png",
     "Software Engineering/AWS",
     "Distributed Systems/System Design",
     "Machine Learning/ML Engineering"
