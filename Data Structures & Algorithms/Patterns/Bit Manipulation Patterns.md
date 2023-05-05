@@ -25,3 +25,16 @@ def reverseBits(self, n):
 	n = ((n & 0xaaaaaaaa) >> 1) | ((n & 0x55555555) << 1)
 	return n
 ```
+
+## Sum of Two Integers  
+  
+How do you sum two integers without using the addition or subtraction operator? you can use alternating XOR and AND operators. First you XOR the two numbers, this will give you the remainder number. You also calculate the AND to get the carry bits, we then shift these once to the left as they are carries. We replace the first number with our XOR result and the second number with the carry result, and continue this process until the carry is zero. At this point, the first number is the result.  
+  
+In an [Interpreted](../../Systems%20Software/Interpreter.md) language like Python, integers grow limitlessly, and are not bound to set 32 bits, this becomes a problem when dealing with negative numbers (two's complement). Say we are adding -2 and 3, which = 1. In Python this would be (110 + 011 = 001). This seems fine but what happened to the extra carry bit at the front? Normally we should ignore it, but Python keeps it going. In order to fix this, we make a mask of 32 one's (8 F's in hex) and AND that with the carry whenever we are checking to end the loop. That way, we won't continue the operation if the carry is out of bounds  
+  
+  
+## Reverse Integer  
+  
+To reverse an integer while staying in the 32 bit range, iterate through the int and sum up its digits backwards. You do this by modding the integer by 10 and then adding that to ten times the running sum. This way, you keep moving the digits up and add them modding through the entire input. To check for overflows, make sure the result does not go over or under the int MIN and MAX (+/- $2^{31}$). After each round of modding and adding, integer divide the input by 10, and continue until the input hits zero.  
+  
+Note that in [Python](../../Software%20Engineering/Python/Python%20101.md), the operators "%" and "//" have strange behavior with negative numbers. `-1 % 10 = 9` and `-1 // 10 = -1`. Instead of those, use the float versions `math.fmod = %` and `/ = //`, and then cast the values into integers.

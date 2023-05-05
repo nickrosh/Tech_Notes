@@ -37,6 +37,20 @@ The status codes are 3 digit codes that tell you the status of the request. Ther
 - Client error responses (400-499)
 - Server error responses (500-599)
 
+Common Status Codes:
+- 200: OK, request is successful
+- 201: New resource created successfully
+- 204: Success, but no return information needed, e.g. deletions
+- 301: Permanent Redirect, cache "Location" field redirect permanently
+- 302: Temporary Redirect, go to URL in "Location" field
+- 400: Bad request
+- 401: Authentication not provided
+- 403: Forbidden, unauthorized access
+- 404: Resource not found
+- 410: Gone, resource is permanently removed
+- 500: Internal Server error
+- 503: Service unavailable, usually due to temporary overload or maintenance
+
 ## Methods
 
 `GET` => requesting a resource

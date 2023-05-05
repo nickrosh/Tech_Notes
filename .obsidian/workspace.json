@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "36dea10097a567c9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "980fbdba4a092142",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures & Algorithms/Patterns/Interval Patterns.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cc60e005d4b6198c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
+                "file": "Distributed Systems/Consistent Hashing.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -81,6 +56,14 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "364e0dc2aa5090d6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -102,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Distributed Systems/Consistent Hashing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,43 +121,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "cc60e005d4b6198c",
+  "active": "980fbdba4a092142",
   "lastOpenFiles": [
-    "Data Structures & Algorithms/Patterns/Math & Geometry Patterns.md",
-    "Data Structures & Algorithms/Patterns/Interval Patterns.md",
-    "Attachments/Pasted image 20230503002027.png",
-    "Data Structures & Algorithms/Patterns/Two Pointers.md",
-    "Data Structures & Algorithms/Patterns/Tree Patterns.md",
-    "Data Structures & Algorithms/Patterns/Stack Patterns.md",
-    "Data Structures & Algorithms/Patterns/Sliding Window.md",
-    "Data Structures & Algorithms/Patterns/Linked List Patterns.md",
-    "Data Structures & Algorithms/Patterns/Heap Patterns.md",
-    "Data Structures & Algorithms/Patterns/Greedy Patterns.md",
-    "Data Structures & Algorithms/Patterns/Graph Patterns.md",
-    "Data Structures & Algorithms/Patterns/Dynamic Programming Patterns.md",
-    "Data Structures & Algorithms/Patterns/Bit Manipulation Patterns.md",
-    "Data Structures & Algorithms/Patterns/Arrays & Hashing.md",
-    "Data Structures & Algorithms/Patterns/Backtracking Patterns.md",
-    "Data Structures & Algorithms/Patterns/Binary Search Patterns.md",
-    "Internet & Networking/Serialization.md",
-    "Software Engineering/HTML.md",
-    "Systems Software/Bootloader.md",
-    "Distributed Systems/System Design/Design a Rate Limiter.md",
-    "Distributed Systems/System Design/Design TinyURL.md",
-    "Distributed Systems/System Design/System Design Interviews.md",
-    "Distributed Systems/Design Requirements.md",
-    "Distributed Systems/Distribution Problems.md",
-    "Distributed Systems/CAP Theorem.md",
+    "Machine Learning/Regularization.md",
+    "Machine Learning/ML Metrics.md",
+    "Machine Learning/Linear Regression.md",
+    "Machine Learning/K Means.md",
+    "Machine Learning/Deep Learning/Recurrent Neural Net.md",
+    "Machine Learning/Deep Learning/Activation Functions.md",
     "README.md",
-    "Attachments/Pasted image 20230501192740.png",
-    "Attachments/Pasted image 20230501184236.png",
-    "Attachments/Pasted image 20230420191856.png",
-    "Attachments/Pasted image 20230419004722.png",
-    "Attachments/Pasted image 20230419001212.png",
-    "Attachments/Pasted image 20230419000914.png",
-    "Attachments/Pasted image 20230418234342.png",
-    "Attachments/Pasted image 20230418231701.png",
-    "Attachments/Pasted image 20230418223255.png",
+    "Distributed Systems/System Design/Design TinyURL.md",
+    "Distributed Systems/Consistent Hashing.md",
+    "Attachments/Pasted image 20230504212729.png",
+    "Attachments/Pasted image 20230504212056.png",
+    "Attachments/Pasted image 20230504211012.png",
+    "Attachments/Pasted image 20230504210512.png",
+    "Attachments/Pasted image 20230504210130.png",
+    "Internet & Networking/HTTP.md",
+    "Attachments/Pasted image 20230504203305.png",
+    "Attachments/Pasted image 20230504202527.png",
+    "Attachments/Pasted image 20230504200713.png",
+    "Distributed Systems/System Design/Design a Rate Limiter.md",
+    "Distributed Systems/Consistency and Consensus.md",
+    "Distributed Systems/Distribution Problems.md",
+    "Attachments/Pasted image 20230504195233.png",
+    "Internet & Networking/Serialization.md",
+    "Attachments/Pasted image 20230504182358.png",
+    "Data Structures & Algorithms/Patterns/Interval Patterns.md",
+    "Data Structures & Algorithms/Patterns/Bit Manipulation Patterns.md",
+    "Distributed Systems/CAP Theorem.md",
+    "Data Structures & Algorithms/DS&A Coding Interviews.md",
+    "Distributed Systems/System Design/System Design Interviews.md",
+    "Distributed Systems/Batch Processing.md",
+    "Distributed Systems/CDN.md",
+    "Distributed Systems/Design Requirements.md",
+    "Distributed Systems/Load Balancer.md",
+    "Distributed Systems/Message Queue.md",
+    "Distributed Systems/Pub-Sub Model.md",
+    "Distributed Systems/Stream Processing.md",
     "Software Engineering/OOP/OOP Design",
     "Software Engineering/OOP",
     "Software Engineering/AWS",

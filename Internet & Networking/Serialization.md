@@ -32,4 +32,4 @@ Google's encoding format that is used in gRPC. It is meant for very fast process
 
 
 ### Base64
-Base64 is an encoding algorithm to convert [Binary](../Electrical%20Engineering/Digital/Binary.md) data into an ASCII string which can be sent as a regular string over the network. This is not necessarily a serialization format, but is used in combination with one of the above formats to safely deliver binary data over the web.
+Base64 is an encoding algorithm to encode [Binary](../Electrical%20Engineering/Digital/Binary.md) data into an ASCII string which can be sent as a regular text string over the network. This is not necessarily a serialization format, but is used in combination with one of the above formats to safely deliver binary data over the web. It includes all numbers (0-9) all lower case letters (a-z) and upper case letters (A-Z) and two symbols (+, /) to take it to 64 characters.
