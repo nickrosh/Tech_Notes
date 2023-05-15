@@ -13,11 +13,11 @@ Rate limiting helps to protect services against DDOS attacks, brute force passwo
 
 ## Requirements
 
-**Functional Requirements:**
+#### Functional Requirements:
 1. Limit the number of requests and entity can send to an [API](../../Internet%20&%20Networking/REST%20API.md) within a time window, e.g. 15 per second.
 2. The APIs are accessible through a cluster, so the rate limit should be considered across different servers. The user should get an error message whenever the defined threshold is crossed within a single server or across a combination of servers.
 
-**Non-functional Requirements**
+#### Non-functional Requirements
 1. The system should be highly [available](../Design%20Requirements.md). The rate limiter should always be up as it protects from external attacks.
 2. The rate limiter should not introduce substantial latencies affecting the user experience.
 
