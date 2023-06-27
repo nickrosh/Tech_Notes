@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures & Algorithms/DS&A Coding Interviews.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8c02d6332078e81c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
+                "file": "Software Engineering/Containers.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Software Engineering/Containers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,44 +121,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8c02d6332078e81c",
+  "active": "980fbdba4a092142",
   "lastOpenFiles": [
-    "Software Engineering/Python/Hugging Face.md",
+    "Machine Learning/ML Engineering/Model Optimization.md",
+    "Attachments/Pasted image 20230625162716.png",
+    "Attachments/Pasted image 20230625162626.png",
+    "Machine Learning/Regularization.md",
+    "Machine Learning/ML System Design/ML System Design Interview.md",
     "Machine Learning/Deep Learning/NLP.md",
-    "Machine Learning/Deep Learning/Transformers.md",
-    "Software Engineering/AWS/AWS Networking.md",
-    "Software Engineering/OOP/Object Oriented Design/Design Connect Four.md",
-    "Software Engineering/OOP/Object Oriented Design/Design Blackjack.md",
-    "Software Engineering/OOP/Object Oriented Design/Design a Parking Lot.md",
-    "Software Engineering/OOP/Object Oriented Design/Design a Bank.md",
-    "Software Engineering/OOP/Abstraction.md",
-    "Software Engineering/OOP/Design Patterns.md",
-    "Software Engineering/OOP/SOLID Principles.md",
-    "Software Engineering/OOP/Polymorphism.md",
-    "Software Engineering/OOP/Object Oriented Programming.md",
-    "Software Engineering/OOP/Inheritance.md",
-    "Software Engineering/OOP/Encapsulation.md",
-    "Software Engineering/Python/PyTorch.md",
-    "Software Engineering/Python/Python 101.md",
+    "Software Engineering/Containers.md",
+    "Software Engineering/Kubernetes.md",
+    "Software Engineering/Test Driven Development.md",
+    "Software Engineering/Logging.md",
     "README.md",
-    "Data Structures & Algorithms/DS&A Coding Interviews.md",
-    "Data Structures & Algorithms/Solving DS&A Questions.md",
-    "Data Structures & Algorithms/Time & Space Complexity.md",
-    "Distributed Systems/System Design/Design a Rate Limiter.md",
-    "Distributed Systems/System Design/Design Dropbox.md",
-    "Distributed Systems/System Design/Design Facebook Messenger.md",
-    "Attachments/Pasted image 20230509194545.png",
-    "Attachments/Pasted image 20230509194334.png",
-    "Attachments/Pasted image 20230509194330.png",
-    "Attachments/Pasted image 20230509194120.png",
-    "Attachments/Pasted image 20230509194114.png",
-    "Attachments/Pasted image 20230509193946.png",
-    "Attachments/Pasted image 20230509193909.png",
-    "Distributed Systems/System Design/System Design Interviews.md",
-    "Distributed Systems/System Design/Design TinyURL.md",
-    "Attachments/Pasted image 20230508222017.png",
-    "Attachments/Pasted image 20230508222011.png",
-    "Attachments/Pasted image 20230508221901.png",
+    "Systems Software/Shell.md",
+    "Systems Software/Virtual Memory.md",
+    "Systems Software/Reference Counting.md",
+    "Systems Software/Processes & Threads.md",
+    "Systems Software/Operating System.md",
+    "Systems Software/Interpreter.md",
+    "Systems Software/Garbage Collection.md",
+    "Machine Learning/Scaling.md",
+    "Machine Learning/Regression.md",
+    "Machine Learning/PCA.md",
+    "Machine Learning/ML Metrics.md",
+    "Machine Learning/Maximum Likelihood.md",
+    "Machine Learning/Logistic Regression.md",
+    "Machine Learning/Linear Regression.md",
+    "Machine Learning/K Means.md",
+    "Machine Learning/Ensemble Learning.md",
+    "Attachments/Pasted image 20230618153844.png",
+    "Attachments/Pasted image 20230613200956.png",
+    "Attachments/Pasted image 20230611182909.png",
+    "Attachments/Pasted image 20230606195022.png",
+    "Machine Learning/ML System Design",
+    "Attachments/Pasted image 20230602003843.png",
+    "Attachments/Pasted image 20230602003407.png",
+    "Attachments/Pasted image 20230602003127.png",
+    "Attachments/Pasted image 20230602002208.png",
     "Software Engineering/OOP/Object Oriented Design",
     "Software Engineering/OOP",
     "Software Engineering/AWS",

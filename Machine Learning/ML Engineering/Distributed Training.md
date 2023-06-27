@@ -55,27 +55,3 @@ Due to the two all-reduces per layer in both the forward and backward passes, te
 
 ## Optimization
 
-Distributed training strategies are great for when our data or models are too large for training, but what about when our model are too large to deploy for inference? The following model compression techniques are commonly used to make large models fit within existing infrastructure.
-
-#### Pruning
-
-Remove weights (unstructured) or entire channels (structured) to reduce the size of the network. The objective is to preserve the model's performance while increasing its sparsity. For example, many heads in [Multi-Head Attention](../Deep%20Learning/Attention.md) have been shown to provide little to model performance, and can thus be eliminated without a big hit.
-
-#### Quantization
-
-Reduce the memory footprint of the weights by reducing their precision (e.g. 32 bit to 16 bit). We may lose some precision but it shouldn't affect performance too much. There are special [Floating Point](../../Electrical%20Engineering/Digital/Floating%20Point%20Numbers.md) formats for ML that have lower precision and higher exponent precision than mantissa. In training, we worry about overflow, which his when we exceed the max numerical range of a weight. This is why BF16 is much better than the same sized FP16. The exponent term of BF16 is just as large as FP32 so the numerical range is much better, at the cost of much lower precision. However, since our [Optimizers](../Deep%20Learning/Optimizers.md) are not exact anyway and have a component of randomness, perfect precision is not needed in training
-
-Note that regardless of whether one uses BF16 or FP16, there is also a copy of weights which is always in FP32. This is what gets updated by the optimizer. So the 16-[bit](../../Electrical%20Engineering/Digital/Binary.md) formats are only used for the computation, the optimizer updates the FP32 weights will full precision and then casts them into the 16-bit format for the next iteration.
-
-#### Gradient Accumulation
-
-Gradient accumulation is a technique where you can train on bigger batch sizes than your machine would normally be able to fit into memory. This is done by accumulating gradients over several batches, and only stepping the [Optimizer](../Deep%20Learning/Optimizers.md) and updating the gradients after a certain number of batches have been performed. Thus, you can essentially "emulate" a batch size of 64 if you do a batch size of 16 and accumulate it over 4 batches.
-
-One crucial point about gradient accumulation is that it must be implemented with FP32 (not 16-bit) to keep the training precise. This is what accumulation libraries should be doing anyway.
-
-
-#### Distillation
-
-Training smaller networks to "mimic" larger networks by having it reproduce the larger network's layer's outputs. Below is an example of distilling the knowledge in a [Neural Network](../Deep%20Learning/Neural%20Networks.md).
-
-![](../../Attachments/Pasted%20image%2020230310020618.png)

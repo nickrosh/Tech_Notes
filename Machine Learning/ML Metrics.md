@@ -31,17 +31,31 @@ $$F1 = 2\frac{\text{Precision} * \text{Recall}}{\text{Precision} + \text{Recall}
 F1 is the harmonic mean of Precision and Recall. Only issue is that it gives equal weight to both. You can make weighted F1 if you want.
 
 
-#### 3. Log Loss/Binary Cross Entropy
+#### 3. F2 Score
+The F2 score is the weighted harmonic mean of the precision and recall (given a threshold value). Unlike the F1 score, which gives equal weight to precision and recall, the F2 score gives more weight to recall than to precision.
+
+$$F2 = 5\frac{\text{Precision} * \text{Recall}}{4\text{Precision} + \text{Recall}} $$
+F2 is used when a False Negative is more costly than a False Positive. For example, if your use case is to predict which customers churn, you may consider False Negatives worse than False Positives. In this case, you want your predictions to capture all of the customers that will churn. 
+
+
+#### 4. F0.5 Score
+The F0.5 score is the weighted harmonic mean of the precision and recall (given a threshold value). Unlike the F1 score, which gives equal weight to precision and recall, the F0.5 score gives more weight to precision than to recall.
+
+$$F0.5 = 1.25\frac{\text{Precision} * \text{Recall}}{0.25\text{Precision} + \text{Recall}} $$
+F0.5 is used when a False Positive is more costly than a False Negative. For example, if your use case is to predict which products you will run out of, you may consider False Positives worse than False Negatives. In this case, you want your predictions to be very precise and only capture the products that will definitely run out.
+
+
+#### 4. Log Loss/Binary Cross Entropy
 
 When the model output is prediction probabilities, log loss takes into account the uncertainty of your prediction based on how much it varies.
 
 
-#### 4. Categorical Cross Entropy
+#### 5. Categorical Cross Entropy
 
 Multiclass version of the above. Usually used as the [Loss Functions](Deep%20Learning/Loss%20Functions.md) for training. Susceptible to imbalanced datasets.
 
 
-#### 5. Area Under ROC (AUC)
+#### 6. Area Under ROC (AUC)
 
 ![](../Attachments/Pasted%20image%2020230225023235.png)
 

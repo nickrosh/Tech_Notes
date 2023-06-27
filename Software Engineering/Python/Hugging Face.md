@@ -17,6 +17,43 @@ The configuration of a model is its blueprint, containing everything needed to c
 
 the `datasets` library contains a simple API to download and cache datasets from the cloud. All the datasets are saved to disk as Apache Arrow files, so they are also not volatile if [Memory & Cache](../../Electrical%20Engineering/Digital/Memory%20&%20Cache.md) crashes. You can apply a tokenizer function to a dataset in batches by using the `map` function and setting `batched=True`.
 
+You can also load custom datasets to a Dataset object. There are four different file formats you can use to load in. You specify the type of file and a file path or URL that specifies the path to one or more files.
+| Data Format        | Loading Script | Example                                            |
+| ------------------ | -------------- | -------------------------------------------------- |
+| CSV/TSV            | `csv`          | `load_dataset("csv", data_files="my_file.csv")`    |
+| Text Files         | `text`         | `load_dataset("text", data_files="my_file.txt")`   |
+| JSON & JSON Lines  | `json`         | `load_dataset("json", data_files="my_file.json")`  |
+| Pickled DataFrames | `pandas`       | `load_dataset("pandas", data_files="my_file.pkl")` |
+
+The `data_files` argument is quite flexible and can be either a single file path, a list of file paths, or a dictionary that maps split names to file paths. You can also glob files that match a specific pattern according to the rules used by the Unix [Shell](../../Systems%20Software/Shell.md) (e.g. glob all the JSON files in a directory as a single split by setting `data_files="*.json"`). The loading scripts also supports automatic decompression of the input files, so you can pass in a `example.json.gz` compressed file directly to the `data_files` argument.
+
+#### Data Wrangling
+
+The Datasets library also comes with several data wrangling methods that can be quite useful:
+
+- Shuffle: It can be quite useful to shuffle your dataset before training so your model doesn't learn any artificial ordering in the data. This can applied to the entire dataset with `Dataset.shuffle()`.
+- Train/Test Split: When you need to split your dataset into train and test sections, you can use `Dataset.train_test_split(test_size=XXX)` which randomly splits the data according to the test size you specified
+- Rows: You can select specific rows with `Dataset.select()`. You can also get a random sample by chaining `Dataset.shuffle.select()`. Lastly, you can use `Dataset.filter()` which which only select rows that fulfill the filter condition
+- Columns: You can rename columns with `Dataset.rename_column()` and delete them with `Dataset.remove_columns()` to transform your columns. If your dataset has nested columns, you can flatten them with `Dataset.flatten()`.
+- Map: The `Dataset.map()` method allows you to apply any preprocessing function on the dataset. You can also do this in batches with `Dataset.map(batched=True)` for faster  multithreaded processing.
+
+#### Big Data
+
+Massive datasets are common in NLP and are usually larger than any single machine's [RAM](../../Electrical%20Engineering/Digital/Memory%20&%20Cache.md). The Datasets library frees you from memory management problems by treating datasets as *memory-mapped* files, and from hard drive limits by *streaming* the entries in a corpus.
+
+Datasets will automatically treat each dataset as a memory-mapped file, which provides a mapping between RAM and filesystem storage that allows the library to access and operate on elements of the dataset without needing to fully load it into memory. Memory-mapped file can also be shared across multiple [Processes](../../Systems%20Software/Processes%20&%20Threads.md), which enables methods like `Datasets.map()` to be parallelized without needing to move or copy the dataset. Under the hood, these capabilities are all realized by the *Apache Arrow* memory format and `pyarrow` library, which make the data loading and processing very fast
+
+When the dataset is too big to even be held on disk, you can stream the dataset, which is simply done with passing `streaming=True` to the `load_dataset()` function:
+```python
+stream_dataset = load_dataset('json', data_files, split='train', streaming=True)
+```
+
+Instead of a `Dataset` object, the object returned with `streaming=True` is an `IterableDataset`. As the name suggests, to access the elements of an `IterableDataset` we need to iterate over it, like a Python generator. We can access the first element of the streamed dataset as follows:
+```python
+next(iter(stream_dataset))
+```
+
+The elements from a streamed dataset can be processed with `.map()` just like a regular dataset, which is useful when tokenizing inputs. You can also shuffle a streamed dataset with `.shuffle()`, but unlike `Dataset.shuffle()`, this only shuffles the elements in a predefined `buffer_size`. You can also select elements from a streamed dataset using the `.take()` and `.skip()` functions, which act in a similar way to `Dataset.select()`. You can use `.skip()` to make your train and test split, e.g. setting the first 1000 elements for test and the rest for training.
 
 ## Preprocessing
 

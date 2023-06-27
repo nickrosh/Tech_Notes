@@ -69,17 +69,65 @@ Different Transformer architectures have arisen from only using encoders, decode
 
 ![](../../Attachments/Pasted%20image%2020230309015202.png)
 
-#### Encoder Only
+There is many types of models, but they fall generally within these three categories.
 
-When only the encoder is used, a sequence of input tokens in converted into the same number of representation that can be further projected into output (e.g. [Classification](../Classification.md)). A Transformer encoder of self-attention layers, where all input tokens attend to each other. This is famously used by BERT
+![](../../Attachments/Pasted%20image%2020230602002208.png)
 
-#### Encoder-Decoder
+#### BERT - Encoder Only
+
+When only the encoder is used, a sequence of input tokens in converted into the same number of representation that can be further projected into output (e.g. [Classification](../Classification.md)). A Transformer encoder of self-attention layers, where all input tokens attend to each other. This is famously used by BERT. These models are pre-trained with [masked language modeling](NLP.md).
+
+#### Seq2Seq - Encoder-Decoder
 
 Since a Transformer encoder converts a sequence of input tokens into the same number of output representations, the encoder-only mode cannot generate a sequence of arbitrary length like in machine translation. As originally proposed for machine translation, the Transformer architecture can be outfitted with a decoder that autoregressively predicts the target sequence of arbitrary length, token by token, conditional on both encoder output and decoder output
 - For conditioning on encoder output, encoder-decoder cross attention allows target tokens to attend to *all* input tokens.
 - Conditioning on decoder output is achieved by the masked self-attention in the decoder block, where any target token can only attend to *past* and *present* tokens in the target sequence.
 
-
-#### Decoder Only
+#### GPT - Decoder Only
 
 Decoder-only Transformers, like GPT, remove the entire encoder block and cross attention layer in the decoder block. These are the best models for large-scale [language modelling](NLP.md), which leverages the world's abundant unlabeled text corpus via self-supervised learning.
+
+
+## Pretraining
+
+Using either causal language modeling (predicting the next word only looking back) or masked language modeling (predicting the random missing word looking front and back).
+
+![](../../Attachments/Pasted%20image%2020230602000703.png)
+
+This is done on a huge amount of data. LLAMA in 2023 was pretrained on 1.4 trillion token, this is the bulk of the computation required in training a large language model. The model predicts the most likely word out of its vocabulary, and then the loss of the predicted word versus the actual word is the loss used by the [Optimizer](Optimizers.md) to train the transformer. By using causal language modeling and masked language modeling, the model is able to be pretrained unsupervised. This is what allows for mass internet text to be ingested by the model.
+
+A paradigm established with GPT3 is that the more data and parameters of a model, the better it will perform. This compute scaling is like the Moore's Law of LLMs. DeepMind proved in the Chinchilla paper that the compute optimal ratio of parameters to training tokens is around 20 tokens per parameter.
+
+## Supervised Fine Tuning
+
+After a transformer is pretrained on either a language modeling or masked language modeling task, its output will be generalized to its pretraining data. It will not be a chatbot, it will only seek to complete the document/prompt given to it. You can fine tune a pretrained model on labeled data to make it much more accurate to a specific task. With fine-tuning, you can train the model on a specific task, with an encoder model like BERT, this means changing the head and completely changing the task. This way, you can train BERT to perform any [NLP](NLP.md) task like classification or question answering. GPT was fine tuned on high quality Question-Answer pairs, and trained to learn the zero-shot answer to a question. This greatly improved GPTs ability to act as a chatbot.
+
+![](../../Attachments/Pasted%20image%2020230601232203.png)
+
+This ability to fine tune pretrained models allows you to talk advantage of transfer learning, like what was previously done with [Convolutional Neural Net](Convolutional%20Neural%20Net.md), except that it can also be done in [NLP](NLP.md).
+
+## RLHF
+
+*Reinforcement Learning from Human Feedback* is an additional layer that can be placed on top of a fine tuned model to align it much more to human interaction and providing desired responses.
+
+![](../../Attachments/Pasted%20image%2020230602003127.png)
+
+First, a reward model is created by asking the fine tuned model to generate multiple outputs to a single input. A human labeler then ranks each of these outputs from best to worst. We then follow this with something that looks very similar to binary classification on all of the pairs. We append a reward token to the end of each completion, and we then do a classification model where we have the model predict the score of each prediction compared to the ground truth comparison labels created by the human.
+
+![](../../Attachments/Pasted%20image%2020230602003407.png)
+
+Next, we can use this reward model to score any arbitrary completion for any given prompt. We now do reinforcement learning by looking at the outputs of the reward model and updating the token probabilities.
+
+![](../../Attachments/Pasted%20image%2020230602003843.png)
+
+## ChatGPT
+
+![](../../Attachments/Pasted%20image%2020230601235730.png)
+
+Current state of the art language models utilize this four step pipeline to generate high quality outputs. RLHF model outputs are generally preferred by humans, followed by fine tuned models, followed by base models. A final safety layer is probably added on top of all of this to prevent dangerous language.
+
+Prompt Engineering is becoming more and more important as you have to massage the "working memory" of the model in the form of its context, and spread out its computation in order to get high quality answers. Models don't "think" like humans, they are merely a statistical model. A great way of eliciting Chain-of-Thought accuracy from a model is by adding the following to a prompt
+
+>Let's work this out in a step by step way to be sure we have the right answer.
+
+Language models don't want to succeed. They want to imitate training sets with a spectrum of performance qualities. You want to succeed, and you should ask for it.

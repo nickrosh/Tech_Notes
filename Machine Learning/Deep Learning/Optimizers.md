@@ -26,17 +26,52 @@ In classical gradient descent , each step of descent is computed on the average 
 ![](../../Attachments/Pasted%20image%2020230226230446.png)
 
 So we see two extremes. Classical gradient descent which uses the full dataset to compute gradients and to update parameters, one pass at a time. And Stochastic Gradient Descent, which processes one training example at a time to make progress, which is also inefficient as you cannot make use of the vectorization available through [GPUs](../../Electrical%20Engineering/Digital/GPU.md) and [SIMD](../../Electrical%20Engineering/Digital/SIMD.md) instructions. The solution is *Mini-Batch Stochastic Gradient Descent*, where we process mini-batches of randomly selected data at a time. This technique is so effective, this is what people actually refer to when they reference Stochastic Gradient Descent. Here Batch size is $\mathcal{B}$:
+
 $$\mathbf{g}_t = \partial_{\mathbf{w}} \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} f(\mathbf{x}_{i}, \mathbf{w})$$
+
 In practice, we pick a batch size that is large enough to offer good computational efficiency while still fitting into the [Memory](../../Electrical%20Engineering/Digital/Memory%20&%20Cache.md) of a [GPU](../../Electrical%20Engineering/Digital/GPU.md).
 
 #### Adam
 
 Adam is the State-of-The-Art Optimizer Algorithm. It combines two improvements on top of SGD. Specifically:
 - **Adaptive Gradient Algorithm (AdaGrad)** that maintains a per-parameter learning rate that improves performance on problems with sparse gradients (e.g. [NLP](NLP.md) and [Computer Vision](Computer%20Vision.md) problems)
-- **Root Mean Square Propagation (RMSProp)** that also maintains per-parameter learning rates that are adapted based on the average of recent magnitudes of the gradients for the wright (e.g. how quickly it is changing). This means this algorithm does well on online and non-stationary problems (noisy)
+- **Root Mean Square Propagation (RMSProp)** that also maintains per-parameter learning rates that are adapted based on the average of recent magnitudes of the gradients for the weight (e.g. how quickly it is changing). This means this algorithm does well on online and non-stationary problems (noisy)
 
 The following are the hyperparameters for Adam:
 -   **alpha**. Also referred to as the learning rate or step size. The proportion that weights are updated (e.g. 0.001). Larger values (e.g. 0.3) results in faster initial learning before the rate is updated. Smaller values (e.g. 1.0E-5) slow learning right down during training
 -   **beta1**. The exponential decay rate for the first moment estimates (e.g. 0.9).
 -   **beta2**. The exponential decay rate for the second-moment estimates (e.g. 0.999). This value should be set close to 1.0 on problems with a sparse gradient (e.g. [NLP](NLP.md) and [Computer Vision](Computer%20Vision.md) problems).
 -   **epsilon**. Is a very small number to prevent any division by zero in the implementation (e.g. 10E-8).
+
+#### AdamW
+
+AdamW is a modification on Adam that decouples weight decay from the gradient update. L2 [Regularization](../Regularization.md) in Adam is usually implemented as being added to the cost function which is then derived to calculate the gradients. However, if one adds the weight decay term at this point, the moving averages of the gradient and its square keep track not only of the loss function, but also of the regularization term. AdamW performs the weight decay only after controlling the parameter-wise step size. Thus the weight decay does not end up in the moving averages and is thus proportional only to the weight itself. AdamW usually outperforms both Adam and SGD.
+
+
+## Learning Rate Schedules
+
+For better convergence, learning rates must be adjusted as we perform gradient descent. If the learning rate stays constant, our step size will be massive by the time we are around a minima and the model will struggle to converge.
+
+#### Warm-Up
+
+If your data is highly-differentiated, you can suffer from a sort of "early over-fitting". If your shuffled data happens to include a cluster of related, strongly-featured observations, your model's initial training can skew badly toward those features - or worse, toward incidental features that aren't truly related to the topic at all.
+
+Warm up is a way to reduce the primacy effect of the early training examples. Without it, you may need additional epochs to reach the desired convergence. The learning rate starts at zero and then increases or "warms up" to its maximum value. From the peak value, the learning rate can then be decayed with any strategy, such as linear decay.
+
+#### Linear Decay
+
+The simplest learning rate schedule is to decay the learning rate linearly from its starting value to zero over all the training steps. This is a simple strategy and yields decent results.
+
+#### Cosine Decay
+
+![](../../Attachments/Pasted%20image%2020230520012826.png)
+
+We can use the cosine function to decay the learning rate throughout an epoch. This is almost always paired with a warmup period.
+
+#### Cyclic Cosine Annealing
+
+![](../../Attachments/Pasted%20image%2020230520013110.png)
+
+Another non-intuitive learning rate schedule is cyclic cosine annealing, where the learning rate decays to zero, and then jumps back up and repeats the decay cycle. This can even happen multiple times in a single epoch if desired. This method is usually superior and is believed to be so because it allows the optimizer to jump past multiple minima before reaching a stronger convergence.
+
+![](../../Attachments/Pasted%20image%2020230520013328.png)
