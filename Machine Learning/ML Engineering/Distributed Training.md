@@ -52,6 +52,9 @@ Parallelizing the [Multi-Head Attention](../Deep%20Learning/Attention.md) layers
 
 Due to the two all-reduces per layer in both the forward and backward passes, tensor parallelism requires a very fast interconnect between devices. Therefore it is not advisable to do TP across more than one node, unless you have a very fast network. Your degree of TP will be the number of GPUs in a node.
 
+All three methods can be used at the same time. Data Parallelism can be sent along one "axis" of machines while pipeline parallelism can be used along another axis. Tensor parallelism requires absolute minimum latency, so it can only be done within each node. The main source of distribution is through data parallelism.
+
+![](../../Attachments/Pasted%20image%2020230703193503.png)
 
 ## Optimization
 

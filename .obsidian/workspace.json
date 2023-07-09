@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "922b07052a811dca",
+        "id": "4800e611bd1fc4fe",
         "type": "tabs",
         "children": [
           {
-            "id": "980fbdba4a092142",
+            "id": "b093e4a217a8fe63",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Engineering/Containers.md",
+                "file": "Machine Learning/ML Engineering/Training Data.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering/Containers.md",
+                "file": "Machine Learning/ML Engineering/Training Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,15 +121,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "980fbdba4a092142",
+  "active": "b093e4a217a8fe63",
   "lastOpenFiles": [
+    "Machine Learning/ML Engineering/Distributed Training.md",
+    "Attachments/Pasted image 20230703193503.png",
+    "Machine Learning/ML Engineering/Model Monitoring.md",
+    "Machine Learning/ML Engineering/MLOps.md",
+    "Machine Learning/ML Engineering/Baselines.md",
+    "Software Engineering/Containers.md",
     "Machine Learning/ML Engineering/Model Optimization.md",
     "Attachments/Pasted image 20230625162716.png",
     "Attachments/Pasted image 20230625162626.png",
     "Machine Learning/Regularization.md",
     "Machine Learning/ML System Design/ML System Design Interview.md",
     "Machine Learning/Deep Learning/NLP.md",
-    "Software Engineering/Containers.md",
     "Software Engineering/Kubernetes.md",
     "Software Engineering/Test Driven Development.md",
     "Software Engineering/Logging.md",
@@ -147,9 +152,6 @@
     "Machine Learning/ML Metrics.md",
     "Machine Learning/Maximum Likelihood.md",
     "Machine Learning/Logistic Regression.md",
-    "Machine Learning/Linear Regression.md",
-    "Machine Learning/K Means.md",
-    "Machine Learning/Ensemble Learning.md",
     "Attachments/Pasted image 20230618153844.png",
     "Attachments/Pasted image 20230613200956.png",
     "Attachments/Pasted image 20230611182909.png",
@@ -158,7 +160,6 @@
     "Attachments/Pasted image 20230602003843.png",
     "Attachments/Pasted image 20230602003407.png",
     "Attachments/Pasted image 20230602003127.png",
-    "Attachments/Pasted image 20230602002208.png",
     "Software Engineering/OOP/Object Oriented Design",
     "Software Engineering/OOP",
     "Software Engineering/AWS",
