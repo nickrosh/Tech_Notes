@@ -11,6 +11,13 @@ Embeddings are the formalization of analogies. We can look at all similar words 
 $$\text{King}-\text{Man}+\text{Woman}=\text{Queen}$$
 if you sum the embedding vectors for "King" and "Woman" and subtract the embedding for "Man", the resulting vector is closest to "Queen".
 
+## Cosine Similarity
+
+The strength of embedding vectors are that they encode rich contextual meaning. By taking the distance between two vectors, we can determine their semantic similarity.
+
+![](../../Attachments/Pasted%20image%2020230907182357.png)
+
+This distance is usually calculated via cosine similarity, which is the cosine of the angle between the two vectors. This is the same as the dot product of the vectors divided by the product of their lengths.
 ## Word2Vec
 
 With the *Word2Vec* embedding algorithm, words get their embeddings by looking at which other words they tend to appear next to. The mechanics of that is simply:
@@ -78,3 +85,5 @@ GloVe takes the matrix of the word-word co-occurrences of every single word. The
 ![](../../Attachments/Pasted%20image%2020230307233911.png)
 
 This matrix is used along with local statistics to calculate the loss function for the embedding vectors. This provides theoretically better performance than word2vec.
+
+## Bi-Encoders

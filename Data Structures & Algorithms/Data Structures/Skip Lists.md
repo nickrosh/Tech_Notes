@@ -1,0 +1,5 @@
+A *Skip List* is a probabilistic data structure that is build upon the general idea of a [Linked List](Linked%20Lists.md). This structure allows for $O(\log n)$ average [Time Complexity](../Time%20&%20Space%20Complexity.md) for search as well as $O(\log n)$ average complexity for insertion within an ordered sequence of elements. It allows fast search like sorted [Arrays](Arrays.md), while using a linked list structure for easy (and fast) insertion of new elements (something that is not possible with sorted arrays).
+
+Skip lists work by building several layers of linked lists. On the first layer, we find links that *skip* many intermediate nodes/vertices. As we move down the layers, the number of "skips" by each link is decreased. To search a skip list, we start at the highest layer with the longest "skips" and move along the edges towards the right (below). If we find that the current node "key" is greater than the key we are searching for, we know we have overshot our target, so we move down to the previous node in the *next* level.
+
+![](../../Attachments/Pasted%20image%2020230907190734.png)

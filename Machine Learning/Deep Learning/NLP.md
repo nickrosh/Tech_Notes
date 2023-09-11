@@ -74,3 +74,12 @@ Being able to take the "sentiment" from unstructured text can be very useful for
 
 
 #### Text Embeddings & Semantic Search
+
+
+#### Token Classification & Named Entity Recognition
+
+
+#### Summarization
+
+
+#### Question Answering
